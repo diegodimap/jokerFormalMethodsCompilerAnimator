@@ -1,0 +1,51 @@
+spec_trans(root,'$initialise_machine',0).
+spec_trans(0,'Life.born(PERSON1,boy)',1).
+spec_trans(0,'Life.born(PERSON1,girl)',2).
+spec_trans(0,'Life.born(PERSON2,boy)',3).
+spec_trans(0,'Life.born(PERSON2,girl)',4).
+spec_trans(1,'Life.born(PERSON2,boy)',5).
+spec_trans(1,'Life.born(PERSON2,girl)',6).
+spec_trans(1,'Life.die(PERSON1)',0).
+spec_trans(4,'Life.born(PERSON1,boy)',6).
+spec_trans(4,'Life.born(PERSON1,girl)',7).
+spec_trans(4,'Life.die(PERSON2)',0).
+spec_trans(7,'Life.die(PERSON1)',4).
+spec_trans(7,'Life.die(PERSON2)',2).
+spec_trans(2,'Life.born(PERSON2,boy)',8).
+spec_trans(2,'Life.born(PERSON2,girl)',7).
+spec_trans(2,'Life.die(PERSON1)',0).
+spec_trans(3,'Life.born(PERSON1,boy)',5).
+spec_trans(3,'Life.born(PERSON1,girl)',8).
+spec_trans(3,'Life.die(PERSON2)',0).
+spec_trans(5,'Life.die(PERSON1)',3).
+spec_trans(5,'Life.die(PERSON2)',1).
+spec_trans(6,'wed(PERSON1,PERSON2)',9).
+spec_trans(6,'Life.die(PERSON1)',4).
+spec_trans(6,'Life.die(PERSON2)',1).
+spec_trans(8,'wed(PERSON2,PERSON1)',10).
+spec_trans(8,'Life.die(PERSON1)',3).
+spec_trans(8,'Life.die(PERSON2)',2).
+spec_trans(9,'part(PERSON1,PERSON2)',6).
+spec_trans(9,'partner(PERSON1)-->PERSON2',9).
+spec_trans(9,'partner(PERSON2)-->PERSON1',9).
+spec_trans(9,'Life.die(PERSON1)',11).
+spec_trans(9,'Life.die(PERSON2)',12).
+spec_trans(10,'part(PERSON2,PERSON1)',8).
+spec_trans(10,'partner(PERSON1)-->PERSON2',10).
+spec_trans(10,'partner(PERSON2)-->PERSON1',10).
+spec_trans(10,'Life.die(PERSON1)',13).
+spec_trans(10,'Life.die(PERSON2)',14).
+spec_trans(11,'partner(PERSON1)-->PERSON2',11).
+spec_trans(11,'partner(PERSON2)-->PERSON1',11).
+spec_trans(11,'Life.born(PERSON1,boy)',9).
+spec_trans(11,'Life.born(PERSON1,girl)',15).
+spec_trans(11,'Life.die(PERSON2)',16).
+spec_not_all_transitions_added(12).
+spec_not_all_transitions_added(13).
+spec_not_all_transitions_added(14).
+spec_not_all_transitions_added(15).
+spec_not_all_transitions_added(16).
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored :-
+        fail.

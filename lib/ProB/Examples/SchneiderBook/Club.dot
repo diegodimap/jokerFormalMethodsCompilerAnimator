@@ -1,0 +1,113 @@
+digraph visited_states {
+graph [page="8.5, 11",ratio=fill,size="7.5,10"];
+root [shape=triangle, color=green, label=""];
+
+root -> 1060 [style = dotted, color = black, label="setup_constants(1,3)"];
+root -> 1066 [style = dotted, color = black, label="setup_constants(2,3)"];
+
+1060 [shape=ellipse, color=red, label="capacity=1,total=3"];
+
+
+1066 [shape=ellipse, color=green, label="capacity=2,total=3"];
+
+1066 -> 1087 [color = blue, label="initialise_machine({},{})"];
+
+1087 [shape=ellipse, color=green, label="member={},waiting={}"];
+
+1087 -> 1137 [color = blue, label="join_queue(NAME1)"];
+1087 -> 1142 [color = blue, label="join_queue(NAME2)"];
+1087 -> 1147 [color = blue, label="join_queue(NAME3)"];
+1087 -> 1087 [color = blue, label="semi_reset"];
+
+1137 [shape=ellipse, color=green, label="member={},waiting={NAME1}"];
+
+1137 -> 1247 [color = blue, label="join(NAME1)"];
+1137 -> 1280 [color = blue, label="join_queue(NAME2)"];
+1137 -> 1285 [color = blue, label="join_queue(NAME3)"];
+1137 -> 1087 [color = blue, label="semi_reset"];
+
+1142 [shape=ellipse, color=red, label="member={},waiting={NAME2}"];
+
+
+1147 [shape=ellipse, color=red, label="member={},waiting={NAME3}"];
+
+
+1247 [shape=ellipse, color=red, label="member={NAME1},waiting={}"];
+
+
+1280 [shape=ellipse, color=green, label="member={},waiting={NAME1,NAME2}"];
+
+1280 -> 1387 [color = blue, label="join(NAME1)"];
+1280 -> 1407 [color = blue, label="join(NAME2)"];
+1280 -> 1440 [color = blue, label="join_queue(NAME3)"];
+1280 -> 1087 [color = blue, label="semi_reset"];
+
+1285 [shape=ellipse, color=green, label="member={},waiting={NAME1,NAME3}"];
+
+1285 -> 1700 [color = blue, label="join(NAME1)"];
+1285 -> 1720 [color = blue, label="join(NAME3)"];
+1285 -> 1440 [color = blue, label="join_queue(NAME2)"];
+1285 -> 1087 [color = blue, label="semi_reset"];
+
+1387 [shape=ellipse, color=green, label="member={NAME1},waiting={NAME2}"];
+
+1387 -> 1540 [color = blue, label="join(NAME2)"];
+1387 -> 1573 [color = blue, label="join_queue(NAME3)"];
+1387 -> 1142 [color = blue, label="remove(NAME1)"];
+1387 -> 1137 [color = blue, label="semi_reset"];
+
+1407 [shape=ellipse, color=red, label="member={NAME2},waiting={NAME1}"];
+
+
+1440 [shape=ellipse, color=red, label="member={},waiting={NAME1,NAME2,NAME3}"];
+
+
+1540 [shape=box, color=green, label="member={NAME1,NAME2},waiting={}"];
+
+1540 -> 2308 [color = blue, label="join_queue(NAME3)"];
+1540 -> 2333 [color = blue, label="remove(NAME1)"];
+1540 -> 1247 [color = blue, label="remove(NAME2)"];
+1540 -> 1280 [color = blue, label="semi_reset"];
+
+1573 [shape=ellipse, color=red, label="member={NAME1},waiting={NAME2,NAME3}"];
+
+
+1700 [shape=ellipse, color=red, label="member={NAME1},waiting={NAME3}"];
+
+
+1720 [shape=ellipse, color=green, label="member={NAME3},waiting={NAME1}"];
+
+1720 -> 1852 [color = blue, label="join(NAME1)"];
+1720 -> 1885 [color = blue, label="join_queue(NAME2)"];
+1720 -> 1137 [color = blue, label="remove(NAME3)"];
+1720 -> 1147 [color = blue, label="semi_reset"];
+
+1852 [shape=ellipse, color=green, label="member={NAME1,NAME3},waiting={}"];
+
+1852 -> 2013 [color = blue, label="join_queue(NAME2)"];
+1852 -> 2038 [color = blue, label="remove(NAME1)"];
+1852 -> 1247 [color = blue, label="remove(NAME3)"];
+1852 -> 1285 [color = blue, label="semi_reset"];
+
+1885 [shape=ellipse, color=red, label="member={NAME3},waiting={NAME1,NAME2}"];
+
+
+2013 [shape=ellipse, color=green, label="member={NAME1,NAME3},waiting={NAME2}"];
+
+2013 -> 2175 [color = blue, label="remove(NAME1)"];
+2013 -> 1387 [color = blue, label="remove(NAME3)"];
+2013 -> 1285 [color = blue, label="semi_reset"];
+
+2038 [shape=ellipse, color=red, label="member={NAME3},waiting={}"];
+
+
+2175 [shape=ellipse, color=red, label="member={NAME3},waiting={NAME2}"];
+
+
+2308 [shape=ellipse, color=red, label="member={NAME1,NAME2},waiting={NAME3}"];
+
+
+2333 [shape=ellipse, color=red, label="member={NAME2},waiting={}"];
+
+
+}

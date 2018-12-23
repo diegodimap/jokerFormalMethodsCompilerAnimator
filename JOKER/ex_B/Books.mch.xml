@@ -1,0 +1,33 @@
+<specification name="Books.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="newbook-->BOOK1"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="newbook-->BOOK2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="newbook-->BOOK2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="newbook-->BOOK1"/> 
+            <next value="4"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

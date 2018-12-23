@@ -1,0 +1,87 @@
+\documentclass[a4paper]{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+
+\section*{Scheduler}
+\subsection*{Data types}
+We have a given set $Proc$ of processes, each can be in one of
+the states $idle$, $ready$ or $active$.
+\begin{zed}
+  [Proc]\\
+  State ::= idle | ready | active\\
+\end{zed}
+
+\subsection*{State}
+The current global state consists of a set of processes and each process
+has a assigned state. This is modelled as a partial function from the
+set of all possible processes to their state. The current processes
+are the domain of the function.
+
+The system starts with no processes.
+\begin{zed}
+  Processes \defs [~proc: Proc \pfun State~]\\
+  Init \defs [~Processes | proc = \emptyset~]\\
+\end{zed}
+
+
+\subsection*{Helper schemas}
+The two following schemas are used by the operations defined
+below. $ProcBase$ is for operations that modify the state and
+have a process as input. $ProcOperation$ has the additional
+constraint that the given process is an existing process in
+the system.
+\begin{zed}
+  ProcBase \defs [~\Delta Processes; p? : Proc~]\\
+  ProcOperation \defs [~ProcBase | p? \in \dom proc~]  
+\end{zed}
+
+
+\subsection*{Process creation and destruction}
+A new process is created.
+\begin{schema}{New}
+  ProcBase\\
+  \where
+  p? \notin \dom proc\\
+  proc' = proc \oplus \{p? \mapsto idle\}
+\end{schema}
+
+An idle process is destroyed.
+\begin{schema}{Del}
+  ProcOperation\\
+  \where
+  proc(p?) = idle\\
+  proc' = \{p?\} \ndres proc
+\end{schema}
+
+
+\subsection*{Changing the state of a process}
+
+An idle process signalises that it's ready to enter the critical section.
+\begin{schema}{Ready}
+  ProcOperation\\
+  \where
+  proc(p?) = idle\\
+  proc' = proc \oplus \{ p? \mapsto ready \}
+\end{schema}
+
+A process that is ready enters the critical section and is then active.
+The process can only become active if no other process is active.
+\begin{schema}{Enter}
+  ProcOperation\\
+  \where
+  proc(p?) = ready\\
+  proc \rres \{ active \} = \emptyset\\
+  proc' = proc \oplus \{ p? \mapsto active\}
+\end{schema}
+
+An active process leaves the critical section.
+\begin{schema}{Leave}
+  ProcOperation\\
+  \where
+  proc(p?) = active\\
+  proc' = proc \oplus \{ p? \mapsto idle \}
+\end{schema}
+
+\end{document}

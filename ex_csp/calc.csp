@@ -1,0 +1,20 @@
+channel turnon, turnoff, use, sum, sub, div, mul
+
+START = turnon -> NUMBER1 
+
+NUMBER1 = [] x:{0..100} @ x -> NUMBER2(x)
+NUMBER2(x) = [] y:{0..100} @ y -> CALC(x,y)
+
+CALC(x,y) = 
+sum -> SUM(x,y) 
+[] 
+sub -> SUB(x,y) 
+[] 
+div -> DIV(x,y) 
+[] 
+mul -> MUL(x,y)
+
+SUM(x,y) = (x+y) -> (turnoff -> START [] use -> NUMBER1)
+SUB(x,y) = (x-y) -> (turnoff -> START [] use -> NUMBER1)
+DIV(x,y) = (x/y) -> (turnoff -> START [] use -> NUMBER1)
+MUL(x,y) = (x*y) -> (turnoff -> START [] use -> NUMBER1)

@@ -1,0 +1,226 @@
+(GIVEN 12
+  (LIST
+    (NAME "Proc" "")))
+
+(DATA 13
+  (NAME "State" "")
+  (LIST
+    (ARM 13
+      (NAME "idle" "")
+      (NOTHING 13))
+    (ARM 13
+      (NAME "ready" "")
+      (NOTHING 13))
+    (ARM 13
+      (NAME "active" "")
+      (NOTHING 13))))
+
+(DEFEQ 24
+  (SHEAD 24
+    "Processes"
+    ())
+  (TEXT 24
+    (BODY 24
+      (LIST
+        (DECL 24
+          (LIST
+            (NAME "proc" ""))
+          (INGEN 24
+            (NAME "\pfun" "")
+            (REF 24 (NAME "Proc" "") ())
+            (REF 24 (NAME "State" "") ()))))
+      ())))
+
+(DEFEQ 25
+  (SHEAD 25
+    "Init"
+    ())
+  (TEXT 25
+    (BODY 25
+      (LIST
+        (SDECL 25
+          (SREF 25 "Processes" "" () ())))
+      (LIST
+        (EQUAL 25
+          (REF 25 (NAME "proc" "") ())
+          (REF 25 (NAME "\emptyset" "") ()))))))
+
+(SDEF 0
+  (SHEAD 0
+    "\Delta Processes"
+    ())
+  (BODY 0
+    (LIST
+      (SDECL 0
+        (SREF 0 "Processes" "" () ()))
+      (SDECL 0
+        (SREF 0 "Processes" "'" () ())))
+    ()))
+
+(DEFEQ 36
+  (SHEAD 36
+    "ProcBase"
+    ())
+  (TEXT 36
+    (BODY 36
+      (LIST
+        (SDECL 36
+          (SREF 36 "\Delta Processes" "" () ()))
+        (DECL 36
+          (LIST
+            (NAME "p" "?"))
+          (REF 36 (NAME "Proc" "") ())))
+      ())))
+
+(DEFEQ 37
+  (SHEAD 37
+    "ProcOperation"
+    ())
+  (TEXT 37
+    (BODY 37
+      (LIST
+        (SDECL 37
+          (SREF 37 "ProcBase" "" () ())))
+      (LIST
+        (MEMBER 37
+          (REF 37 (NAME "p" "?") ())
+          (APPLY 37
+            (REF 37 (NAME "\dom" "") ())
+            (REF 37 (NAME "proc" "") ())))))))
+
+(SDEF 43
+  (SHEAD 43
+    "New"
+    ())
+  (BODY 44
+    (LIST
+      (SDECL 44
+        (SREF 44 "ProcBase" "" () ())))
+    (LIST
+      (INREL 46
+        (NAME "\notin" "")
+        (REF 46 (NAME "p" "?") ())
+        (APPLY 46
+          (REF 46 (NAME "\dom" "") ())
+          (REF 46 (NAME "proc" "") ())))
+      (EQUAL 47
+        (REF 47 (NAME "proc" "'") ())
+        (INOP 47
+          (NAME "\oplus" "")
+          (REF 47 (NAME "proc" "") ())
+          (EXT 47
+            (LIST
+              (INOP 47
+                (NAME "\mapsto" "")
+                (REF 47 (NAME "p" "?") ())
+                (REF 47 (NAME "idle" "") ())))))))))
+
+(SDEF 51
+  (SHEAD 51
+    "Del"
+    ())
+  (BODY 52
+    (LIST
+      (SDECL 52
+        (SREF 52 "ProcOperation" "" () ())))
+    (LIST
+      (EQUAL 54
+        (APPLY 54
+          (REF 54 (NAME "proc" "") ())
+          (REF 54 (NAME "p" "?") ()))
+        (REF 54 (NAME "idle" "") ()))
+      (EQUAL 55
+        (REF 55 (NAME "proc" "'") ())
+        (INOP 55
+          (NAME "\ndres" "")
+          (EXT 55
+            (LIST
+              (REF 55 (NAME "p" "?") ())))
+          (REF 55 (NAME "proc" "") ()))))))
+
+(SDEF 62
+  (SHEAD 62
+    "Ready"
+    ())
+  (BODY 63
+    (LIST
+      (SDECL 63
+        (SREF 63 "ProcOperation" "" () ())))
+    (LIST
+      (EQUAL 65
+        (APPLY 65
+          (REF 65 (NAME "proc" "") ())
+          (REF 65 (NAME "p" "?") ()))
+        (REF 65 (NAME "idle" "") ()))
+      (EQUAL 66
+        (REF 66 (NAME "proc" "'") ())
+        (INOP 66
+          (NAME "\oplus" "")
+          (REF 66 (NAME "proc" "") ())
+          (EXT 66
+            (LIST
+              (INOP 66
+                (NAME "\mapsto" "")
+                (REF 66 (NAME "p" "?") ())
+                (REF 66 (NAME "ready" "") ())))))))))
+
+(SDEF 71
+  (SHEAD 71
+    "Enter"
+    ())
+  (BODY 72
+    (LIST
+      (SDECL 72
+        (SREF 72 "ProcOperation" "" () ())))
+    (LIST
+      (EQUAL 74
+        (APPLY 74
+          (REF 74 (NAME "proc" "") ())
+          (REF 74 (NAME "p" "?") ()))
+        (REF 74 (NAME "ready" "") ()))
+      (EQUAL 75
+        (INOP 75
+          (NAME "\rres" "")
+          (REF 75 (NAME "proc" "") ())
+          (EXT 75
+            (LIST
+              (REF 75 (NAME "active" "") ()))))
+        (REF 75 (NAME "\emptyset" "") ()))
+      (EQUAL 76
+        (REF 76 (NAME "proc" "'") ())
+        (INOP 76
+          (NAME "\oplus" "")
+          (REF 76 (NAME "proc" "") ())
+          (EXT 76
+            (LIST
+              (INOP 76
+                (NAME "\mapsto" "")
+                (REF 76 (NAME "p" "?") ())
+                (REF 76 (NAME "active" "") ())))))))))
+
+(SDEF 80
+  (SHEAD 80
+    "Leave"
+    ())
+  (BODY 81
+    (LIST
+      (SDECL 81
+        (SREF 81 "ProcOperation" "" () ())))
+    (LIST
+      (EQUAL 83
+        (APPLY 83
+          (REF 83 (NAME "proc" "") ())
+          (REF 83 (NAME "p" "?") ()))
+        (REF 83 (NAME "active" "") ()))
+      (EQUAL 84
+        (REF 84 (NAME "proc" "'") ())
+        (INOP 84
+          (NAME "\oplus" "")
+          (REF 84 (NAME "proc" "") ())
+          (EXT 84
+            (LIST
+              (INOP 84
+                (NAME "\mapsto" "")
+                (REF 84 (NAME "p" "?") ())
+                (REF 84 (NAME "idle" "") ())))))))))
+

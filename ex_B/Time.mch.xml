@@ -1,0 +1,54 @@
+<specification name="Time.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="input(TIME1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="input(TIME2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="output-->TIME2"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="input(TIME1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="input(TIME2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="output-->TIME1"/> 
+            <next value="0"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

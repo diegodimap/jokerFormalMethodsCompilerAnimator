@@ -1,0 +1,99 @@
+<specification name="Keys.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insertkey(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insertkey(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="removekey(KEY1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="removekey(KEY2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insertkey(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insertkey(KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="removekey(KEY1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="removekey(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insertkey(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insertkey(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="removekey(KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="removekey(KEY2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insertkey(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insertkey(KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="removekey(KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="removekey(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

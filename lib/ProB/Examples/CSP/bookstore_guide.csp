@@ -1,0 +1,22 @@
+-- A CSP Process to guide bookstore.mch
+--
+-- First open the bookstore.mch file as usual.
+-- Then select the menu item
+--        Menu -> File -> Open Special -> Use CSP File to Guide B
+-- You have to be in normal mode to see this menu item (not in beginner mode)
+
+-- The following shows how you can use CSP to detect errors in a B
+-- specification: if the combined system deadlocks an error was found
+
+datatype BClient = c1 | c2 | c3
+
+channel error_need_arrive_client_first, AddBook, Checkout
+channel Arrive,Quit: BClient
+
+MAIN = AddBook -> error_need_arrive_client_first -> STOP 
+ [] Checkout -> error_need_arrive_client_first -> STOP
+ [] Arrive?Client -> Quit!Client -> MAIN
+
+
+-- when you model check you will find a deadlock, as the Quit operation is
+-- not fully implemented and does not remove the client.

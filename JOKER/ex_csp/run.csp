@@ -1,0 +1,4 @@
+channel moeda, choc
+
+SPEC = moeda -> RUN({moeda, choc})
+

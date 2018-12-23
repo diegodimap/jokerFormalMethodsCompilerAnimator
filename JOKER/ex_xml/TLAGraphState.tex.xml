@@ -1,0 +1,54 @@
+<specification name="TLAGraphState.tex">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="AddEdge(NODE1,NODE1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="AddEdge(NODE1,NODE2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="AddEdge(NODE2,NODE1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="AddEdge(NODE2,NODE2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="AddEdge(NODE1,NODE2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="AddEdge(NODE2,NODE1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="AddEdge(NODE2,NODE2)"/> 
+            <next value="5"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

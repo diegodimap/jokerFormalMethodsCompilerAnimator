@@ -1,0 +1,7 @@
+RANGE = {0..59}
+channel min, sec : RANGE
+channel tick, out, time
+chrono(min, sec) = (tick -> if sec==59 then chrono(min+1,0) else chrono(min,sec+1))
+[]
+(time -> out!(min,sec) -> chrono(min,sec))
+START = chrono(1,1)

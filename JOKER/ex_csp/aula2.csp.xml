@@ -1,0 +1,35 @@
+<specification name="aula2.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_826DC2B1EFD72591350CC0626822E6B5"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_826DC2B1EFD72591350CC0626822E6B5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_41C495297E64FA4C6ECE6C4A91275DD7"/> 
+            <event value="termina"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_41C495297E64FA4C6ECE6C4A91275DD7"/> 
+            <event value="exercicio"/> 
+            <next value="GP_HashMD5_41C495297E64FA4C6ECE6C4A91275DD7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_826DC2B1EFD72591350CC0626822E6B5"/> 
+            <event value="inicia"/> 
+            <next value="GP_HashMD5_41C495297E64FA4C6ECE6C4A91275DD7"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

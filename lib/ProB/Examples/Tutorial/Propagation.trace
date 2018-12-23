@@ -1,0 +1,11 @@
+machine('Propagation').
+'$setup_constants'(int(0),int(3),avl_set(node((int(1),int(1)),true,1,node((int(0),int(1)),true,0,empty,empty),node((int(2),int(0)),true,1,empty,node((int(3),int(1)),true,0,empty,empty)))),avl_set(node((int(1),int(0)),true,1,node((int(0),int(0)),true,0,empty,empty),node((int(2),int(1)),true,1,empty,node((int(3),int(0)),true,0,empty,empty)))),avl_set(node((int(0),int(1)),true,1,empty,node((int(1),int(0)),true,0,empty,empty)))).
+'$initialise_machine'(int(0)).
+'Sense'-->[int(1)].
+'Inc'.
+'Sense'-->[int(1)].
+'Inc'.
+'Sense'-->[int(0)].
+'Inc'.
+'Sense'-->[int(1)].
+

@@ -1,0 +1,139 @@
+<specification name="Life.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="born(PERSON1,boy)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="born(PERSON1,girl)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="born(PERSON2,boy)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="born(PERSON2,girl)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="born(PERSON2,boy)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="born(PERSON2,girl)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="born(PERSON1,boy)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="born(PERSON1,girl)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="born(PERSON2,boy)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="born(PERSON2,girl)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="born(PERSON1,boy)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="born(PERSON1,girl)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="die(PERSON1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="die(PERSON2)"/> 
+            <next value="2"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

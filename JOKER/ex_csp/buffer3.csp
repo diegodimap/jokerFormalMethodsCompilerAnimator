@@ -1,0 +1,35 @@
+
+BUFFER(i) = B(<>,i)
+
+B(s,i) = if (s == <>)
+         then in?x -> B(<x>,i)
+         else if (#s == i) 
+              then out!head(s) -> B(tail(s),i)
+              else ((out!head(s) -> B(tail(s),i)) [] in?x -> B(s^<x>,i))
+                   |~| out!head(s) -> B(tail(s),i)
+
+assert BUFFER(3) [F= PROTOCOL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\subsection*{The numbers}
+\begin{zed}
+  NRS ::= n1 | n2 | n3 | n4 | n5 | n6 | n7 | n8 | n9\\
+  Answer ::= Yes | No
+\end{zed}
+
+
+\subsection*{Constants}
+\begin{axdef}
+   sqsize, fullsize : \num\\
+ \where
+   fullsize = \#(NRS) \\
+   sqsize>0\\
+   sqsize*sqsize = fullsize
+\end{axdef}
+
+\subsection*{State Variables}
+
+\begin{schema}{SUD}
+  Sudoku9: (1 \upto fullsize) \fun ((1 \upto fullsize) \pfun NRS)\\
+  ToSolve : Answer
+\end{schema}
+
+
+\subsection*{Initialisation}
+\begin{schema}{Init}
+  SUD
+  \where
+  Sudoku9 = (\lambda x:(1 \upto fullsize) @ \emptyset)\\
+  ToSolve = No
+\end{schema}
+
+
+\subsection*{Operations}
+\begin{schema}{Set}
+  \Delta SUD\\
+  i? : 1 \upto fullsize\\
+  j? : 1 \upto fullsize\\
+  n? : NRS
+  \where
+  j? \notin \dom(Sudoku9(i?))\\
+  ToSolve' = ToSolve\\
+  Sudoku9'(i?) = Sudoku9(i?) \cup \{ j? \mapsto n? \} \\
+  \forall i: 1 \upto fullsize | i \neq i? @ Sudoku9'(i) = Sudoku9(i)
+\end{schema}
+
+
+\begin{schema}{SetPuzzle1}
+  \Delta SUD
+  \where
+   ToSolve' = ToSolve\\
+   Sudoku9' =  \{ 1 \mapsto 
+                   \{ 1\mapsto n7, 2\mapsto n8, 3\mapsto n1, 4\mapsto n6,   6\mapsto n2, 7\mapsto n9, 9\mapsto n5 \},\\
+                              \t1 2 \mapsto \{ 1\mapsto n9, 3\mapsto n2, 4\mapsto n7, 5\mapsto n1 \},\\
+                              \t1 3 \mapsto \{ 3\mapsto n6, 4\mapsto n8, 8\mapsto n1, 9\mapsto n2\},\\
+                              \t1 4 \mapsto \{ 1\mapsto n2, 4\mapsto n3, 7\mapsto n8, 8\mapsto n5, 9\mapsto n1\} ,\\
+                              \t1 5 \mapsto \{ 2\mapsto n7, 3\mapsto n3, 4\mapsto n5, 9\mapsto n4\} ,\\
+                              \t1 6 \mapsto \{ 3\mapsto n8, 6\mapsto n9, 7\mapsto n3, 8\mapsto n6\}  ,\\
+                              \t1 7 \mapsto \{ 1\mapsto n1, 2\mapsto n9, 6\mapsto n7, 8\mapsto n8\} ,\\
+                              \t1 8 \mapsto \{ 1\mapsto n8, 2\mapsto n6, 3\mapsto n7, 6\mapsto n3, 7\mapsto n4, 9\mapsto n9\} ,\\
+                              \t1 9 \mapsto \{ 3\mapsto n5, 7\mapsto n1\}
+                             \}
+\end{schema}
+
+\begin{schema}{StartSolving}
+ \Delta SUD
+ \where
+  ToSolve = No\\
+  ToSolve' = Yes\\
+  Sudoku9' = Sudoku9
+\end{schema}
+
+\begin{schema}{Solve}
+  \Delta SUD
+  \where
+  ToSolve = Yes\\
+  ToSolve' = No\\
+  Sudoku9'\in (1 \upto fullsize) \fun ((1 \upto fullsize) \fun NRS)\\
+   (\forall i,j : 1 \upto fullsize | j \in \dom(Sudoku9(i)) @\\
+           \t1 Sudoku9'(i)(j) = Sudoku9(i)(j) ) \\
+   (\forall i,j1,j2 : 1 \upto fullsize | j2 > j1 @ \\
+         \t1 (Sudoku9'(i)(j1) \neq Sudoku9'(i)(j2) \land \\
+         \t1  Sudoku9'(j1)(i) \neq Sudoku9'(j2)(i)  ) 
+   )\\
+   (\forall xi,yi : \{ 1\upto 3, 4\upto 6, 7 \upto 9 \} @\\
+         \t1 (\forall i1,j1,i2,j2: \num |
+             i1 \in xi \land i2 \in xi \land i2\geq i1 \land j1 \in yi \land j2 \in yi 
+             \land (i1=i2 \implies j2>j1) @\\
+                       \t2 Sudoku9'(i1)(j1) \neq Sudoku9'(i2)(j2) )
+                       )
+ \end{schema}
+\end{document}

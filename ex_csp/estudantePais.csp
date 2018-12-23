@@ -1,0 +1,22 @@
+channel passar, graduar, reprovar, presente, reclamacao
+channel ano:{1..4}
+
+ESTUDANTE(n) = ano.n -> 
+(
+(passar -> if (n==4) then FORMANDO else ESTUDANTE(n+1))
+[]
+(reprovar -> ESTUDANTE(n))
+)
+
+FORMANDO = graduar -> STOP
+ESTUDANTES = ESTUDANTE(1)
+
+E = {ano.1, ano.2, ano.3, ano.4, passar, graduar, reprovar}
+
+PARENTES = passar -> presente -> PARENTES
+P = {passar, presente}
+
+TUTOR = reprovar -> reclamacao -> TUTOR
+T = {reprovar, reclamacao}
+
+START = (ESTUDANTES[E||P]PARENTES) [union(E,P)||T] TUTOR

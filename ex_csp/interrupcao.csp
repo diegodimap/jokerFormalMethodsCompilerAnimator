@@ -1,0 +1,7 @@
+channel a, b,c,d,e
+
+P = a->b->c->STOP
+Q = c->d->e->STOP
+
+SISTEMA = P/\Q
+

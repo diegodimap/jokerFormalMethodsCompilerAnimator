@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\newcommand{\prozignore}{ignore_\textsl{\tiny ProZ}}
+
+\subsection*{Ignoring constraints}
+
+
+This is a small example how some constraints in a specification can
+be ignored by ProZ.
+E.g. we want to achieve that ProZ does not check if a defined
+function $square$ is actually a total function.
+
+\subsubsection*{Preparatory work}
+
+To instruct ProZ to ignore constraints, one must define a
+\LaTeX{} command \verb|\prozignore|:
+\begin{verbatim}
+  \newcommand{\prozignore}{ignore_\textsl{\tiny ProZ}}
+\end{verbatim}
+The exact definition of the new command can be modified by
+the user, only the name \verb|\prozignore| is used.
+
+Then the type of the operator $\prozignore$ must be declared:
+%%pregen \prozignore
+\begin{gendef}[X]
+  \prozignore~\_ : \power X
+\end{gendef}
+In the \LaTeX{} source code, the schema is prefixed with a
+line
+\begin{verbatim}
+ %%pregen \prozignore
+\end{verbatim}
+The source code of the generic definition can also be moved
+into the file \textsl{fuzzlib}.
+
+
+\subsubsection*{The specification}
+
+We define the function $square$ and instruct ProZ to ignore all
+constraints in $\num\fun\num$:
+\begin{axdef}
+  square : \prozignore (\num \fun \num)
+  \where
+  square = (\lambda x:\num @ x*x)
+\end{axdef}
+The type declaration is now equivalent to $square : \power(\num\cross\num)$.
+
+We define $State$, $Init$ and $ApplySquare$ to make an animation of
+this specification possible:
+
+\begin{zed}
+  State \defs [~number : \num~]\\
+  Init \defs [~State | number = 2~]\\
+  ApplySquare \defs [~\Delta State | number' = square~number~]
+\end{zed}
+
+\end{document}

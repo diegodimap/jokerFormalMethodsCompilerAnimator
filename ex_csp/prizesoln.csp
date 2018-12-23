@@ -1,0 +1,55 @@
+channel year1, year2, year3, pass, fail, graduate, present, prize
+
+S = {| year1, year2, year3, pass, fail, graduate |}
+
+P = {| pass, present |}
+
+C = {| pass, fail, prize |}
+
+STUDENT = year1 -> (pass -> YEAR2 [] fail -> STUDENT)
+
+YEAR2 = year2 -> (pass -> YEAR3 [] fail -> YEAR2)
+
+YEAR3 = year3 -> (pass -> graduate -> STOP [] fail -> YEAR3)
+
+PARENT = pass -> present -> PARENT
+
+
+
+UNI = fail -> NOPRIZE [] pass -> C1
+
+C1 = fail -> NOPRIZE [] pass -> C2
+
+C2 = fail -> NOPRIZE [] pass -> prize -> STOP
+
+NOPRIZE = fail -> NOPRIZE [] pass -> NOPRIZE
+
+
+
+SYSTEM = (STUDENT [ S || P ] PARENT) [ union(S,P) || C ] UNI
+
+
+UNI2 = FAILS 
+         [{fail,prize}||{pass,prize}] 
+       PASSES
+
+-- UNI2 is made up of two conditions on when prize can occur:  it can only
+-- occur after three passes (i.e. at the end of the degree).  This is
+-- expressed by PASSES.  It can also only occur provided no more than one fail
+-- has occurred.  This is expressed by FAILS.  By synchronising these two
+-- processes, the common event `prize' can only occur when both conditions are
+-- met.
+
+
+PASSES = pass -> pass -> pass -> prize -> STOP
+
+
+FAILS = prize -> STOP [] fail -> ONEFAIL
+
+ONEFAIL = prize -> STOP [] fail -> MOREFAIL
+
+MOREFAIL = fail -> MOREFAIL
+
+
+SYSTEM2 = (STUDENT [ S || P ] PARENT) [ union(S,P) || C ] UNI2
+

@@ -1,0 +1,7 @@
+MACHINE     PRICE_ctx
+
+CONSTANTS   price
+
+PROPERTIES  price : GOODS -->NAT1
+
+END

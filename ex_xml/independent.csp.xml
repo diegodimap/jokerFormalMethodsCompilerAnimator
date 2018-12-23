@@ -1,0 +1,108 @@
+<specification name="independent.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_9F4C5D654AE4C7150B5063D0C4C29CC3"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_9F4C5D654AE4C7150B5063D0C4C29CC3"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_9F4C5D654AE4C7150B5063D0C4C29CC3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0E1772B7439F017BA053E13C1E5DECA0"/> 
+            <event value="down"/> 
+            <next value="GP_HashMD5_8E8C7A811054DA9BC26264B5FE6659D8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0E1772B7439F017BA053E13C1E5DECA0"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_48A254B82D313C64B5F347D1693889C9"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_0E1772B7439F017BA053E13C1E5DECA0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_48A254B82D313C64B5F347D1693889C9"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_525D633675302D8869CF8DF224C29198"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_525D633675302D8869CF8DF224C29198"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_525D633675302D8869CF8DF224C29198"/> 
+            <event value="right"/> 
+            <next value="GP_HashMD5_48A254B82D313C64B5F347D1693889C9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+            <event value="down"/> 
+            <next value="GP_HashMD5_B9BCFCC0D8972B73052E09971F999DCD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+            <event value="right"/> 
+            <next value="GP_HashMD5_0E1772B7439F017BA053E13C1E5DECA0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7550F070F53EF73841B03D35BE84A5B1"/> 
+            <event value="down"/> 
+            <next value="GP_HashMD5_D059DAAA41CFE472C01B1B37B106A555"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7550F070F53EF73841B03D35BE84A5B1"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8E8C7A811054DA9BC26264B5FE6659D8"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_0E1772B7439F017BA053E13C1E5DECA0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8E8C7A811054DA9BC26264B5FE6659D8"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_B9BCFCC0D8972B73052E09971F999DCD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9F4C5D654AE4C7150B5063D0C4C29CC3"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_7550F070F53EF73841B03D35BE84A5B1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9F4C5D654AE4C7150B5063D0C4C29CC3"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_525D633675302D8869CF8DF224C29198"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B9BCFCC0D8972B73052E09971F999DCD"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_65E4D65F29DDB6122936AD8E5C45B1A6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B9BCFCC0D8972B73052E09971F999DCD"/> 
+            <event value="right"/> 
+            <next value="GP_HashMD5_8E8C7A811054DA9BC26264B5FE6659D8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D059DAAA41CFE472C01B1B37B106A555"/> 
+            <event value="up"/> 
+            <next value="GP_HashMD5_7550F070F53EF73841B03D35BE84A5B1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D059DAAA41CFE472C01B1B37B106A555"/> 
+            <event value="left"/> 
+            <next value="GP_HashMD5_B9BCFCC0D8972B73052E09971F999DCD"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

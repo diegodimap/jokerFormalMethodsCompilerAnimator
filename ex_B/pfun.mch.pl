@@ -1,0 +1,42 @@
+spec_trans(root,'$initialise_machine',0).
+spec_trans(0,'set(INDEX1,VALUE1)',1).
+spec_trans(0,'set(INDEX1,VALUE2)',2).
+spec_trans(0,'set(INDEX2,VALUE1)',3).
+spec_trans(0,'set(INDEX2,VALUE2)',4).
+spec_trans(1,'set(INDEX2,VALUE1)',5).
+spec_trans(1,'set(INDEX2,VALUE2)',6).
+spec_trans(1,'remove(INDEX1)',0).
+spec_trans(1,'get(INDEX1)-->VALUE1',1).
+spec_trans(4,'set(INDEX1,VALUE1)',6).
+spec_trans(4,'set(INDEX1,VALUE2)',7).
+spec_trans(4,'remove(INDEX2)',0).
+spec_trans(4,'get(INDEX2)-->VALUE2',4).
+spec_trans(7,'remove(INDEX1)',4).
+spec_trans(7,'remove(INDEX2)',2).
+spec_trans(7,'get(INDEX1)-->VALUE2',7).
+spec_trans(7,'get(INDEX2)-->VALUE2',7).
+spec_trans(2,'set(INDEX2,VALUE1)',8).
+spec_trans(2,'set(INDEX2,VALUE2)',7).
+spec_trans(2,'remove(INDEX1)',0).
+spec_trans(2,'get(INDEX1)-->VALUE2',2).
+spec_trans(3,'set(INDEX1,VALUE1)',5).
+spec_trans(3,'set(INDEX1,VALUE2)',8).
+spec_trans(3,'remove(INDEX2)',0).
+spec_trans(3,'get(INDEX2)-->VALUE1',3).
+spec_trans(5,'remove(INDEX1)',3).
+spec_trans(5,'remove(INDEX2)',1).
+spec_trans(5,'get(INDEX1)-->VALUE1',5).
+spec_trans(5,'get(INDEX2)-->VALUE1',5).
+spec_trans(6,'remove(INDEX1)',4).
+spec_trans(6,'remove(INDEX2)',1).
+spec_trans(6,'get(INDEX1)-->VALUE1',6).
+spec_trans(6,'get(INDEX2)-->VALUE2',6).
+spec_trans(8,'remove(INDEX1)',3).
+spec_trans(8,'remove(INDEX2)',2).
+spec_trans(8,'get(INDEX1)-->VALUE2',8).
+spec_trans(8,'get(INDEX2)-->VALUE1',8).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

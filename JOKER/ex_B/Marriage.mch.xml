@@ -1,0 +1,224 @@
+<specification name="Marriage.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Life.born(PERSON1,boy)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Life.born(PERSON1,girl)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Life.born(PERSON2,boy)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Life.born(PERSON2,girl)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Life.born(PERSON2,boy)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Life.born(PERSON2,girl)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Life.born(PERSON1,boy)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Life.born(PERSON1,girl)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Life.born(PERSON2,boy)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Life.born(PERSON2,girl)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Life.born(PERSON1,boy)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Life.born(PERSON1,girl)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="wed(PERSON1,PERSON2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="wed(PERSON2,PERSON1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="part(PERSON1,PERSON2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="partner(PERSON1)-->PERSON2"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="partner(PERSON2)-->PERSON1"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="part(PERSON2,PERSON1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="partner(PERSON1)-->PERSON2"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="partner(PERSON2)-->PERSON1"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Life.die(PERSON1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="partner(PERSON1)-->PERSON2"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="partner(PERSON2)-->PERSON1"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Life.born(PERSON1,boy)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Life.born(PERSON1,girl)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Life.die(PERSON2)"/> 
+            <next value="16"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

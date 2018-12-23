@@ -1,0 +1,41 @@
+spec_trans(root,'$initialise_machine',4).
+spec_trans(root,'$initialise_machine',8).
+spec_trans(root,'$initialise_machine',3).
+spec_trans(2,'$initialise_machine',3).
+spec_trans(0,'$initialise_machine',4).
+spec_trans(3,'take(JOB1)',5).
+spec_trans(3,'take(JOB2)',6).
+spec_trans(6,'take(JOB1)',7).
+spec_trans(6,'process-->JOB2',3).
+spec_trans(6,'prioritise(JOB2)',3).
+spec_trans(7,'process-->JOB1',6).
+spec_trans(7,'process-->JOB2',5).
+spec_trans(7,'prioritise(JOB1)',6).
+spec_trans(7,'prioritise(JOB2)',5).
+spec_trans(1,'$initialise_machine',8).
+spec_trans(5,'take(JOB2)',7).
+spec_trans(5,'process-->JOB1',3).
+spec_trans(5,'prioritise(JOB1)',3).
+spec_trans(4,'take(JOB1)',9).
+spec_trans(4,'take(JOB2)',10).
+spec_trans(8,'take(JOB1)',11).
+spec_trans(8,'take(JOB2)',12).
+spec_trans(9,'process-->JOB1',4).
+spec_trans(9,'prioritise(JOB1)',4).
+spec_trans(12,'take(JOB1)',13).
+spec_trans(12,'process-->JOB2',8).
+spec_trans(12,'prioritise(JOB2)',8).
+spec_trans(13,'process-->JOB1',12).
+spec_trans(13,'process-->JOB2',11).
+spec_trans(13,'prioritise(JOB1)',12).
+spec_trans(13,'prioritise(JOB2)',11).
+spec_trans(10,'process-->JOB2',4).
+spec_trans(10,'prioritise(JOB2)',4).
+spec_trans(11,'take(JOB2)',13).
+spec_trans(11,'process-->JOB1',8).
+spec_trans(11,'prioritise(JOB1)',8).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

@@ -1,0 +1,54 @@
+spec_trans(root,'$initialise_machine',0).
+spec_trans(0,'choose(1)',1).
+spec_trans(0,'choose(2)',2).
+spec_trans(0,'choose(3)',3).
+spec_trans(0,'query(1)-->FALSE',0).
+spec_trans(0,'query(2)-->FALSE',0).
+spec_trans(0,'query(3)-->FALSE',0).
+spec_trans(0,'allocate-->1',1).
+spec_trans(0,'allocate-->2',2).
+spec_trans(0,'allocate-->3',3).
+spec_trans(1,'choose(2)',4).
+spec_trans(1,'choose(3)',5).
+spec_trans(1,'query(1)-->TRUE',1).
+spec_trans(1,'query(2)-->FALSE',1).
+spec_trans(1,'query(3)-->FALSE',1).
+spec_trans(1,'allocate-->2',4).
+spec_trans(1,'allocate-->3',5).
+spec_trans(3,'choose(1)',5).
+spec_trans(3,'choose(2)',7).
+spec_trans(3,'query(1)-->FALSE',3).
+spec_trans(3,'query(2)-->FALSE',3).
+spec_trans(3,'query(3)-->TRUE',3).
+spec_trans(3,'allocate-->1',5).
+spec_trans(3,'allocate-->2',7).
+spec_trans(7,'choose(1)',9).
+spec_trans(7,'query(1)-->FALSE',7).
+spec_trans(7,'query(2)-->TRUE',7).
+spec_trans(7,'query(3)-->TRUE',7).
+spec_trans(7,'allocate-->1',9).
+spec_trans(2,'choose(1)',4).
+spec_trans(2,'choose(3)',7).
+spec_trans(2,'query(1)-->FALSE',2).
+spec_trans(2,'query(2)-->TRUE',2).
+spec_trans(2,'query(3)-->FALSE',2).
+spec_trans(2,'allocate-->1',4).
+spec_trans(2,'allocate-->3',7).
+spec_trans(4,'choose(3)',9).
+spec_trans(4,'query(1)-->TRUE',4).
+spec_trans(4,'query(2)-->TRUE',4).
+spec_trans(4,'query(3)-->FALSE',4).
+spec_trans(4,'allocate-->3',9).
+spec_trans(9,'query(1)-->TRUE',9).
+spec_trans(9,'query(2)-->TRUE',9).
+spec_trans(9,'query(3)-->TRUE',9).
+spec_trans(5,'choose(2)',9).
+spec_trans(5,'query(1)-->TRUE',5).
+spec_trans(5,'query(2)-->FALSE',5).
+spec_trans(5,'query(3)-->TRUE',5).
+spec_trans(5,'allocate-->2',9).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

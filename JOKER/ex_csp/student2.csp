@@ -1,0 +1,23 @@
+channel level1, level2, level3, pass, fail, graduate, present
+
+D = {| level1, level2, level3, pass, fail, graduate |}
+
+P = {| pass, present |}
+
+DEGREE = level1 -> (pass -> LEVEL2 [] fail -> DEGREE)
+
+LEVEL2 = level2 -> (pass -> LEVEL3 [] fail -> LEVEL2)
+
+LEVEL3 = level3 -> (pass -> graduate -> STOP [] fail -> LEVEL3)
+
+PARENT = pass -> present -> PARENT
+
+SYSTEM = DEGREE [ D || P ] PARENT
+
+SPEC_GRAD = pass -> pass -> pass -> graduate -> STOP
+
+SPEC_LEVELS = level1 -> SPEC_LEVELS []
+              level2 -> SPEC_LEVELS2
+
+SPEC_LEVELS2 = level2 -> SPEC_LEVELS2
+

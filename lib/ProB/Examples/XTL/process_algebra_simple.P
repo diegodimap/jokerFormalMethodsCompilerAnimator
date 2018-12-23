@@ -1,0 +1,16 @@
+
+% start(PossibleInitialState)
+start(choice(pref(a,stop),intl(pref(b,pref(c,stop)),pref(d,stop)))).
+
+% trans(Event, StateBefore, StateAfter)
+trans(A,pref(A,P),P). % action prefix
+trans(A,intl(P,Q),intl(P2,Q)) :- trans(A,P,P2). % interleave
+trans(A,intl(P,Q),intl(P,Q2)) :- trans(A,Q,Q2).
+trans(A,par(P,Q),par(P2,Q2)) :- trans(A,P,P2), trans(A,Q,Q2). % parallel composition
+trans(A,choice(P,Q),P2) :- trans(A,P,P2). % choice
+trans(A,choice(P,Q),Q2) :- trans(A,Q,Q2).
+
+% prop(State, PropertyOfState)
+prop(pref(A,P),prefix).
+prop(intl(P,Q),interleave).
+prop(A,A).

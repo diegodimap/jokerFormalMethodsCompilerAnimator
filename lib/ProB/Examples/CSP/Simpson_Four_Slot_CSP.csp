@@ -1,0 +1,24 @@
+channel w1_writerChoosesPair, w2_writerChoosesSlot, w4_writerIndicatesSlot,
+        w5_writerIndicatesPair
+channel w3_write:Int
+	
+channel r1_readerChoosesPair, r2_readerIndicatesPair,r3_readerChoosesSlot
+
+channel r4_readerChoosesPair:Int
+
+channel error
+myassert(Pred) = if Pred then SKIP else error -> SKIP
+
+MAIN = Reader(0) ||| Writer(1)
+
+-- MAIN2 = r1_readerChoosesPair -> STOP [] r3_readerChoosesSlot -> STOP
+
+Reader(last) = 
+  r1_readerChoosesPair -> r2_readerIndicatesPair -> r3_readerChoosesSlot ->
+  r4_readerChoosesPair?new  -> (myassert(new>=last) ; Reader(new))
+
+
+Writer(next) = if next > 5 then STOP else
+        w1_writerChoosesPair -> w2_writerChoosesSlot ->
+        w3_write!next -> w4_writerIndicatesSlot ->
+        w5_writerIndicatesPair -> Writer(next+1)

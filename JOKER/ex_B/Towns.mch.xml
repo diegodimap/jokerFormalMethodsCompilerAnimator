@@ -1,0 +1,671 @@
+<specification name="Towns.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->notconnected"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->notconnected"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->notconnected"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->notconnected"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->notconnected"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->notconnected"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->notconnected"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->notconnected"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="link(TOWN1,TOWN1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="link(TOWN1,TOWN2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="link(TOWN2,TOWN1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="link(TOWN2,TOWN2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="connectedquery(TOWN1,TOWN1)-->connected"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="connectedquery(TOWN1,TOWN2)-->connected"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="connectedquery(TOWN2,TOWN1)-->connected"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="connectedquery(TOWN2,TOWN2)-->connected"/> 
+            <next value="15"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

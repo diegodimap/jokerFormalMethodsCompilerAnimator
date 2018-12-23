@@ -1,0 +1,274 @@
+<specification name="Allocate.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="choose(1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="choose(2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="choose(3)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="query(1)-->FALSE"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="query(2)-->FALSE"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="query(3)-->FALSE"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="allocate-->1"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="allocate-->2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="allocate-->3"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="choose(2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="choose(3)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(1)-->TRUE"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(2)-->FALSE"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(3)-->FALSE"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="allocate-->2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="allocate-->3"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="choose(1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="choose(2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(1)-->FALSE"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(2)-->FALSE"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(3)-->TRUE"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="allocate-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="allocate-->2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="choose(1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(1)-->FALSE"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(2)-->TRUE"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(3)-->TRUE"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="allocate-->1"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="choose(1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="choose(3)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(1)-->FALSE"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(2)-->TRUE"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(3)-->FALSE"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="allocate-->1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="allocate-->3"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="choose(3)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(1)-->TRUE"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(2)-->TRUE"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(3)-->FALSE"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="allocate-->3"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(1)-->TRUE"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(2)-->TRUE"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(3)-->TRUE"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="choose(2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(1)-->TRUE"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(2)-->FALSE"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(3)-->TRUE"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="allocate-->2"/> 
+            <next value="9"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

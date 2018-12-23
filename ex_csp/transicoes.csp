@@ -1,0 +1,8 @@
+channel comer, choc, moeda, beep, gritar
+
+MC = moeda -> beep -> choc -> MC
+CLIENTE = moeda -> gritar -> choc -> comer -> CLIENTE
+M = {moeda, beep, choc}
+C = {moeda, choc, comer, gritar}
+
+MAQUINA = MC[M||C]CLIENTE

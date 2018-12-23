@@ -1,0 +1,46 @@
+digraph visited_states {
+graph [page="8.5, 11",ratio=fill,size="7.5,10"];
+root [shape=triangle, color=green, label=""];
+
+root -> 2173 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK1),(COPY2,BOOK2),(COPY3,BOOK3)})"];
+root -> 2182 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK1),(COPY2,BOOK3),(COPY3,BOOK2)})"];
+root -> 2199 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK2),(COPY2,BOOK1),(COPY3,BOOK3)})"];
+root -> 2208 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK2),(COPY2,BOOK3),(COPY3,BOOK1)})"];
+root -> 2225 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK3),(COPY2,BOOK1),(COPY3,BOOK2)})"];
+root -> 2234 [style = dotted, color = black, label="setup_constants({(COPY1,BOOK3),(COPY2,BOOK2),(COPY3,BOOK1)})"];
+
+2173 [shape=ellipse, color=red, label="copyof(COPY1,BOOK1),copyof(COPY2,BOOK2),copyof(COPY3,BOOK3)"];
+
+
+2182 [shape=ellipse, color=red, label="copyof(COPY1,BOOK1),copyof(COPY2,BOOK3),copyof(COPY3,BOOK2)"];
+
+
+2199 [shape=ellipse, color=red, label="copyof(COPY1,BOOK2),copyof(COPY2,BOOK1),copyof(COPY3,BOOK3)"];
+
+
+2208 [shape=ellipse, color=green, label="copyof(COPY1,BOOK2),copyof(COPY2,BOOK3),copyof(COPY3,BOOK1)"];
+
+2208 -> 2284 [color = blue, label="initialise_machine({},{})"];
+
+2225 [shape=ellipse, color=red, label="copyof(COPY1,BOOK3),copyof(COPY2,BOOK1),copyof(COPY3,BOOK2)"];
+
+
+2234 [shape=ellipse, color=red, label="copyof(COPY1,BOOK3),copyof(COPY2,BOOK2),copyof(COPY3,BOOK1)"];
+
+
+2284 [shape=box, color=green, label="hasread={},reading={}"];
+
+2284 -> 2330 [color = blue, label="start(READER1,COPY1)"];
+2284 -> 2336 [color = blue, label="start(READER2,COPY1)"];
+2284 -> 2342 [color = blue, label="start(READER3,COPY1)"];
+
+2330 [shape=ellipse, color=red, label="hasread={},reading(READER1,COPY1)"];
+
+
+2336 [shape=ellipse, color=red, label="hasread={},reading(READER2,COPY1)"];
+
+
+2342 [shape=ellipse, color=red, label="hasread={},reading(READER3,COPY1)"];
+
+
+}

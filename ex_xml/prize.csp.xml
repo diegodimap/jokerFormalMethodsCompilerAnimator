@@ -1,0 +1,275 @@
+<specification name="prize.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_E7D7C9BC516D98AB82549913A7DB9E02"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_E7D7C9BC516D98AB82549913A7DB9E02"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0BB5E3C3EEDC1DB0EEFEAE70E22B64E8"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_27441C86B1BA072338ACEAA9CF55FE16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0BB5E3C3EEDC1DB0EEFEAE70E22B64E8"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_738279162113E9524F1165A17762A807"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1BA469E94356BE9F400A5968086AD062"/> 
+            <event value="year2"/> 
+            <next value="GP_HashMD5_BF80434070E6664557D5BFAE71478AB0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_253D691FF9F055AF0B5974E76306BACB"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_A83C7563580D9B41031229B25B78B42C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_27441C86B1BA072338ACEAA9CF55FE16"/> 
+            <event value="year3"/> 
+            <next value="GP_HashMD5_921A051D1EF933FC16697805CD748F73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3D4F4D432993E1C78C6F6B5FD5984825"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_45E44F4FD9F3D5D5586971A038AE54D7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3F51AB25A8AB46443959B51C4EE47379"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_3D4F4D432993E1C78C6F6B5FD5984825"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3F51AB25A8AB46443959B51C4EE47379"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_C3195132CB26B23BE6294017BFE48A50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_45E44F4FD9F3D5D5586971A038AE54D7"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_45E44F4FD9F3D5D5586971A038AE54D7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_46C19D607B9044E047FF8EFED3C45745"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_D917C7357007977840FD079D5E0FE490"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_46C19D607B9044E047FF8EFED3C45745"/> 
+            <event value="prize"/> 
+            <next value="GP_HashMD5_253D691FF9F055AF0B5974E76306BACB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_504A4C9835252A3FC5F0E6E9707B67F3"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_C7250A8A7D0E164A2E64FB4C8D5865C7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_504A4C9835252A3FC5F0E6E9707B67F3"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_FF4DD988296B92CFE7F8C5088B169547"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_53E1DE285738F8FA86E3BD4DC00ECD17"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_A83C7563580D9B41031229B25B78B42C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_592A9AAF00BD5096381E163E51FF041B"/> 
+            <event value="year3"/> 
+            <next value="GP_HashMD5_CAAF08DE44792E882C09E23B512834DA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_592A9AAF00BD5096381E163E51FF041B"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_27441C86B1BA072338ACEAA9CF55FE16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_637AEE7066E3B5732B80A31C50D75C56"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_DADF67B8607103BD605EB482DBDB7319"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_637AEE7066E3B5732B80A31C50D75C56"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_FF4DD988296B92CFE7F8C5088B169547"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_65191C308E793B3CC66991A547415599"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_BF80434070E6664557D5BFAE71478AB0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_65191C308E793B3CC66991A547415599"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_FF4DD988296B92CFE7F8C5088B169547"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_738279162113E9524F1165A17762A807"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_A6505B4FD6DF9E6816CF6ABAFDF441BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_738279162113E9524F1165A17762A807"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_46C19D607B9044E047FF8EFED3C45745"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_738279162113E9524F1165A17762A807"/> 
+            <event value="prize"/> 
+            <next value="GP_HashMD5_DCD3A00EEAE80D5AA9969ED823741690"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_82378BD29716B4A0B373C53FF9499FB3"/> 
+            <event value="year3"/> 
+            <next value="GP_HashMD5_0BB5E3C3EEDC1DB0EEFEAE70E22B64E8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8BD8DB87AEB033DFC6100B546A7CAB27"/> 
+            <event value="year3"/> 
+            <next value="GP_HashMD5_E4D00ACA165D284155FF03D0BDC3AD30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8BD8DB87AEB033DFC6100B546A7CAB27"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_82378BD29716B4A0B373C53FF9499FB3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_921A051D1EF933FC16697805CD748F73"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_27441C86B1BA072338ACEAA9CF55FE16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_921A051D1EF933FC16697805CD748F73"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_3F51AB25A8AB46443959B51C4EE47379"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A6505B4FD6DF9E6816CF6ABAFDF441BC"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_D917C7357007977840FD079D5E0FE490"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A6505B4FD6DF9E6816CF6ABAFDF441BC"/> 
+            <event value="prize"/> 
+            <next value="GP_HashMD5_53E1DE285738F8FA86E3BD4DC00ECD17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A83C7563580D9B41031229B25B78B42C"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_A83C7563580D9B41031229B25B78B42C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B6C5587D928DA1FF5D10F41A14DA5277"/> 
+            <event value="year2"/> 
+            <next value="GP_HashMD5_C7250A8A7D0E164A2E64FB4C8D5865C7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BF80434070E6664557D5BFAE71478AB0"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_1BA469E94356BE9F400A5968086AD062"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BF80434070E6664557D5BFAE71478AB0"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_592A9AAF00BD5096381E163E51FF041B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C3195132CB26B23BE6294017BFE48A50"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_45E44F4FD9F3D5D5586971A038AE54D7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C7250A8A7D0E164A2E64FB4C8D5865C7"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_1BA469E94356BE9F400A5968086AD062"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C7250A8A7D0E164A2E64FB4C8D5865C7"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_8BD8DB87AEB033DFC6100B546A7CAB27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CAAF08DE44792E882C09E23B512834DA"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_921A051D1EF933FC16697805CD748F73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CAAF08DE44792E882C09E23B512834DA"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_592A9AAF00BD5096381E163E51FF041B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D88A36870A1B8F010480FE96074E8844"/> 
+            <event value="year2"/> 
+            <next value="GP_HashMD5_504A4C9835252A3FC5F0E6E9707B67F3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D88A36870A1B8F010480FE96074E8844"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_B6C5587D928DA1FF5D10F41A14DA5277"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D917C7357007977840FD079D5E0FE490"/> 
+            <event value="prize"/> 
+            <next value="GP_HashMD5_A83C7563580D9B41031229B25B78B42C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DADF67B8607103BD605EB482DBDB7319"/> 
+            <event value="year1"/> 
+            <next value="GP_HashMD5_637AEE7066E3B5732B80A31C50D75C56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCC8CC9CC2F8AAA76E32ACCD99B252E9"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_DADF67B8607103BD605EB482DBDB7319"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCC8CC9CC2F8AAA76E32ACCD99B252E9"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_D88A36870A1B8F010480FE96074E8844"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCD3A00EEAE80D5AA9969ED823741690"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_53E1DE285738F8FA86E3BD4DC00ECD17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCD3A00EEAE80D5AA9969ED823741690"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_253D691FF9F055AF0B5974E76306BACB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E4D00ACA165D284155FF03D0BDC3AD30"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_0BB5E3C3EEDC1DB0EEFEAE70E22B64E8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E4D00ACA165D284155FF03D0BDC3AD30"/> 
+            <event value="fail"/> 
+            <next value="GP_HashMD5_592A9AAF00BD5096381E163E51FF041B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E7D7C9BC516D98AB82549913A7DB9E02"/> 
+            <event value="year1"/> 
+            <next value="GP_HashMD5_DCC8CC9CC2F8AAA76E32ACCD99B252E9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FF4DD988296B92CFE7F8C5088B169547"/> 
+            <event value="year2"/> 
+            <next value="GP_HashMD5_65191C308E793B3CC66991A547415599"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FF4DD988296B92CFE7F8C5088B169547"/> 
+            <event value="present"/> 
+            <next value="GP_HashMD5_1BA469E94356BE9F400A5968086AD062"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

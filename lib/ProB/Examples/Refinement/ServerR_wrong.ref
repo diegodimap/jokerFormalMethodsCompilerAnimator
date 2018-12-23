@@ -1,0 +1,35 @@
+REFINEMENT ServerR_wrong
+ /* This is not a proper refinement of Server. ProB will find the difference. */
+/* To do refinement checking: Explore the entire state space (e.g. using Temporal
+   model check and then use "Refinement Check against Ancestor" (you need to be
+   in normal user mode for the RefinementChecking submenu to be visible in the Verify menu) */
+REFINES Server
+
+SETS
+  SessionID = {sid1,sid2,sid3}
+  
+VARIABLES
+  session
+  
+INVARIANT
+  session : Process +-> SessionID &
+   logged_in = dom(session)
+  
+INITIALISATION
+  session := {}
+  
+OPERATIONS
+
+  LogIn(pp) =
+    PRE pp: Process /* & pp /: dom(session) */ THEN
+     ANY sid WHERE sid: SessionID & sid /: ran(session) THEN
+      session := ({pp} <<| session) \/ {pp |-> sid}
+     END
+    END;
+    
+  LogOut(pp) =
+    PRE pp: Process & pp: dom(session) THEN
+      session := {pp} <<| session 
+    END
+    
+END

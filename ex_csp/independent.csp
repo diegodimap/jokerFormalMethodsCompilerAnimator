@@ -1,0 +1,7 @@
+channel up, down, left, right
+
+UD = up -> down -> UD
+
+LR = left -> right -> LR
+
+UDLR = UD [ {| up,down |} || {| left,right |} ] LR

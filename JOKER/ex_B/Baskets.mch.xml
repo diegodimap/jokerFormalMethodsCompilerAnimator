@@ -1,0 +1,2654 @@
+<specification name="Baskets.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="$initialise_machine"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="$initialise_machine"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="checkout(CUSTOMER2)-->4"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="checkout(CUSTOMER2)-->4"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="checkout(CUSTOMER2)-->4"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="checkout(CUSTOMER1)-->4"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="checkout(CUSTOMER2)-->4"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="checkout(CUSTOMER1)-->4"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="checkout(CUSTOMER2)-->4"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="checkout(CUSTOMER1)-->4"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="checkout(CUSTOMER1)-->4"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="checkout(CUSTOMER1)-->4"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="enter(CUSTOMER2)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="enter(CUSTOMER1)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="checkout(CUSTOMER2)-->0"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="checkout(CUSTOMER1)-->1"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="checkout(CUSTOMER1)-->0"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="checkout(CUSTOMER1)-->2"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="checkout(CUSTOMER2)-->3"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="checkout(CUSTOMER2)-->2"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="add(CUSTOMER1,GOODS1)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="add(CUSTOMER1,GOODS2)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="add(CUSTOMER2,GOODS1)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="add(CUSTOMER2,GOODS2)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="checkout(CUSTOMER1)-->3"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="checkout(CUSTOMER2)-->1"/> 
+            <next value="85"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

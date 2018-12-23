@@ -1,0 +1,121 @@
+-- crossinglecture.fdr2
+
+-- Script to accompany CS388 Lecture 7, Autumn 2005
+
+
+-- The level crossing.
+-- Originator: Simon Gay, Royal Holloway, January 1999
+-- Adapted by Steve Schneider, Royal Holloway, May 1999
+-- Revised by Steve Schneider, Royal Holloway, September 2002
+-- Revised by Steve Schneider, Surrey, September 2005
+
+-- The purpose of these datatype and channel declarations is to give
+-- us events car.enter, gate.raise etc
+
+datatype UD = raise | lower | down
+datatype ELA = enter | leave | approach
+
+channel car:ELA
+channel train:ELA
+channel gate:UD
+
+-- A supply of cars
+
+CARS = car.approach -> car.enter -> car.leave -> CARS
+
+-- ... and trains
+
+TRAINS = train.approach -> train.enter -> train.leave -> TRAINS
+
+-- The gate is lowered and raised:
+
+GATE = gate.lower -> gate.raise -> GATE
+
+-- The gate blocks cars from entering the crossing when it is down.
+-- This is captured by a process ROAD which restricts the event car.enter.
+
+ROAD = gate.lower -> gate.raise -> ROAD
+       [] car.enter -> ROAD
+
+ET   = {| train |}
+EC   = {| car |}
+EG   = {| gate |}
+ER   = {| gate, car.enter |}
+EGC  = {| gate, car |}
+ES   = {| train, car, gate |}
+ETC  = {| train, car |}
+ECON = {| gate, train |}
+
+-- The crossing system is the parallel composition of these components.
+
+CROSSING = ((GATE [EG||EC] CARS) [EGC||ET] TRAINS) [ES||ER] ROAD
+
+-- The specification is that a car and a train should not be on the
+-- crossing at the same time.
+
+NOCRASH = car.enter -> car.leave -> NOCRASH
+        [] train.enter -> train.leave -> NOCRASH
+
+assert NOCRASH [T= CROSSING
+
+-- oops!  Need to allow the other events!
+
+NOCRASHSPEC = NOCRASH [NC||NNC] RUN(NNC)
+
+-- Define RUN(A)
+
+RUN(A) = [] x:A @ x -> RUN(A)
+
+NC = {|car.enter, car.leave, train.enter, train.leave|}
+
+NNC = {|car.approach, train.approach, gate|}
+
+
+-- The specification allows all the other events, disallowing only a
+-- car and a train on the crossing at the same time
+
+assert NOCRASHSPEC [T= CROSSING
+
+-- Introducing the controller to lower the gate when a train
+-- approaches.  The gate is lowered before the train enters the
+-- crossing.
+
+CONTROL =  train.approach -> gate.lower -> train.enter -> 
+           train.leave -> gate.raise -> CONTROL
+
+-- Using the controller should make the system safe
+
+-- which can be checked against the specification:
+
+assert NOCRASHSPEC [T= CROSSING [ES||ECON] CONTROL
+
+------------------------------------------
+
+-- We also need to know when the gate is lowered and raised
+
+GATE2 = gate.lower -> gate.down -> gate.raise -> GATE2
+
+-- If a car is on the crossing when the gate is lowered, then it will
+-- be off the crossing before the gate is down.
+
+ROAD2 = gate.lower -> gate.down -> gate.raise -> ROAD2
+       [] car.enter -> (car.leave -> ROAD2
+                        [] gate.lower -> car.leave -> gate.down ->
+                                 gate.raise -> ROAD2)
+
+-- This expands the alphabet of the ROAD component:
+
+ER2 = {| gate, car.enter, car.leave |}
+
+CROSSING2 = ((GATE2 [EG||EC] CARS) [EGC||ET] TRAINS) [ES||ER2] ROAD2
+
+-- The controller needs to include the information that the gate is
+-- down before the train enters the crossing.
+
+CONTROL2 =  train.approach -> gate.lower -> gate.down -> train.enter -> 
+               train.leave -> gate.raise -> CONTROL2
+
+assert NOCRASHSPEC [T= CROSSING2 [ES||ECON] CONTROL2
+
+SYSTEM = CROSSING2 [ES||ECON] CONTROL2
+

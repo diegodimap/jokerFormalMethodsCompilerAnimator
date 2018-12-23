@@ -1,0 +1,244 @@
+-- A model from the paper
+-- David A. Basin, Ernst-RŸdiger Olderog, Paul E. Sevin:
+-- Specifying and analyzing security automata using CSP-OZ. ASIACCS 2007: 70-81
+
+m = \ x,S @ member(x,S) 
+-- abbreviation for membership function 
+-- Definitions of constants 
+datatype UserID = u1 | u2 | u3 
+-- concrete set of user ids 
+datatype AccID = ac1 | ac2 
+-- concrete set of accounts 
+Val = {(-6)..6} 
+-- concrete set of values accounts may assume 
+Sum = {1..6} 
+-- concrete set of sums customers may transfer 
+-- CSP Part Bank 
+channel login: UserID.Bool 
+channel logout 
+channel balance: AccID.Val 
+channel transferReq: Sum.AccID.AccID.Bool 
+channel transferExec: Sum.AccID.AccID 
+channel abort 
+mainB = login?u?ok -> (ok & Operate
+    [] not ok & mainB) 
+
+Operate = (balance?a?v -> Operate
+        [] transferReq?s?a1?a2?ok -> 
+               (transferExec!s!a1!a2 -> Operate
+                [] abort -> Operate)
+        [] logout -> mainB) 
+-- OZ Part Bank 
+-- We represent the current balance bal as a set of 
+-- pairs (account-id, value). This requires some 
+-- auxiliary functions defined below: 
+ValSet = \b,a @ { v | v <- Val, m((a,v),b) } 
+pick({x}) = x 
+PickVal = \b,a @ pick(ValSet(b,a)) 
+withdrawOK = \b,a1,a2,s @ 
+         not(a1==a2) and 
+         (PickVal(b,a1) - s >= 0) 
+upd = \b,a,v @ 
+   let 
+         bminus = diff(b,{(a,vold) | vold <-Val }) 
+   within 
+         union(bminus, {(a,v)}) 
+-- The set of customers is defined as a concrete 
+-- subset of UserID. It appears as a global parameter 
+-- of the process OZB. 
+cust = {u1, u2} 
+OZB(bal,transferOK) = 
+     (m(bal,Set({(a,v)|a<-AccID,v<-Val})) and 
+      m(transferOK,Bool)) & 
+         (
+         ([] (u,ok): {(u,m(u,cust)) | u <- UserID } @ 
+              login.u.ok -> OZB(bal,transferOK))
+         []
+          ([] (a,v) : 
+           {(a,PickVal(bal,a)) | 
+              a <- AccID, card(ValSet(bal,a))==1 } @ 
+           balance.a.v -> OZB(bal,transferOK))
+        []
+         ([] (s,a1,a2,ok): 
+         {(s,a1,a2,withdrawOK(bal,a1,a2,s)) | 
+            s<-Sum, a1<-AccID, a2 <-AccID, 
+           card(ValSet(bal,a1)) == 1 } @ 
+          transferReq.s.a1.a2.ok -> OZB(bal,ok))
+        [] transferExec?s?a1?a2 -> 
+             if transferOK and card(ValSet(bal,a1))==1 and 
+                card(ValSet(bal,a2))==1 
+             then 
+              let 
+                 v1 = PickVal(bal,a1) - s 
+                 v2 = PickVal(bal,a2) + s 
+             within 
+               OZB(upd(upd(bal,a1,v1),a2,v2), transferOK) 
+           else OZB(bal,transferOK) 
+      ) 
+-- Parallel Composition of CSP and OZ part of the Bank 
+-- starts with the following initial balance of the 
+-- accounts: 
+bal = { (ac1,3), (ac2,-2) } 
+Bank =  mainB 
+         [|{| login,balance,transferReq,transferExec |}|] 
+        OZB(bal,false) 
+
+OZB_bal_false = OZB(bal,false) -- added by mal
+
+-- Unprotected System 
+UnpSys = Bank 
+-- SecAut 
+datatype Actions = Balance | Transfer 
+datatype PIN = p1 | p2 
+-- concrete set of pins 
+datatype TN = t1 | t2 |t3 
+-- concrete set of tans 
+-- CSP Part SecAut 
+channel pin: PIN.Bool 
+channel tan: TN.Bool 
+mainS = login?u?ok -> (ok & Identify
+    [] not ok & mainS) 
+Identify = pin?p?ok -> (ok & SecOperate
+    [] not ok & Identify) 
+SecOperate =  balance?a?val -> SecOperate
+    [] transferReq?s?a1?a2?ok -> TanCheckExec
+    [] logout -> mainS 
+TanCheckExec = 
+    tan?t?ok -> (ok & transferExec?s?a1?a2 -> SecOperate
+    [] not ok & abort -> SecOperate)
+    [] logout -> mainS 
+-- OZ Part SecAut 
+-- The following definitions appear as 
+-- global parameters of the process OZS: 
+priv = { (u1,ac1,Balance), 
+         (u1,ac1,Transfer), 
+         (u2,ac2,Balance), 
+         (u2,ac2,Transfer), 
+         (u3,ac1,Balance), 
+         (u3,ac1,Transfer), 
+         (u3,ac2,Balance) } 
+-- concrete set of privileges 
+cred(u1) = p1 
+cred(u2) = p2 
+-- concrete set of credentials 
+N = 2 
+-- N+1 is the concrete length of the tanlist 
+tanlist(u1,0) = t1 
+tanlist(u1,1) = t3 
+tanlist(u1,2) = t2 
+tanlist(u2,0) = t1 
+tanlist(u2,1) = t2 
+tanlist(u2,2) = t3 
+-- concrete tanlist 
+tid0 = { (u1,0), (u2,0) } 
+-- initial tan indices 
+OZS(uid,tid) = 
+    ( m(uid,UserID) and m(tid,Set({(u,v) |  u <-cust, v<-{0..N} }) ) ) & 
+    (login?u?ok -> OZS(u,tid)
+    []([] (p,ok): {(p,m(uid,cust) and p == cred(uid)) | 
+    p <- PIN } @ pin.p.ok -> OZS(uid,tid))
+    []([] a: {a | a <- AccID, 
+    m((uid,a,Balance),priv)} @ 
+    balance.a?v -> OZS(uid,tid))
+    []([] a1: {a1 | a1 <- AccID, 
+    m((uid,a1,Transfer),priv)} @ 
+    transferReq?s.a1?a2?ok -> OZS(uid,tid))
+    []([] (t,ti,ok): {(t,ti,t == tanlist(uid,ti)) | 
+    t <- TN, ti <- {0..N}, 
+    card(ValSet(tid,uid)) == 1, 
+    ti == PickVal(tid,uid) } @ 
+    tan.t.ok -> ( (ok and (ti < N) & 
+    OZS(uid,upd(tid,uid,ti+1))
+    [](not ok or (ti == N) & 
+    OZS(uid,tid)) )) ) 
+    ) 
+
+-- Parallel Composition of CSP and OZ part of the SecAut 
+SecAut = 
+mainS 
+[|{| login,pin,balance,transferReq,tan |}|] 
+OZS(u3,tid0) 
+-- Secure System 
+A = {| login, balance, transferReq, transferExec, 
+       abort, logout |} 
+    SecSys = Bank [| A |] SecAut 
+-- has alphabet A union {| pin, tan |} 
+-------------------------------------------------------- 
+-- Individual Traces (Use Cases): two examples 
+-------------------------------------------------------- 
+-- assert SecSys [T= login.u1.true -> pin.p1.true -> 
+--  transferReq.3.ac1.ac2.true -> 
+--  tan.t1.true -> 
+--  transferExec.3.ac1.ac2 -> STOP 
+-- satisfied 
+-- assert SecSys [T= login.u1.true -> pin.p1.true -> 
+--    transferReq.3.ac1.ac2.true -> 
+--    tan.t2.false -> 
+--    transferExec.3.ac1.ac2 -> STOP 
+-- not satisfied: tan t2 is false 
+-------------------------------------------------------- 
+-- General Properties 
+-------------------------------------------------------- 
+-- Deadlock 
+-- Bank, UnpSys, SecAut, SecSys are all 
+-- deadlock free. -- checked 
+-- Livelock (Divergence) 
+-- Bank, UnpSys, SecAut, SecSys are all 
+-- livelock free. -- checked 
+-- Determinism 
+-- Bank, UnpSys, SecAut, SecSys are all 
+-- deterministic. -- checked 
+-------------------------------------------------------- 
+-- Refinement Properties 
+-------------------------------------------------------- 
+-- assert UnpSys [T= SecSys 
+-- not satisfied due to pin and tan 
+-- assert UnpSys [T= SecSys \ {|pin, tan |} 
+-- checked for values up to 6 
+-------------------------------------------------------- 
+-- Security Properties 
+-------------------------------------------------------- 
+-- No balance check before a sequence of successful 
+-- login and pin, belonging to the credentials of 
+-- the user. 
+A1 = {| transferReq, transferExec, abort, tan |} 
+P1 = ([] u : { u | u <- UserID, 
+member(u,cust) } @ 
+login.u.true -> P1L(u))
+    []([] u : { u | u <- UserID, 
+not member(u,cust) } @ 
+login.u.false -> P1) 
+    [] logout -> P1 
+    [] ([] x : A1 @ x -> P1) 
+P1L(u) = 
+    ([] p : { p | p <- PIN, p == cred(u) } @ 
+    pin.p.true -> P1LP) 
+    []([] p : { p | p <- PIN, 
+    not(p == cred(u)) } @ 
+    pin.p.false -> P1L(u)) 
+    [] logout -> P1 
+    [] ([] x : A1 @ x -> P1L(u)) 
+P1LP = balance?a?v -> P1LP 
+    [] logout -> P1 
+    [] ([] x : A1 @ x -> P1LP) 
+-- assert P1 [T= SecSys 
+    -- satisfied 
+
+-- No transferExec before a successful tan. 
+A2 = union({| login, balance, transferReq, 
+    abort, logout, pin |}, 
+    { tan.t.false | t <- TN }) 
+
+P2 = tan?t!true {- mal: changed .true to !true -}
+  -> P2T 
+    [] ([] x : A2 @ x -> P2) 
+P2T = transferExec?s?a1?a2 -> P2 
+    [] ([] x : A2 @ x -> P2) 
+-- assert P2 [T= SecSys 
+-- satisfied 
+
+MAIN = Bank
+
+-- LTL Formulas checked:
+-- G ( [transferExec] => O [transferReq])
+-- G ( [abort] => O [transferReq])

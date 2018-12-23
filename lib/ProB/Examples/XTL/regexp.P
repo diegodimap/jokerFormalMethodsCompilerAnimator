@@ -1,0 +1,25 @@
+/* A simple animator for regular expressions */
+
+start('|'('.'('*'(a),b) ,  '.'('*'(b),a))).
+
+trans(_,[],_) :- !,fail.
+trans(X,X,[]) :- atomic(X),!.
+trans(X,'|'(R1,R2),R) :- 
+   trans(X,R1,R) ; trans(X,R2,R).
+trans(X,'.'(R1,B),R) :- trans(X,R1,R2),
+   gen_concat(R2,B,R).
+trans(X,'?'(R1),R) :-
+  trans(X,R1,R) ; (X=epsilon,R=[]).
+trans(epsilon,'*'(_R1),[]). 
+trans(X,'*'(R1),R) :- 
+  trans(X,R1,R2),
+  gen_concat(R2,'*'(R1),R).
+trans(X,'+'(R1),R) :- 
+  trans(X,R1,R2),
+  gen_concat(R2,'*'(R1),R).
+  
+  
+ gen_concat(R1,R2,R) :- 
+   (R1=[] -> R = R2 ; R = '.'(R1,R2)).
+ 
+ prop(X,X).

@@ -1,0 +1,8 @@
+MACHINE     SZE_ctx
+
+CONSTANTS   sze
+
+PROPERTIES  sze : NAT1 
+
+END
+

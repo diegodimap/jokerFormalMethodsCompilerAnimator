@@ -1,0 +1,99 @@
+<specification name="Mult.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="value-->1"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="mult(1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="mult(2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="mult(3)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="value-->2"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="mult(1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="mult(2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="mult(3)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="value-->3"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="mult(1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="mult(2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="mult(3)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="value-->9"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="mult(1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="mult(2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="mult(3)"/> 
+            <next value="7"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

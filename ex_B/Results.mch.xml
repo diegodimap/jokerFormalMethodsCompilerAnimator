@@ -1,0 +1,121 @@
+<specification name="Results.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="finished(RUNNER1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="finished(RUNNER2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="medals-->{}"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="finished(RUNNER2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(1)-->RUNNER1"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="disqualify(1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="medals-->{(1|->RUNNER1)}"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="finished(RUNNER1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(1)-->RUNNER2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="disqualify(1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="medals-->{(1|->RUNNER2)}"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(1)-->RUNNER2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(2)-->RUNNER1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="disqualify(1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="disqualify(2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="medals-->[RUNNER2,RUNNER1]"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(1)-->RUNNER1"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(2)-->RUNNER2"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="disqualify(1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="disqualify(2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="medals-->[RUNNER1,RUNNER2]"/> 
+            <next value="3"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

@@ -1,0 +1,6 @@
+channel chocolate, biscuit, coin
+
+VMC = coin -> chocolate -> VMC
+VMB = coin -> biscuit -> VMB
+
+START = VMC ||| VMB

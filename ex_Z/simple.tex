@@ -1,0 +1,35 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage{fuzz}
+
+\begin{document}
+
+\begin{zed}
+  [TEST]
+\end{zed}
+
+\begin{schema}{State}
+  state : TEST \rel TEST
+\end{schema}
+
+\begin{schema}{Init}
+  State'\\
+  \where
+  state' = \{\}
+\end{schema}
+
+\begin{schema}{Inc}
+  \Delta State\\
+  pos? : TEST\\
+  value? : TEST\\
+  \where
+  \# state \leq 1\\
+  state' = state \oplus \{pos? \mapsto value?\}
+\end{schema}
+
+\begin{schema}{Invert}
+  \Delta State\\
+  \where
+  state' = state \inv\\
+\end{schema}
+
+\end{document}

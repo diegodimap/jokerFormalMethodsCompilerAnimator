@@ -1,0 +1,4 @@
+start(a).
+trans(lock,a,b).
+trans(unlock,b,a).
+prop(X,X).

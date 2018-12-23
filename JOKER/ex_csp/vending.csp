@@ -1,0 +1,30 @@
+channel coin, choc, toffee, fudge
+
+VMSPEC = coin -> (choc -> VMSPEC |~| toffee -> VMSPEC)
+
+VM1 = coin -> choc -> (STOP |~| VM1)
+
+VM2 = coin -> (choc -> VM2 [] toffee -> VM2)
+
+CHOCS = coin -> choc -> CHOCS
+
+TOFFEES = coin -> toffee -> TOFFEES
+
+VMSPEC2 = CHOCS |~| TOFFEES
+
+SWEETCHOICE = (choc -> SWEETCHOICE |~| toffee -> SWEETCHOICE)
+
+VM0 = coin -> (choc -> VMSPEC |~| toffee -> VMSPEC)
+
+VMPAR = VM0 [{|coin, choc, toffee|}||{|choc, toffee|}] SWEETCHOICE
+
+VM3 = CHOCS[{coin, choc}||{coin,toffee}]TOFFEES
+
+VM4 = CHOCS2[{coin, choc}||{coin,toffee}]TOFFEES2
+
+--- warning!  CHOCS2 and TOFFEES2 have not yet been defined
+
+
+
+
+

@@ -1,0 +1,105 @@
+-- The painting system
+-- SAS 4/10/02
+
+channel kate, jane: ACTION.RESOURCE
+
+datatype ACTION = get | put | paint
+datatype RESOURCE = box | easel | nadinha
+
+-- the actions kate.paint and jane.paint will use the nadinha resource.
+
+KATE = kate.get.easel -> kate.get.box -> kate.paint.nadinha ->
+              kate.put.easel -> kate.put.box -> KATE
+       [] kate.get.box -> kate.get.easel -> kate.paint.nadinha ->
+              kate.put.box -> kate.put.easel -> KATE
+
+JANE = jane.get.easel -> jane.get.box -> jane.paint.nadinha ->
+              jane.put.easel -> jane.put.box -> JANE
+       [] jane.get.box -> jane.get.easel -> jane.paint.nadinha ->
+              jane.put.box -> jane.put.easel -> JANE
+
+EASEL = kate.get.easel -> kate.put.easel -> EASEL
+        [] jane.get.easel -> jane.put.easel -> EASEL
+
+BOX = kate.get.box -> kate.put.box -> BOX
+        [] jane.get.box -> jane.put.box -> BOX
+
+-- alphabets for the parallel combination:
+
+aK = {|kate|}
+aJ = {|jane|}
+aE = { kate.get.easel, kate.put.easel, jane.get.easel, jane.put.easel }
+aB = { kate.get.box, kate.put.box, jane.get.box, jane.put.box }
+
+aR = union(aB, aE)
+aS = union(aK, aJ)
+
+PAINTING = (KATE[aK||aJ]JANE) [aS||aR] (EASEL[aE||aB]BOX)
+
+-----------------
+
+aP = {|kate.get, jane.get|}
+
+HAPPINESS = PAINTING [aS||aP] PARENT
+
+PARENT = STOP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PARENT2 =   kate.get.easel -> kate.get.box -> PARENT
+         [] kate.get.box -> kate.get.easel -> PARENT
+         [] jane.get.easel -> jane.get.box -> PARENT
+         [] jane.get.box -> jane.get.easel -> PARENT

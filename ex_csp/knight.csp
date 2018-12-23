@@ -1,0 +1,42 @@
+-- Knight moves
+
+-- size of board:
+
+n = 5
+
+COORD = {0..(n-1)}
+
+channel move:COORD.COORD
+
+channel done
+
+SQUARE(i,j) = move.i.j -> done -> STOP
+
+-- A square can only signal `done' once it has been visited.  
+
+A(i,j) = {move.i.j, done}
+
+BOARD = [|{done}|] i : {0..(n-1)} @ [|{done}|] j : {0..(n-1)} @ SQUARE(i,j)
+
+KNIGHT(i,j) = (if ((i+2 < n) and (j+1 < n)) then 
+                 move.(i+2).(j+1) -> KNIGHT(i+2,j+1) 
+                 else STOP)
+              [] (if ((i+2 < n) and (j > 0)) then 
+                    move.(i+2).(j-1) -> KNIGHT(i+2,j-1) else STOP)
+              [] (if ((i>1) and (j+1 < n)) then 
+                    move.(i-2).(j+1) -> KNIGHT(i-2,j+1) else STOP)
+              [] (if ((i>1) and (j > 0)) then 
+                    move.(i-2).(j-1) -> KNIGHT(i-2,j-1) else STOP)
+              [] (if ((i+1 < n) and (j+2 < n)) then 
+                    move.(i+1).(j+2) -> KNIGHT(i+1,j+2) else STOP)
+              [] (if ((i+1 < n) and (j>1)) then 
+                    move.(i+1).(j-2) -> KNIGHT(i+1,j-2) else STOP)
+              [] (if ((i>0) and (j+2 < n)) then 
+                    move.(i-1).(j+2) -> KNIGHT(i-1,j+2) else STOP)
+              [] (if ((i>0) and (j>1)) then 
+                    move.(i-1).(j-2) -> KNIGHT(i-1,j-2) else STOP)
+
+TOUR = (move.0.0 -> KNIGHT(0,0)) -- [{|move|}||{|move,done|}] BOARD
+
+
+

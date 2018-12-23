@@ -1,0 +1,25 @@
+<specification name="aula4.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_9EB947AFA24845C03338D6CBC1A4B3EA"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_9EB947AFA24845C03338D6CBC1A4B3EA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3F7D65E8116D1E54B648B3EE317A46BB"/> 
+            <event value="SKIP"/> 
+            <next value="GP_HashMD5_3F7D65E8116D1E54B648B3EE317A46BB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9EB947AFA24845C03338D6CBC1A4B3EA"/> 
+            <event value="exercicio"/> 
+            <next value="GP_HashMD5_9EB947AFA24845C03338D6CBC1A4B3EA"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

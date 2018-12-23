@@ -1,0 +1,134 @@
+<specification name="Rooms.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="sizequery(ROOM1)-->big"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="sizequery(ROOM2)-->little"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="pricequery(ROOM1)-->1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="pricequery(ROOM2)-->1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="$initialise_machine"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="sizequery(ROOM1)-->little"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="sizequery(ROOM2)-->big"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="pricequery(ROOM1)-->1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="pricequery(ROOM2)-->1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="$initialise_machine"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="sizequery(ROOM1)-->big"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="sizequery(ROOM2)-->big"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="pricequery(ROOM1)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="pricequery(ROOM2)-->1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="sizequery(ROOM1)-->little"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="sizequery(ROOM2)-->little"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="pricequery(ROOM1)-->1"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="pricequery(ROOM2)-->1"/> 
+            <next value="7"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

@@ -1,0 +1,138 @@
+<specification name="airlockSystem.fdr2">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_4CF677D4CABDFBE69ACCEB38C1B4AA9A"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_4CF677D4CABDFBE69ACCEB38C1B4AA9A"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_4CF677D4CABDFBE69ACCEB38C1B4AA9A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_18447C2228C844EA207E89937BDF7CA1"/> 
+            <event value="valvula.interna.abrir"/> 
+            <next value="GP_HashMD5_A3AAC7A13B90091664AF0D4CCCD0C539"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_18447C2228C844EA207E89937BDF7CA1"/> 
+            <event value="valvula.externa.abrir"/> 
+            <next value="GP_HashMD5_63D2E224E49283AB4E06C84680C4CABB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_4CF677D4CABDFBE69ACCEB38C1B4AA9A"/> 
+            <event value="valvula.interna.abrir"/> 
+            <next value="GP_HashMD5_D0FDABD820F100AFFAB32BFF79B6913B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_4CF677D4CABDFBE69ACCEB38C1B4AA9A"/> 
+            <event value="valvula.externa.abrir"/> 
+            <next value="GP_HashMD5_F207F96825A1C95007E7609D7921AE13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D2B10A67D019BF3A59656C6FC461306"/> 
+            <event value="valvula.interna.abrir"/> 
+            <next value="GP_HashMD5_A01F45D31DFAA9DA3F87CEF7B9AD924F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D2B10A67D019BF3A59656C6FC461306"/> 
+            <event value="valvula.externa.abrir"/> 
+            <next value="GP_HashMD5_5D67846CCD5A42BFF439DB15C74C2F03"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D67846CCD5A42BFF439DB15C74C2F03"/> 
+            <event value="porta.externa.abrir"/> 
+            <next value="GP_HashMD5_75E6D804171B02B36F849C55FC3DF1C1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D67846CCD5A42BFF439DB15C74C2F03"/> 
+            <event value="valvula.externa.fechar"/> 
+            <next value="GP_HashMD5_5D2B10A67D019BF3A59656C6FC461306"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_63D2E224E49283AB4E06C84680C4CABB"/> 
+            <event value="porta.externa.abrir"/> 
+            <next value="GP_HashMD5_9B86C49387934354A8D1A720F9723D92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_73B090BA165A2A82D721C62AC17038F6"/> 
+            <event value="valvula.interna.abrir"/> 
+            <next value="GP_HashMD5_DCE2C6F6E2435B9649CCE04EACEF23AE"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_73B090BA165A2A82D721C62AC17038F6"/> 
+            <event value="valvula.externa.abrir"/> 
+            <next value="GP_HashMD5_E1F91310957795B494D430F2BC0B344F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_75E6D804171B02B36F849C55FC3DF1C1"/> 
+            <event value="porta.externa.fechar"/> 
+            <next value="GP_HashMD5_5D67846CCD5A42BFF439DB15C74C2F03"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8CB0C2F0AFC942A0628A177974A5E408"/> 
+            <event value="porta.interna.fechar"/> 
+            <next value="GP_HashMD5_A3AAC7A13B90091664AF0D4CCCD0C539"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9B86C49387934354A8D1A720F9723D92"/> 
+            <event value="porta.externa.fechar"/> 
+            <next value="GP_HashMD5_E1F91310957795B494D430F2BC0B344F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A01F45D31DFAA9DA3F87CEF7B9AD924F"/> 
+            <event value="porta.interna.abrir"/> 
+            <next value="GP_HashMD5_A516343D0FEB3A20ACA225ABDB535861"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A3AAC7A13B90091664AF0D4CCCD0C539"/> 
+            <event value="porta.interna.abrir"/> 
+            <next value="GP_HashMD5_8CB0C2F0AFC942A0628A177974A5E408"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A3AAC7A13B90091664AF0D4CCCD0C539"/> 
+            <event value="valvula.interna.fechar"/> 
+            <next value="GP_HashMD5_18447C2228C844EA207E89937BDF7CA1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A516343D0FEB3A20ACA225ABDB535861"/> 
+            <event value="porta.interna.fechar"/> 
+            <next value="GP_HashMD5_DCE2C6F6E2435B9649CCE04EACEF23AE"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D0FDABD820F100AFFAB32BFF79B6913B"/> 
+            <event value="porta.interna.abrir"/> 
+            <next value="GP_HashMD5_8CB0C2F0AFC942A0628A177974A5E408"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCE2C6F6E2435B9649CCE04EACEF23AE"/> 
+            <event value="porta.interna.abrir"/> 
+            <next value="GP_HashMD5_A516343D0FEB3A20ACA225ABDB535861"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCE2C6F6E2435B9649CCE04EACEF23AE"/> 
+            <event value="valvula.interna.fechar"/> 
+            <next value="GP_HashMD5_73B090BA165A2A82D721C62AC17038F6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E1F91310957795B494D430F2BC0B344F"/> 
+            <event value="porta.externa.abrir"/> 
+            <next value="GP_HashMD5_9B86C49387934354A8D1A720F9723D92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E1F91310957795B494D430F2BC0B344F"/> 
+            <event value="valvula.externa.fechar"/> 
+            <next value="GP_HashMD5_73B090BA165A2A82D721C62AC17038F6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F207F96825A1C95007E7609D7921AE13"/> 
+            <event value="porta.externa.abrir"/> 
+            <next value="GP_HashMD5_75E6D804171B02B36F849C55FC3DF1C1"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

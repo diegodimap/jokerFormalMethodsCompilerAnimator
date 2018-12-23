@@ -1,0 +1,11 @@
+machine('Array').
+setup_constants(int(2)).
+initialise_machine([(int(1),int(0)),(int(2),int(2))]).
+set(int(1),int(1)).
+get(int(1))-->[int(1)].
+get(int(2))-->[int(2)].
+set(int(1),int(3)).
+get(int(1))-->[int(3)].
+get(int(2))-->[int(2)].
+set(int(2),int(3)).
+

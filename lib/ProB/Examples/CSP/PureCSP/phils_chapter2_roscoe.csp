@@ -1,0 +1,92 @@
+-- The five dining philosophers for FDR: FDR2 version
+
+-- Bill Roscoe
+
+-- The most standard example of them all.  We can determine how many
+-- (with the conventional number being 5):
+
+N = 5
+
+PHILNAMES= {0..N-1}
+FORKNAMES = {0..N-1}
+
+channel sits, eats, getsup:PHILNAMES
+channel picks, putsdown:PHILNAMES.FORKNAMES
+
+-- A philosopher sits down, picks up two forks, eats, puts down the forks
+-- and gets up, in an unending cycle.	
+
+PHIL(i) = sits!i -> picks!i!i -> picks!i!((i+1)%N) ->
+          eats!i -> putsdown!i!((i+1)%N) -> putsdown!i!i -> getsup!i -> PHIL(i)
+
+-- Its alphabet is
+
+AlphaP(i) = {sits.i,picks.i.i,picks.i.(i+1)%N,eats.i,putsdown.i.i,
+             putsdown.i.(i+1)%N,getsup.i}
+
+-- A fork can only be picked up by one neighbour at once!
+
+FORK(i) = picks!i!i -> putsdown!i!i -> FORK(i)
+         []  picks!((i-1)%N)!i -> putsdown!((i-1)%N)!i -> FORK(i)
+
+AlphaF(i) = {picks.i.i, picks.(i-1)%N.i, putsdown.i.i, putsdown.(i-1)%N.i}
+
+-- We can build the system up in several ways, but certainly
+-- have to use some form of parallel that allows us to
+-- build a network parameterized by N.  The following uses
+-- a composition of N philosopher/fork pairs, each individually
+-- a parallel composition.
+
+SYSTEM = || i:PHILNAMES@[union(AlphaP(i),AlphaF(i))] 
+                       (PHIL(i)[AlphaP(i)|| AlphaF(i)] FORK(i))
+
+
+-- As an alternative (see Section 2.3) we can create separate
+-- collections of the philosophers and forks, each composed
+-- using interleaving ||| since there is no communication inside
+-- these groups.
+
+PHILS = ||| i:PHILNAMES@ PHIL(i)
+FORKS = ||| i:FORKNAMES@ FORK(i)
+
+SYSTEM2 = PHILS[|{|picks, putsdown|}|]FORKS
+
+-- The potential for deadlock is illustrated by 
+
+assert SYSTEM :[deadlock free [F]]
+
+-- There are several well-known solutions to the problem.  One involves a
+-- butler who must co-operate on the sitting down and getting up events,
+-- and always ensures that no more than four of the five
+-- philosophers are seated.
+
+BUTLER(j) = j>0 & getsup?i -> BUTLER(j-1)
+            []j<N-1 & sits?i -> BUTLER(j+1)
+
+BSYSTEM = SYSTEM [|{|sits, getsup|}|] BUTLER(0)
+
+assert BSYSTEM :[deadlock free [F]]
+
+-- A second solution involves replacing one of the above right-handed (say)
+-- philosophers by a left-handed one:
+
+LPHIL(i)= sits.i -> picks.i.((i+1)%N) -> picks.i.i -> 
+          eats.i -> putsdown.i.((i+1)%N) -> putsdown.i.i -> getsup.i -> LPHIL(i)
+
+ASPHILS = ||| i:PHILNAMES @ if i==0 then LPHIL(i) else PHIL(i)
+
+ASSYSTEM = ASPHILS[|{|picks, putsdown|}|]FORKS
+
+-- This asymmetric system is deadlock free, as can be proved using Check.  
+
+assert ASSYSTEM :[deadlock free [F]]
+
+-- If you want to run a lot of dining philosophers, the best results will
+-- probably be obtained by removing the events irrelevant to ASSYSTEM
+-- (leaving only picks and putsdown).
+
+-- TECHNICAL NOTES
+-- This deadlock check can be speeded up enormously for large values of
+-- N by using the compression techniques discussed in
+-- Appendix C, as is illustrated by the version of this file
+-- included in the appropriate directory.

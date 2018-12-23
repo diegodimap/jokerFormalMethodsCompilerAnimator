@@ -1,0 +1,268 @@
+<specification name="CopySavePasteTools.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="$initialise_machine"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="GetSol-->[9,0,2,5,3,7,4,6,1,8]"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="COPY-->[9,0,2,5]"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="PASTE-->[2,3,7,4,6]"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="SAVE-->[7,3,1,6]"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="TOOLS-->[4,0,0,8,7]"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="$initialise_machine"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="GetSol-->[8,9,1,5,3,7,2,6,0,4]"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="COPY-->[8,9,1,5]"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="PASTE-->[1,3,7,2,6]"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="SAVE-->[7,3,0,6]"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="TOOLS-->[2,9,9,4,7]"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="$initialise_machine"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="$initialise_machine"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="$initialise_machine"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="$initialise_machine"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="GetSol-->[3,2,5,9,1,7,6,4,8,0]"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="COPY-->[3,2,5,9]"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="PASTE-->[5,1,7,6,4]"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="SAVE-->[7,1,8,4]"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="TOOLS-->[6,2,2,0,7]"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="GetSol-->[6,5,8,3,7,1,9,4,2,0]"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="COPY-->[6,5,8,3]"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="PASTE-->[8,7,1,9,4]"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="SAVE-->[1,7,2,4]"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="TOOLS-->[9,5,5,0,1]"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="GetSol-->[3,2,5,4,0,8,6,7,9,1]"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="COPY-->[3,2,5,4]"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="PASTE-->[5,0,8,6,7]"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="SAVE-->[8,0,9,7]"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="TOOLS-->[6,2,2,1,8]"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="GetSol-->[4,3,8,5,1,7,9,6,2,0]"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="COPY-->[4,3,8,5]"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="PASTE-->[8,1,7,9,6]"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="SAVE-->[7,1,2,6]"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="TOOLS-->[9,3,3,0,7]"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="GetSol-->[5,6,3,7,9,1,4,2,0,8]"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="COPY-->[5,6,3,7]"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="PASTE-->[3,9,1,4,2]"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="SAVE-->[1,9,0,2]"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="TOOLS-->[4,6,6,8,1]"/> 
+            <next value="13"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

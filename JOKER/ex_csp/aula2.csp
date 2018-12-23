@@ -1,0 +1,4 @@
+channel inicia, termina, exercicio
+INICIO2 = inicia -> AULA
+AULA = exercicio -> AULA [] TERMINA
+TERMINA = termina -> STOP

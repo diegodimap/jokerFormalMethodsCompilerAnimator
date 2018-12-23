@@ -1,0 +1,32 @@
+spec_trans(root,'$initialise_machine',4).
+spec_trans(root,'$initialise_machine',8).
+spec_trans(root,'$initialise_machine',3).
+spec_trans(2,'$initialise_machine',3).
+spec_trans(0,'$initialise_machine',4).
+spec_trans(3,szeinc,5).
+spec_trans(3,'szeget-->0',3).
+spec_trans(5,szeinc,6).
+spec_trans(5,szedec,3).
+spec_trans(5,'szeget-->1',5).
+spec_trans(6,szeinc,7).
+spec_trans(6,szedec,5).
+spec_trans(6,'szeget-->2',6).
+spec_trans(1,'$initialise_machine',8).
+spec_trans(7,szedec,6).
+spec_trans(7,'szeget-->3',7).
+spec_trans(4,szeinc,9).
+spec_trans(4,'szeget-->0',4).
+spec_trans(8,szeinc,10).
+spec_trans(8,'szeget-->0',8).
+spec_trans(9,szedec,4).
+spec_trans(9,'szeget-->1',9).
+spec_trans(10,szeinc,11).
+spec_trans(10,szedec,8).
+spec_trans(10,'szeget-->1',10).
+spec_trans(11,szedec,10).
+spec_trans(11,'szeget-->2',11).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

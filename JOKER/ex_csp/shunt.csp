@@ -1,0 +1,162 @@
+-- A shunting problem 
+-- Bill Roscoe, Jun 1996
+
+-- Fractionally modified by James Heather, Oct 2002
+
+-- This problem is #363 in the Penguin Book of Curious and Interesting Puzzles
+
+{- The problem is to get the trains into their own sheds as efficiently
+as possible in the following network:
+
+Trains
+
+         E        D        C        B        A
+	 |        |        |        |        |
+	 |        |        |        |        |
+	 |        |       /|       /|        |
+	 |\       |      / |      / |\      /|
+	 | \      |     /  |     /  | \    / |
+	 |  \     |    /   |    /   |  \  /  |
+	 |   \    |   /    |   /    |   \/   |
+	 |    \  ____/   __|__/     |   /\   |
+	 |     \/ |     /  |      __|__/  \  |
+	 |     /\ |    /   |     /  |      \ |
+	 |    /  \|   /    |    /   |       \|
+	 |   /    |  /     |   /    |        |
+	 |  /     | /      |  /     |        |
+	 | /      |/       | /      |        |
+	 |/       |        |/       |        |
+	 A        B        C        D        E
+
+-}
+
+-- The following datatype will be used for both lines and trains:
+
+datatype lines = A | B | C | D | E
+
+-- The movements of trains will be represented by the following events,
+-- with forward.X.Y.Z meaning train Z moving from end of line X to the
+-- shed on line Y (with lines meaning the vertical lines, using the labels
+-- of the sheds on them).
+
+channel forward,back: lines.lines.lines
+
+-- The following table determines which lines are available for shunting:
+-- in other words the pair (X,Y) means there is a direct connection between
+-- the end of line X and the shed on Y.
+
+ShuntTable = {(A,A),(B,B),(C,C),(D,D),(E,E),(A,B),(C,A),(D,B),(D,E),(E,C)}
+
+-- And the following table shows the initial positions of the trains.
+
+InitialPosits = {(A,E),(B,D),(C,C),(D,B),(E,A)}
+
+inittrain(X) = let singel({Y}) = Y
+                   Z = {Y | (X',Y) <- InitialPosits, X'==X}
+	       within singel(Z)
+
+-- There is a simple resource process for each place where a train can
+-- come to rest, allowing trains to move in and out subject to there only
+-- being one train at a time.
+
+EndLine(X) = back?Y!X?T -> EndLine'(X,T)
+
+EndLine'(X,T) = forward.X?Y!T -> EndLine(X)
+
+Shed(X) = forward?Y!X?T -> Shed'(X,T)
+
+Shed'(X,T) = back.X?Y!T -> Shed(X)
+            [] X==T & done -> STOP
+
+-- As with other puzzle scripts, the event done is communicated when
+-- the puzzle is solved.
+
+AlphaShed(X) = {|done,forward.Y.X, back.X.Y | Y <- lines|}
+AlphaEnd(X) = {|forward.X.Y, back.Y.X | Y <- lines|}
+
+-- The above definitions pay no attention to which lines are actually
+-- there.  This can be imposed by the following process that only allows
+-- moves along real lines.
+
+Reg = [] (X,Y):ShuntTable @ (forward.X.Y?T -> Reg [] back.Y.X?T -> Reg)
+
+AlphaReg = {|forward,back|}
+
+-- The system can now be put together in the obvious way:
+
+System = ((|| X:lines @ [AlphaEnd(X)] EndLine'(X,inittrain(X)))
+                [|AlphaReg|]
+         (|| X:lines @ [AlphaShed(X)] Shed(X)))
+		[|AlphaReg|]
+		    Reg
+
+-- The following check will find the solution that minimises the number
+-- of train movements.
+
+channel done
+
+Sigma = {|forward,back,done,train|}
+
+RUN(S) = [] x : S @ x -> RUN(S)
+
+-- The process NOTDONE will allow any event to occur at any time, except
+-- 'done'.
+
+NOTDONE = RUN(diff(Sigma,{done}))
+
+assert NOTDONE [T= System
+
+-- In the book, you are asked to find the shortest solution in which any
+-- number of consecutive moves of a single train count as a single turn.
+-- Therefore we introduce an extra event to denote which train's turn it
+-- is:
+
+channel train:lines
+
+-- And specify that only the train whose turn it is can move:
+
+OneTrainAtATime = train?t -> Moving(t)
+
+Moving(t) = forward?X?Y!t -> Moving(t)
+            [] back?X?Y!t -> Moving(t)
+	    [] train?t' -> Moving(t')
+
+TwoTrainsAtATime = train?t1 -> train?t2:diff(lines,{t1}) -> Moving'(t1,t2)
+
+Moving'(t1,t2) = forward?X?Y!t1 -> Moving'(t1,t2)
+              [] back?X?Y!t1 -> Moving'(t1,t2)
+	      [] train?t':diff(lines,{t2}) -> Moving'(t',t2)
+              [] forward?X?Y!t2 -> Moving'(t1,t2)
+              [] back?X?Y!t2 -> Moving'(t1,t2)
+	      [] train?t':diff(lines,{t1}) -> Moving'(t1,t')
+
+
+OTAATSystem = System [|AlphaReg|] OneTrainAtATime
+TTAATSystem = System [|AlphaReg|] TwoTrainsAtATime
+
+-- Because the train.t events count as moves, the following check will
+-- minimise the total of train movements and the moves as the driver
+-- switches from one to another on the event train.t
+
+assert NOTDONE [T= OTAATSystem
+assert NOTDONE [T= TTAATSystem
+
+-- And this finds a solution (requiring 11 train.t events) significantly
+-- better than the one (with 14) in the book.
+
+-- You can increase the emphasis on minimising the train.t events by
+-- increasing the number of events required on the switch from one train
+-- to another, but we can actually use the compression function diamond
+-- to guarantee we have minimised this number, for if we hide the
+-- forward and back events, diamond will remove the resulting tau events
+-- from the traces.
+
+transparent diamond
+
+-- The following much slower check (because of the large transformations
+-- carried out during the compression phase) actually just confirms that
+-- the solution found by the earlier check is optimal.
+
+diamOTAATSystem = diamond(OTAATSystem\({|forward,back|}))
+
+assert NOTDONE [T= diamOTAATSystem

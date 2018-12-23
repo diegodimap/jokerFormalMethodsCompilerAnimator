@@ -1,0 +1,10 @@
+channel a,b,c, moeda, choc, bisc
+
+CHAOSS(A) = STOP |~| ([] x:A @ x -> CHAOSS(A))
+
+ALT = a -> b -> ALT
+MOEDA = moeda -> MOEDA
+
+SPEC_AB = ALT [{|a,b|}||{|c|}] CHAOSS({c})
+
+SPEC_MOEDA = MOEDA [{|moeda|}||{|choc,bisc|}] CHAOS({choc, bisc})

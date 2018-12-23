@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+\usepackage{fuzz}
+
+\begin{document}
+\subsection*{Birthday Book}
+
+We have two given sets, names and dates:
+\begin{zed}
+  [NAME, DATE]
+\end{zed}
+The birthday book has a limited size $maxentries$:
+\begin{axdef}
+  maxentries : \nat
+%  \where
+%  maxentries = 100
+\end{axdef}
+The birthday book has entries for a set of known
+names. It maps each known name to a date. 
+\begin{schema}{BirthdayBook}
+  known : \power NAME\\
+  birthday : NAME \pfun DATE\\
+  \where
+  known = \dom birthday\\
+  \#~known \leq maxentries
+\end{schema}
+We start with an empty birthday book.
+\begin{schema}{Init}
+  BirthdayBook\\
+  \where
+  known = \emptyset
+\end{schema}
+A birthday can be added to the book:
+\begin{schema}{AddBirthday}
+  \Delta BirthdayBook\\
+  name? : NAME\\
+  date? : DATE\\
+  \where
+  name? \notin known\\
+  birthday' = birthday \cup \{ name? \mapsto date? \}\\
+\end{schema}
+\end{document}

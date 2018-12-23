@@ -1,0 +1,70 @@
+<specification name="onibusEscolhaInterna.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_909FB7D004152BEA7E13307ED3927BE0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_909FB7D004152BEA7E13307ED3927BE0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_108A85A383E0A5E20A5E4F382C008E81"/> 
+            <event value="embarcar111forte"/> 
+            <next value="GP_HashMD5_28EBDD820C2316340621C26B040785DA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_108A85A383E0A5E20A5E4F382C008E81"/> 
+            <event value="descer111forte"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_163049245F436DAE8C5D4A82CA287C6A"/> 
+            <event value="descer111redinha"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_28EBDD820C2316340621C26B040785DA"/> 
+            <event value="pagar70"/> 
+            <next value="GP_HashMD5_163049245F436DAE8C5D4A82CA287C6A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_73EBA866897A237D79A421D2834EDF48"/> 
+            <event value="descer37redinha"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_909FB7D004152BEA7E13307ED3927BE0"/> 
+            <event value="parada"/> 
+            <next value="GP_HashMD5_F2653E3F4099EDF1F271EA463981015F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E69F4C935530CA97EE1CDE29978A98D8"/> 
+            <event value="pagar90"/> 
+            <next value="GP_HashMD5_73EBA866897A237D79A421D2834EDF48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_EA161D143BB2A277E06144406447EBEA"/> 
+            <event value="embarcar37forte"/> 
+            <next value="GP_HashMD5_E69F4C935530CA97EE1CDE29978A98D8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_EA161D143BB2A277E06144406447EBEA"/> 
+            <event value="descer37forte"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F2653E3F4099EDF1F271EA463981015F"/> 
+            <event value="Internal Choice = 0"/> 
+            <next value="GP_HashMD5_EA161D143BB2A277E06144406447EBEA"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

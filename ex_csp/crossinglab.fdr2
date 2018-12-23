@@ -1,0 +1,125 @@
+-- The level crossing.
+-- Originator: Simon Gay, Royal Holloway, January 1999
+-- Adapted by Steve Schneider, Royal Holloway, May 1999
+-- Revised by Steve Schneider, Royal Holloway, September 2002
+-- Revised by Steve Schneider, Surrey, September 2005
+
+-- The purpose of these datatype and channel declarations is to give
+-- us events car.enter, gate.raise etc
+
+datatype UD = raise | lower | down
+datatype ELA = enter | leave | approach
+
+channel car:ELA
+channel train:ELA
+channel gate:UD
+
+-- A supply of cars
+
+CARS = car.approach -> car.enter -> car.leave -> CARS
+
+-- ... and now we introduce the system with two trains:
+
+TRAINS2 = train.approach -> TRAINS2_A
+
+TRAINS2_A = train.approach -> TRAINS2_AA
+           [] train.enter -> TRAINS2_E
+
+TRAINS2_AA = train.enter -> TRAINS2_AE
+
+TRAINS2_E = train.approach -> TRAINS2_AE
+            [] train.leave -> TRAINS2
+
+TRAINS2_AE = train.enter -> TRAINS2_EE
+             [] train.leave -> TRAINS2_A
+
+TRAINS2_EE = train.leave -> TRAINS2_E
+
+
+-- The gate is lowered and raised:
+
+GATE2 = gate.lower -> gate.down -> gate.raise -> GATE2
+
+-- The gate blocks cars from entering the crossing when it is down.
+-- This is captured by a process ROAD2 which restricts the event
+-- car.enter, as covered in the lecture.
+
+ROAD2 = gate.lower -> gate.down -> gate.raise -> ROAD2
+       [] car.enter -> (car.leave -> ROAD2
+                        [] gate.lower -> car.leave -> gate.down ->
+                                 gate.raise -> ROAD2)
+
+
+ET   = {| train |}
+EC   = {| car |}
+EG   = {| gate |}
+ER   = {| gate, car.enter, car.leave |}
+EGC  = {| gate, car |}
+ES   = {| train, car, gate |}
+ETC  = {| train, car |}
+ECON = {| gate, train |}
+
+-- The crossing system is the parallel composition of these components.
+
+CROSSING = ((GATE2 [EG||EC] CARS) [EGC||ET] TRAINS2) [ES||ER] ROAD2
+
+-- The specification is that a car and a train should not be on the
+-- crossing at the same time.
+
+NOCRASHSPEC = NOCRASH [NC||NNC] RUN(NNC)
+
+-- Define RUN(A)
+
+RUN(A) = [] x:A @ x -> RUN(A)
+
+NC = {|car.enter, car.leave, train.enter, train.leave|}
+
+NNC = {|car.approach, train.approach, gate|}
+
+
+-- The specification allows all the other events, disallowing only a
+-- car and a train on the crossing at the same time
+
+assert NOCRASHSPEC [T= CROSSING
+
+--------------------
+
+-- Observe that the controller has been adapted to handle two trains
+-- now: as before it lowers the gate when a train approaches, and
+-- raises it after it leaves, but it has to allow for the possibility
+-- of additional train events.
+
+CONTROL = CONTROLUP
+
+CONTROLUP =  train.approach -> gate.lower -> gate.down -> CONTROLDOWN
+             [] train.enter -> CONTROLUP
+             [] train.leave -> CONTROLUP
+
+CONTROLDOWN = train.approach -> CONTROLDOWN
+              [] train.enter -> CONTROLDOWN
+              [] train.leave -> gate.raise -> CONTROLUP
+
+-- Using the controller should make the system safe
+
+-- which can be checked against the specification:
+
+assert NOCRASHSPEC [T= CROSSING [ES||ECON] CONTROL
+
+SYSTEM = CROSSING [ES||ECON] CONTROL
+
+------------------------------------------
+
+
+-- The specification is that there should not be a car and a train on
+-- the crossing at the same time.  Since there are up to two trains,
+-- car.enter should only be possible when the number of train.leave
+-- events matches the number of train.enter events.
+
+NOCRASH = car.enter -> car.leave -> NOCRASH
+        [] train.enter -> NOCRASH1
+
+NOCRASH1 = train.leave -> NOCRASH
+                [] train.enter -> train.leave -> NOCRASH1
+
+
+

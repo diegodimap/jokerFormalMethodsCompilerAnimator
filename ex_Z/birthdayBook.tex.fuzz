@@ -1,0 +1,103 @@
+(GIVEN 9
+  (LIST
+    (NAME "NAME" "")
+    (NAME "DATE" "")))
+
+(AXDEF 12
+  (BODY 13
+    (LIST
+      (DECL 13
+        (LIST
+          (NAME "maxentries" ""))
+        (REF 13 (NAME "\nat" "") ())))
+    ()))
+
+(SDEF 19
+  (SHEAD 19
+    "BirthdayBook"
+    ())
+  (BODY 20
+    (LIST
+      (DECL 20
+        (LIST
+          (NAME "known" ""))
+        (POWER 20
+          (REF 20 (NAME "NAME" "") ())))
+      (DECL 21
+        (LIST
+          (NAME "birthday" ""))
+        (INGEN 21
+          (NAME "\pfun" "")
+          (REF 21 (NAME "NAME" "") ())
+          (REF 21 (NAME "DATE" "") ()))))
+    (LIST
+      (EQUAL 23
+        (REF 23 (NAME "known" "") ())
+        (APPLY 23
+          (REF 23 (NAME "\dom" "") ())
+          (REF 23 (NAME "birthday" "") ())))
+      (INREL 24
+        (NAME "\leq" "")
+        (APPLY 24
+          (REF 24 (NAME "\#" "") ())
+          (REF 24 (NAME "known" "") ()))
+        (REF 24 (NAME "maxentries" "") ())))))
+
+(SDEF 27
+  (SHEAD 27
+    "Init"
+    ())
+  (BODY 28
+    (LIST
+      (SDECL 28
+        (SREF 28 "BirthdayBook" "" () ())))
+    (LIST
+      (EQUAL 30
+        (REF 30 (NAME "known" "") ())
+        (REF 30 (NAME "\emptyset" "") ())))))
+
+(SDEF 0
+  (SHEAD 0
+    "\Delta BirthdayBook"
+    ())
+  (BODY 0
+    (LIST
+      (SDECL 0
+        (SREF 0 "BirthdayBook" "" () ()))
+      (SDECL 0
+        (SREF 0 "BirthdayBook" "'" () ())))
+    ()))
+
+(SDEF 33
+  (SHEAD 33
+    "AddBirthday"
+    ())
+  (BODY 34
+    (LIST
+      (SDECL 34
+        (SREF 34 "\Delta BirthdayBook" "" () ()))
+      (DECL 35
+        (LIST
+          (NAME "name" "?"))
+        (REF 35 (NAME "NAME" "") ()))
+      (DECL 36
+        (LIST
+          (NAME "date" "?"))
+        (REF 36 (NAME "DATE" "") ())))
+    (LIST
+      (INREL 38
+        (NAME "\notin" "")
+        (REF 38 (NAME "name" "?") ())
+        (REF 38 (NAME "known" "") ()))
+      (EQUAL 39
+        (REF 39 (NAME "birthday" "'") ())
+        (INOP 39
+          (NAME "\cup" "")
+          (REF 39 (NAME "birthday" "") ())
+          (EXT 39
+            (LIST
+              (INOP 39
+                (NAME "\mapsto" "")
+                (REF 39 (NAME "name" "?") ())
+                (REF 39 (NAME "date" "?") ())))))))))
+

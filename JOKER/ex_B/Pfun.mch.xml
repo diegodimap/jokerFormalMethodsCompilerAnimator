@@ -1,0 +1,199 @@
+<specification name="Pfun.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="set(INDEX1,VALUE1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="set(INDEX1,VALUE2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="set(INDEX2,VALUE1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="set(INDEX2,VALUE2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="set(INDEX2,VALUE1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="set(INDEX2,VALUE2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="get(INDEX1)-->VALUE1"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="set(INDEX1,VALUE1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="set(INDEX1,VALUE2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="get(INDEX2)-->VALUE2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="get(INDEX1)-->VALUE2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="get(INDEX2)-->VALUE2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="set(INDEX2,VALUE1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="set(INDEX2,VALUE2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="get(INDEX1)-->VALUE2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="set(INDEX1,VALUE1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="set(INDEX1,VALUE2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="get(INDEX2)-->VALUE1"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="get(INDEX1)-->VALUE1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="get(INDEX2)-->VALUE1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="get(INDEX1)-->VALUE1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="get(INDEX2)-->VALUE2"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="get(INDEX1)-->VALUE2"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="get(INDEX2)-->VALUE1"/> 
+            <next value="8"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

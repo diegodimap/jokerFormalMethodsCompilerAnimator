@@ -1,0 +1,7 @@
+channel a, b,c,d,e,f, out, in
+
+P = a->b->c->d->e->f->out->STOP
+Q = in->d->e->STOP
+
+SISTEMA = P[out <-> in]Q
+

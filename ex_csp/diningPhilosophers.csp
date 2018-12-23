@@ -1,0 +1,38 @@
+
+channel pegar:{0..4}.{0..4}
+channel colocar:{0..4}.{0..4}
+channel sentar:{0..4}
+channel levantar:{0..4}
+
+inc(x) = (x + 1) % 5
+dec(x) = (x - 1) % 5
+
+FIL(i) =  sentar.i -> pegar.i.inc(i) -> pegar.i.i -> 
+           colocar.i.inc(i) -> colocar.i.i -> levantar.i -> FIL(i)
+
+GARFO(i) = pegar.i.i -> colocar.i.i -> GARFO(i)
+        [] pegar.dec(i).i -> colocar.dec(i).i -> GARFO(i)
+
+FILS = || i:{0..4} @ [{|pegar.i.i, pegar.i.inc(i),
+                         colocar.i.i, colocar.i.inc(i), 
+                         sentar.i, levantar.i|}]          
+                    FIL(i)
+
+GARFOS = || i:{0..4} @ [{|pegar.i.i, colocar.i.i, 
+                         pegar.dec(i).i, colocar.dec(i).i|}] 
+                    GARFO(i)
+
+MESA = FILS [ {|pegar,colocar,sentar,levantar|} ||
+                  {|pegar,colocar|} ]  GARFOS
+
+MAITRE(i) = if i == 0 
+            then sentar?x -> MAITRE(1)
+            else if i == 4
+                 then levantar?y -> MAITRE(3)
+                 else (  sentar?x -> MAITRE(i+1)
+                      [] levantar?y -> MAITRE(i-1) )
+
+-- Agora coloque a MESA em paralelo com o MAITRE
+SISTEMA = MESA [| {| sentar, levantar |} |] MAITRE(0)
+
+

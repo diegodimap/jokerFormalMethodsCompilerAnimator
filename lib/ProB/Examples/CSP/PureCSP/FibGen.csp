@@ -1,0 +1,28 @@
+-- FibGen
+
+channel out,gen:Int
+
+FibGen(N,M) = out!M -> FibGen(M,N+M)
+
+Take(n) = if n>1 then out?x -> Take(n-1)
+                 else out?x -> gen!x -> SKIP
+
+Repeat(Proc) = Proc ; Repeat(Proc)
+
+FibSeq = FibGen(0,1)
+FibGenTest = FibGen(0,1) [| {| out |} |] Repeat(Take(2))
+Finite = FibGen(0,1) [| {|out|} |] Take(2)
+
+MAIN = DupFactorialTest ; FibGenTest
+
+fact(n) = if n<1 then 1 else n*fact(n-1)
+
+Duplicate(F) = out!F -> out!F -> SKIP
+DTestf(x) = Duplicate(fact(x))
+DupFactorialTest = DTestf(5)
+
+fact2(0) = 1
+fact2(1) = 1
+fact2(n) = n*fact(n-1)
+
+TestFact2 = out!fact2(5) -> SKIP

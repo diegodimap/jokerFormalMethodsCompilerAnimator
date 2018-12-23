@@ -1,0 +1,95 @@
+<specification name="estudante.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_B8B8EF3E056DB5C87FBC1BC4B15BB6E4"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_B8B8EF3E056DB5C87FBC1BC4B15BB6E4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1C858F65523AF28D4F6E15F639651D88"/> 
+            <event value="year.1"/> 
+            <next value="GP_HashMD5_AF1060C09923A265352DE5B79CE6FC78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_21998CD3888789E51D11DC0CEC76ED46"/> 
+            <event value="graduate"/> 
+            <next value="GP_HashMD5_6945A695A7307EB7EB73387446B98FD7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3F7D65E8116D1E54B648B3EE317A46BB"/> 
+            <event value="SKIP"/> 
+            <next value="GP_HashMD5_3F7D65E8116D1E54B648B3EE317A46BB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_490E94FA65206B2F7D9CA7E2B27CF355"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_21998CD3888789E51D11DC0CEC76ED46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_490E94FA65206B2F7D9CA7E2B27CF355"/> 
+            <event value="reprove"/> 
+            <next value="GP_HashMD5_BF4E82AF96A303F4056FD482FA6EF4EF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_570BE6CC9908924C8B66CC90EA438AEE"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_A199EA4B5083D4A61C9F6F40EC5DE36C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_570BE6CC9908924C8B66CC90EA438AEE"/> 
+            <event value="reprove"/> 
+            <next value="GP_HashMD5_7D8DDB208DFB81872909E0F43C955F12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6945A695A7307EB7EB73387446B98FD7"/> 
+            <event value="SKIP"/> 
+            <next value="GP_HashMD5_6945A695A7307EB7EB73387446B98FD7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7D8DDB208DFB81872909E0F43C955F12"/> 
+            <event value="year.2"/> 
+            <next value="GP_HashMD5_570BE6CC9908924C8B66CC90EA438AEE"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A199EA4B5083D4A61C9F6F40EC5DE36C"/> 
+            <event value="year.3"/> 
+            <next value="GP_HashMD5_EB8348FC0A967D66C0732053B9FAAE15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AF1060C09923A265352DE5B79CE6FC78"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_7D8DDB208DFB81872909E0F43C955F12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AF1060C09923A265352DE5B79CE6FC78"/> 
+            <event value="reprove"/> 
+            <next value="GP_HashMD5_1C858F65523AF28D4F6E15F639651D88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B8B8EF3E056DB5C87FBC1BC4B15BB6E4"/> 
+            <event value="start"/> 
+            <next value="GP_HashMD5_1C858F65523AF28D4F6E15F639651D88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BF4E82AF96A303F4056FD482FA6EF4EF"/> 
+            <event value="year.4"/> 
+            <next value="GP_HashMD5_490E94FA65206B2F7D9CA7E2B27CF355"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_EB8348FC0A967D66C0732053B9FAAE15"/> 
+            <event value="pass"/> 
+            <next value="GP_HashMD5_BF4E82AF96A303F4056FD482FA6EF4EF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_EB8348FC0A967D66C0732053B9FAAE15"/> 
+            <event value="reprove"/> 
+            <next value="GP_HashMD5_A199EA4B5083D4A61C9F6F40EC5DE36C"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

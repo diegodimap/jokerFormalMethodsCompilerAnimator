@@ -1,0 +1,8 @@
+channel moeda, choc, conf
+
+A = {moeda, choc, conf}
+
+MC = moeda -> (choc -> STOP [] conf -> STOP)
+CLIENTE = moeda -> STOP
+
+VM = MC[A||A]CLIENTE

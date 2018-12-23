@@ -1,0 +1,235 @@
+<specification name="Hotelguests.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestcheckin(ROOM1,NAME2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestcheckin(ROOM2,NAME2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestcheckout(ROOM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestcheckout(ROOM2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestquery(ROOM1)-->empty"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestquery(ROOM2)-->empty"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="presentquery(NAME2)-->notpresent"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestswap(ROOM1,ROOM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestswap(ROOM1,ROOM2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestswap(ROOM2,ROOM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="guestswap(ROOM2,ROOM2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestcheckin(ROOM1,NAME2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestcheckin(ROOM2,NAME2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestcheckout(ROOM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestcheckout(ROOM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestquery(ROOM1)-->NAME2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestquery(ROOM2)-->empty"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="presentquery(NAME2)-->present"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestswap(ROOM1,ROOM1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestswap(ROOM1,ROOM2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestswap(ROOM2,ROOM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="guestswap(ROOM2,ROOM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestcheckin(ROOM1,NAME2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestcheckin(ROOM2,NAME2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestcheckout(ROOM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestcheckout(ROOM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestquery(ROOM1)-->NAME2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestquery(ROOM2)-->NAME2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="presentquery(NAME2)-->present"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestswap(ROOM1,ROOM1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestswap(ROOM1,ROOM2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestswap(ROOM2,ROOM1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="guestswap(ROOM2,ROOM2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestcheckin(ROOM1,NAME2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestcheckin(ROOM2,NAME2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestcheckout(ROOM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestcheckout(ROOM2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestquery(ROOM1)-->empty"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestquery(ROOM2)-->NAME2"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="presentquery(NAME2)-->present"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestswap(ROOM1,ROOM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestswap(ROOM1,ROOM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestswap(ROOM2,ROOM1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="guestswap(ROOM2,ROOM2)"/> 
+            <next value="3"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

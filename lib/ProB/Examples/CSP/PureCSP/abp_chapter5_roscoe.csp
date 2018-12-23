@@ -1,0 +1,222 @@
+-- abp.csp
+
+-- Alternating bit protocol.
+
+-- Bill Roscoe, August 1992
+-- FDR2 version, June 1996
+
+-- This is the simplest of a number of our examples
+-- which make use of a pair of media
+-- which are permitted to lose data, and provided no infinite sequence is lost
+-- will work independently of how lossy the channels are (unlike the file
+-- prots.csp where the protocols were designed to cope with specific badnesses).-- They work by transmitting messages one way and acknowledgements the other.
+
+-- The alternating bit protocol provides the most standard of all protocol
+-- examples, and is while it is too simple for practical purposes, its
+-- analysis contains much that remains relevant in realistic examples.
+
+-- You will find a number of other versions of this protocol in this
+-- collection of example files: at least in chapter8, chapter12 and
+-- chapter14.  There are also other communication protocol files in
+-- chapter12 (where the most satisfactory model of fault tolerance is
+-- developed).
+
+-- CHANNELS and DATA TYPES
+-- left and right are the external input and output, which we set to
+-- one-bit.  a and b carry a tag and a data value.
+-- c and d carry an acknowledgement tag.  In this protocol tags are bits.
+
+DATA = {0,1}  -- in a data-independent program, where nothing is done to
+              -- or conditional on data, this is sufficient to establish
+              -- correctness
+TAG = {0,1}   -- the alternating bits.
+
+channel left,right:DATA
+channel a,b:TAG.DATA
+channel c,d:TAG
+
+-- The overall specification we want to meet is that of a buffer.  The
+-- most nondeterministic (left-to-right) buffer with size bounded by N is
+-- given by BUFF(<>), where
+
+BUFF(s) = if (null(s)) then (left?x -> BUFF(<x>))
+          else  ((right!(head(s)) -> BUFF(tail(s)))
+                 [](STOP |~| (if ((#s)==N) then STOP
+                              else (left?x -> BUFF(s^<x>)))))
+
+-- For our purposes we will set
+
+N = 3  -- since this example does not introduce more buffering than this.
+
+SPEC = BUFF(<>)
+
+-- The protocol is designed to work in the presence of lossy channels.
+-- We specify here channels which must transmit one out of any L=3 values, but 
+-- any definition would work provided it maintains order and does not lose
+-- an infinite sequence of values.  The only difference would evidence itself
+-- in the size of the state-space!
+
+L = 3
+
+E(n) = a?tag?data -> (if (n==0) then (b!tag!data -> E(L-1))
+                        else ((b!tag!data -> E(L-1)) |~|  E(n-1)))
+
+F(n) = c?tag -> (if (n==0) then (d!tag -> F(L-1))
+                        else ((d!tag -> F(L-1)) |~|  F(n-1)))
+
+-- Increasing L makes this definition less deterministic.  
+
+-- The implementation of the protocol consists of a sender process and
+-- receiver process, linked by E and F above.  
+-- In the text, the medium processes considered have the additional
+-- ability to duplicate messages boundedly.  It easy to extend this
+-- file to that case, and this is left as an exercise.
+
+-- The sender process is parameterised by the current value it tries to send
+-- out, which may be null in which case it does not try to send it,  but
+-- instead accepts a new one from channel left.
+
+Null=99  -- any value not in DATA
+
+SEND(v,bit) = (if (v == Null) then 
+                (left?x -> SEND(x,(1-bit))) else 
+                (a!bit!v -> SEND(v,bit)))
+              [](d?ack ->(if (ack==bit) then SEND(Null,bit) 
+                        else SEND(v,bit)))
+
+-- Initially the data value is Null & bit=1 so the first value input gets bit=0.
+
+SND = SEND(Null,1)
+
+-- The basic part of the receiver takes in messages, sends acknowledgements,
+-- and transmits messages to the environment.  REC(b) is a process that
+-- will always accept a message or send an acknowledgement, save that it
+-- will not do so when it has a pending message to transmit to
+-- the environment.  
+
+REC(bit) = b?tag?data -> (if (tag==bit) then right!data -> REC(1-bit)
+                                      else REC(bit))
+           [] (c!(1-bit) -> REC(bit))
+               
+-- The first message to be output has tag 0, and there is no pending
+-- message.
+
+DRCV = REC(0)
+
+-- If this receiver is placed in the system, there is the danger of
+-- livelock, or divergence, if an infinite sequence of acknowledgements is
+-- transmitted by REC and received by SEND without the next message being
+-- transmitted, as is possible.  Alternatively, a message can be transmitted
+-- and received infinitely without being acknowledged.
+-- Thus, while the following system is
+-- partially correct, it can diverge:
+
+DIVSYSTEM = SND[| {|a,d|} |]((E(L-1)|||F(L-1))[| {|b,c|} |]DRCV)\{|a,b,c,d|}
+
+-- assert SPEC [T= DIVSYSTEM  -- assert commented out to not interfere with ProB checks
+-- assert SPEC [FD= DIVSYSTEM
+
+-- We can avoid divergence by preventing the receiver acknowledging or
+-- receiving infinitely without doing the other.  This can be done by
+-- putting it in parallel with any process which allows these actions
+-- in such a way as to avoid these infinitely unfair sequences.  In fact,
+-- the receiver may choose one of the two to do rather than give the
+-- choice as above.  Examples that will work are:
+
+ALT = b?bit?data -> c?bit -> ALT
+
+-- simple alternation
+
+LIMITc(M,n) = b?bit?data -> LIMITb(M,1)
+             [](if (n==M) then STOP else (c?bit -> LIMITc(M,(n+1))))
+
+LIMITb(M,n) = c?bit -> LIMITc(M,1)
+             [](if (n==M) then STOP else (b?bit?data -> LIMITb(M,(n+1))))
+
+LIMIT(M) = (c?bit -> LIMITc(M,1))[](b?bit?data -> LIMITb(M,1))
+
+-- gives the environment the choice, provided there is no run of more
+-- than M of either.
+
+NDC(M,n) = (if (n==0) then (c?bit -> NDC(M,1))
+            else if (n==M) then (b?bit?data -> NDC(M,(M-1)))
+            else ((c?bit -> NDC(M,(n+1))) |~| (b?bit?data -> NDC(M,(n-1)))))
+
+-- chooses nondeterministically which to allow, within provided the totals
+-- of b's and c's do not differ too much.
+
+-- Modified receiver processes, with small values for the constants, are
+
+RCVA = DRCV[|{|b,c|}|]ALT
+RCVL = DRCV[|{|b,c|}|]LIMIT(3)
+RCVN = DRCV[|{|b,c|}|]NDC(4,2)
+ 
+-- and the respective systems to check against SPEC:
+
+ASYSTEM = SND[|{|a,d|}|]((E(L-1)|||F(L-1))[|{|b,c|}|]RCVA)\{|a,b,c,d|}
+
+LSYSTEM = SND[|{|a,d|}|]((E(L-1)|||F(L-1))[|{|b,c|}|]RCVL)\{|a,b,c,d|}
+
+NSYSTEM = SND[|{|a,d|}|]((E(L-1)|||F(L-1))[|{|b,c|}|]RCVN)\{|a,b,c,d|}
+
+-- We can now prove full refinement 
+
+-- assert SPEC [FD= ASYSTEM
+-- assert SPEC [FD= LSYSTEM
+-- assert SPEC [FD= NSYSTEM
+
+
+-- of course, one would not normally construct one's receiver as a composition
+-- of an algorithmic process and constraint in this way, but we now know that
+-- any receiver which refines RCVN (for example) will work
+
+RECimp(bit) = b?tag?data -> (if (tag==bit) then 
+                                         (right!data -> c!tag -> RECimp(1-bit))
+                                       else (c!tag -> RECimp(bit)))
+
+RCVimp=RECimp(0)
+
+-- You can check that RCVimp refines RCVN, which proves that the revised
+-- system below is correct.  This can, in this instance, be proved directly!
+
+SYSTEMimp = SND[|{|a,d|}|]((E(L-1)|||F(L-1))[|{|b,c|}|]RCVimp)\{|a,b,c,d|}
+
+-- assert SPEC [FD= SYSTEMimp
+
+-- Indeed, RCVimp actually equals (semantically) RCVA, and you can check
+-- that refinement either way.
+
+-- If you want to develop this example much further, perhaps by inserting
+-- a more interesting process in one or both channels, the state-space may
+-- grow uncomfortably large for a Full check (including absence of divergence).
+
+-- Any different channel definitions which satisfy
+
+-- outputs(tr)  subseq of  inputs(tr)  in the obvious sense;
+
+-- will not do an infinite sequence of inputs without an output;
+
+-- and refines 
+
+-- We cannot parse this: because events is not defined
+-- IorO(inp, outp) = inp?x -> IorO(inp,outp) |~| 
+--                   (|~| x:events(outp) @ x -> IorO(inp,outp))
+
+-- (i.e., can always either input any value, or make an output).
+
+-- is substitutable for E and/or F.
+
+-- Note the relationship of the above statement to what is said
+-- in the text about the buffer tolerance of ABP.  It should be easy
+-- for you to try out the buffer tolerance claims by modifying the
+-- examples in this file.
+
+
+-- In fact, as observed in the text, all our divergence-free versions
+-- of the ABP are actually equivalent to COPY.  Therefore, like the
+-- MajSys example in chapter5-1.csp, we have an example of a process
+-- with much internal nondeterminism displaying a deterministic face to
+-- the world.
+
+
+MAIN = SYSTEMimp

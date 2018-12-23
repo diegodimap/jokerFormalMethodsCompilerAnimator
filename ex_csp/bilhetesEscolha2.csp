@@ -1,0 +1,9 @@
+channel dollar1000, ticket, miami, paris, turnon, turnoff
+
+MACHINE = turnon -> TICKET
+TICKET =
+(miami -> dollar1000 -> ticket -> TICKET)
+[]
+(paris -> dollar1000 -> dollar1000 -> ticket -> TICKET)
+[]
+(turnoff -> MACHINE)

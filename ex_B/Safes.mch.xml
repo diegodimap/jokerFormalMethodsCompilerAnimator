@@ -1,0 +1,855 @@
+<specification name="Safes.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="extract(KEY2,KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="extract(KEY1,KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="quicklock(KEY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="lockdoor(KEY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="insert(KEY1,KEY1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="insert(KEY2,KEY2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="unlock(KEY1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="unlock(KEY2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="quicklock(KEY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="opendoor(KEY1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="opendoor(KEY2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="lockdoor(KEY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="closedoor(KEY1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="closedoor(KEY2)"/> 
+            <next value="14"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

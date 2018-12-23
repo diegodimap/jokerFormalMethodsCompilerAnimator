@@ -1,0 +1,11 @@
+channel a, b, c
+
+P = a -> P  []  b -> P
+
+Q = a -> b -> STOP
+
+R = a -> cc -> STOP
+
+assert P [T= Q
+
+assert P [T= R

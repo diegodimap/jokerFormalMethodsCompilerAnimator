@@ -1,0 +1,25 @@
+<specification name="calc.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_31D902A2D375F5636D339D09018FBBAD"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_31D902A2D375F5636D339D09018FBBAD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_172D25D6C685E11C111C5F6FFC04C679"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_172D25D6C685E11C111C5F6FFC04C679"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_31D902A2D375F5636D339D09018FBBAD"/> 
+            <event value="turnon"/> 
+            <next value="GP_HashMD5_172D25D6C685E11C111C5F6FFC04C679"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

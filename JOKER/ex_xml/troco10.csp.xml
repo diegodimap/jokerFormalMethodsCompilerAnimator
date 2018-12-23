@@ -1,0 +1,120 @@
+<specification name="troco10.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_DC14BB75A7E7BE5EE6BDFA7C458EED85"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_DC14BB75A7E7BE5EE6BDFA7C458EED85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0C7087796187C742CA73B213FBA57027"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_C16EEAD8013329AB434AAE4FD5E3647E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0C7087796187C742CA73B213FBA57027"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_99DEBE47DBFC0D98CBCCB88212401AD5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1965E9EFC9113FDC6B9E0A8A68A8181C"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_0C7087796187C742CA73B213FBA57027"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1965E9EFC9113FDC6B9E0A8A68A8181C"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_F62F577BEEFEBC9B4DAD20991E071F91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_30D75F1B8F6134B52A96076DB973CF09"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_1965E9EFC9113FDC6B9E0A8A68A8181C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_30D75F1B8F6134B52A96076DB973CF09"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_B7FF437FCB0818D4F803BFC53DFF7D1F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_99DEBE47DBFC0D98CBCCB88212401AD5"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_C33E3B07C81B3F886D7CCCFC64A5C58E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_99DEBE47DBFC0D98CBCCB88212401AD5"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_C16EEAD8013329AB434AAE4FD5E3647E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B2A4CC89449AFD59A026EEA080B97841"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B7FF437FCB0818D4F803BFC53DFF7D1F"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_F62F577BEEFEBC9B4DAD20991E071F91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B7FF437FCB0818D4F803BFC53DFF7D1F"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_1965E9EFC9113FDC6B9E0A8A68A8181C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C16EEAD8013329AB434AAE4FD5E3647E"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_D7D47E787C8656D5E4C366DF603FA295"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C16EEAD8013329AB434AAE4FD5E3647E"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_C33E3B07C81B3F886D7CCCFC64A5C58E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C33E3B07C81B3F886D7CCCFC64A5C58E"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_B2A4CC89449AFD59A026EEA080B97841"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C33E3B07C81B3F886D7CCCFC64A5C58E"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_D7D47E787C8656D5E4C366DF603FA295"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D7D47E787C8656D5E4C366DF603FA295"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D7D47E787C8656D5E4C366DF603FA295"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_B2A4CC89449AFD59A026EEA080B97841"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DC14BB75A7E7BE5EE6BDFA7C458EED85"/> 
+            <event value="e1r"/> 
+            <next value="GP_HashMD5_30D75F1B8F6134B52A96076DB973CF09"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F62F577BEEFEBC9B4DAD20991E071F91"/> 
+            <event value="s2c"/> 
+            <next value="GP_HashMD5_99DEBE47DBFC0D98CBCCB88212401AD5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F62F577BEEFEBC9B4DAD20991E071F91"/> 
+            <event value="s1c"/> 
+            <next value="GP_HashMD5_0C7087796187C742CA73B213FBA57027"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

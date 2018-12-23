@@ -1,0 +1,6 @@
+channel parada, embarcar37forte, pagar90, descer37redinha, descer37forte, embarcar111forte, pagar70, descer111redinha, descer111forte
+
+ONIBUS37 = embarcar37forte -> (pagar90 -> descer37redinha -> STOP) [] (descer37forte -> STOP)
+ONIBUS111 = embarcar111forte -> (pagar70 -> descer111redinha -> STOP) [] (descer111forte -> STOP)
+
+SERVICO = parada -> (ONIBUS37 |~| ONIBUS111)

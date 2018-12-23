@@ -1,0 +1,53 @@
+--  CS388 Protocols lectures
+--
+--  The alternating bit protocol over a one-place lossy buffer
+--  Starting point
+--
+--  CS388 lecture 
+
+
+MEDIUM3 = c1?x -> (MEDIUM3 |~| c2!x -> MEDIUM3)
+
+ACK3 = c3?n -> (ACK3 |~| c4!n -> ACK3)
+
+datatype MESS = mess1 | mess2
+datatype ACKNOW = ack 
+
+
+channel in, out : MESS
+channel c1, c2 : MESS
+channel c3, c4 : ACKNOW
+
+
+PROTOCOL3 = 
+((S ||| R) 
+    [{|c1,c2,c3,c4,in,out|}||{|c1,c2,c3,c4|}] 
+    (MEDIUM3|||ACK3)) \ {|c1,c2,c3,c4|}
+
+
+-- initial (incorrect) attempt at the protocol:
+
+S = in?x -> c1!x -> S
+
+R = c2?x -> out!x -> R
+
+
+
+-- The requirement: a buffer:
+
+n = 3
+
+SPEC3 = BUFFER(n)
+
+BUFFER(i) = B(<>,i)
+
+B(s,i) = if (s == <>)
+         then in?x -> B(<x>,i)
+         else if (#s == i) 
+              then out!head(s) -> B(tail(s),i)
+              else ((out!head(s) -> B(tail(s),i)) [] in?x -> B(s^<x>,i))
+                   |~| out!head(s) -> B(tail(s),i)
+
+assert BUFFER(3) [F= PROTOCOL3
+
+

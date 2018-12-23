@@ -1,0 +1,177 @@
+<specification name="simple.tex">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Inc(TEST1,TEST1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Inc(TEST1,TEST2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Inc(TEST2,TEST1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Inc(TEST2,TEST2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="Invert"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Inc(TEST1,TEST1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Inc(TEST1,TEST2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Inc(TEST2,TEST1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Inc(TEST2,TEST2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Invert"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Inc(TEST1,TEST1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Inc(TEST1,TEST2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Inc(TEST2,TEST1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Inc(TEST2,TEST2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Invert"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Invert"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Inc(TEST1,TEST1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Inc(TEST1,TEST2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Inc(TEST2,TEST1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Inc(TEST2,TEST2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Invert"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Invert"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Inc(TEST1,TEST1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Inc(TEST1,TEST2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Inc(TEST2,TEST1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Inc(TEST2,TEST2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Invert"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Invert"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="Invert"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Invert"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Invert"/> 
+            <next value="9"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

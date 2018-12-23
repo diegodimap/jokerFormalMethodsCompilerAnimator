@@ -1,0 +1,96 @@
+--  airlocklab.csp
+--
+--  Steve Schneider, 2005
+
+datatype ITEM = door | valve
+
+datatype ACTION = open | close
+
+channel inner, outer : ITEM.ACTION
+
+INNERDOOR =  inner.door.open -> inner.door.close -> INNERDOOR 
+
+INNERVALVE = inner.valve.open -> inner.valve.close -> INNERVALVE 
+
+OUTERDOOR =  outer.door.open -> outer.door.close -> OUTERDOOR 
+
+OUTERVALVE =  outer.valve.open -> outer.valve.close -> OUTERVALVE 
+
+DOORS = INNERDOOR [{|inner.door|}||{|outer.door|}] OUTERDOOR  
+
+VALVES = INNERVALVE [{|inner.valve|}||{|outer.valve|}] OUTERVALVE 
+
+ALTERNATING = DOORS 
+                [{|inner.door, outer.door|}||{|inner.valve, outer.valve|}]
+              VALVES 
+
+
+INNERCON = inner.valve.open -> INNERCONOPEN 
+INNERCONOPEN = inner.valve.close -> INNERCON 
+               [] inner.door.open -> INNERCONOPEN 
+
+OUTERCON = outer.valve.open -> OUTERCONOPEN 
+OUTERCONOPEN = outer.valve.close -> OUTERCON 
+               [] outer.door.open -> OUTERCONOPEN 
+
+DOORSOPEN = 
+   INNERCON
+      [{|inner.valve, inner.door.open|}||{|outer.valve, outer.door.open|}]
+   OUTERCON
+
+SYSTEM = 
+  ALTERNATING 
+    [{|inner,outer|}
+      ||
+      {|inner.valve, inner.door.open, outer.valve, outer.door.open|}]
+  DOORSOPEN  
+
+assert SAFESPEC [T= SYSTEM
+
+---------   Control Components
+
+-- only one valve is ever open at one time:
+
+VALVECON = inner.valve.open -> inner.valve.close -> VALVECON 
+           [] outer.valve.open -> outer.valve.close -> VALVECON 
+
+
+-- only one door is ever open at one time:
+
+DOORCON = inner.door.open -> inner.door.close -> DOORCON 
+          [] outer.door.open -> outer.door.close -> DOORCON 
+
+CONTROL = VALVECON 
+             [{|inner.valve, outer.valve|}||{|inner.door, outer.door|}]
+          DOORCON
+
+AIRLOCK = SYSTEM [|{|inner, outer|}|] CONTROL
+
+
+assert SAFESPEC [T= AIRLOCK
+
+SAFESPEC = ALLCLOSED
+
+ALLCLOSED = 
+  inner.valve.open -> IOC
+  [] inner.door.open -> ICO
+  [] outer.valve.open -> OOC
+  [] outer.door.open -> OCO
+
+IOC = inner.valve.close -> ALLCLOSED
+      [] inner.door.open -> IOO
+
+IOO = inner.valve.close -> ICO
+      [] inner.door.close -> IOC
+
+ICO = inner.valve.open -> IOO
+      [] inner.door.close -> ALLCLOSED
+
+OOC = outer.valve.close -> ALLCLOSED
+      [] outer.door.open -> OOO
+
+OOO = outer.valve.close -> OCO
+      [] outer.door.close -> OOC
+
+OCO = outer.valve.open -> OOO
+      [] outer.door.close -> ALLCLOSED

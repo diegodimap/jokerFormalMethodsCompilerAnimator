@@ -1,0 +1,17 @@
+start(pegs(P1,[],[])) :- list(1,8,P1). % Hanoi with 3 pegs and 8 Discs
+trans(move12,pegs([H|A],B,C),pegs(A,[H|B],C)) :- ok(B,H).
+trans(move13,pegs([H|A],B,C),pegs(A,B,[H|C])) :- ok(C,H).
+trans(move21,pegs(A,[H|B],C),pegs([H|A],B,C)) :- ok(A,H).
+trans(move23,pegs(A,[H|B],C),pegs(A,B,[H|C])) :- ok(C,H).
+trans(move31,pegs(A,B,[H|C]),pegs([H|A],B,C)) :- ok(A,H).
+trans(move32,pegs(A,B,[H|C]),pegs(A,[H|B],C)) :- ok(B,H).
+
+ok([],_). % we can move any disc on an empty peg
+ok([H|_],Disc) :- Disc < H.
+
+list(N,N,[N]).
+list(N,M,[N|T]) :- N<M, N1 is N+1, list(N1,M,T).
+
+prop(X,X).
+prop(pegs([],[],_),unsafe).  % use model checker to find solution
+prop(pegs([],_,[]),unsafe).

@@ -1,0 +1,4828 @@
+<specification name="Reading.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="$initialise_machine"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="39"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="39"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="42"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="44"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="45"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="47"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="47"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="52"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="55"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="56"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="57"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="58"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="28"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="54"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="29"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="55"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="51"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="30"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="31"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="31"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="64"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="64"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="32"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="33"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="33"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="46"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="34"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="34"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="35"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="36"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="36"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="43"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="43"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="54"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="41"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="37"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="37"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="38"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="38"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="52"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="40"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="40"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="51"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="48"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="48"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="42"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="49"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="50"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="50"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="76"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="53"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="53"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="81"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="83"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="84"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="59"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="60"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="60"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="61"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="61"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="85"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="87"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="82"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="88"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="32"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="62"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="62"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="45"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="63"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="89"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="65"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="65"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="82"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="80"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="90"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="66"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="66"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="67"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="67"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="68"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="68"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="69"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="69"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="75"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="75"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="70"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="70"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="71"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="71"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="72"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="72"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="94"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="94"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="73"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="73"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="74"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="74"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="81"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="77"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="77"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="78"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="78"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="83"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="100"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="100"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="44"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="63"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="79"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="79"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="46"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="57"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="86"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="86"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="101"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="97"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="91"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="91"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="102"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="92"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="92"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="90"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="93"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="93"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="95"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="95"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="96"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="96"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="105"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="98"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="101"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="99"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="99"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="start(READER2,COPY1)"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="88"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="103"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="103"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="start(READER1,COPY2)"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="104"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="104"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="106"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="106"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="102"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="110"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="110"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="107"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="107"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="start(READER1,COPY1)"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="84"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="108"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="108"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="finished(READER1,COPY1)"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="currentquery(READER1)-->BOOK1"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->no"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="112"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="112"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="start(READER2,COPY2)"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="precurrentquery(READER2)-->no"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="109"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="109"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="finished(READER1,COPY2)"/> 
+            <next value="89"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="finished(READER2,COPY1)"/> 
+            <next value="105"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="precurrentquery(READER1)-->yes"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="currentquery(READER1)-->BOOK2"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="currentquery(READER2)-->BOOK1"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->no"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->no"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="111"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->yes"/> 
+            <next value="111"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="finished(READER2,COPY2)"/> 
+            <next value="87"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="precurrentquery(READER1)-->no"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="precurrentquery(READER2)-->yes"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="currentquery(READER2)-->BOOK2"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="hasreadquery(READER1,BOOK1)-->yes"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="hasreadquery(READER1,BOOK2)-->yes"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="hasreadquery(READER2,BOOK1)-->yes"/> 
+            <next value="113"/> 
+        </xnode> 
+        <xnode> 
+            <key value="113"/> 
+            <event value="hasreadquery(READER2,BOOK2)-->no"/> 
+            <next value="113"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

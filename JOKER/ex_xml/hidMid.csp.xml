@@ -1,0 +1,37 @@
+<specification name="hidMid.csp">
+    <initialXNodes> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_F9E5D07CD5BA5AC4CA0F04C32FD819AF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_55F07A117050C26CFCF3320FAC6A477A"/> 
+            <event value="d->GP_HashMD5_F58929F0AF01534488AFD9074E100EF7"/> 
+            <next value="GP_HashMD5_55F07A117050C26CFCF3320FAC6A477A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_73B3713AA567C0C87D9C8E9E2E86EAD8"/> 
+            <event value="d"/> 
+            <next value="GP_HashMD5_F58929F0AF01534488AFD9074E100EF7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A307D5CDAB111856759A8FB9E986EDF2"/> 
+            <event value="b"/> 
+            <next value="GP_HashMD5_F58929F0AF01534488AFD9074E100EF7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A83A56DB49AF217F2663C4A8161813DE"/> 
+            <event value="a"/> 
+            <next value="GP_HashMD5_A307D5CDAB111856759A8FB9E986EDF2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F58929F0AF01534488AFD9074E100EF7"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_F58929F0AF01534488AFD9074E100EF7"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

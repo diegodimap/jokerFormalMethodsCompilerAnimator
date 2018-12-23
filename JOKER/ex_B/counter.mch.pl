@@ -1,0 +1,24 @@
+spec_trans(root,'$initialise_machine',0).
+spec_trans(root,'$initialise_machine',1).
+spec_trans(root,'$initialise_machine',2).
+spec_trans(root,'$initialise_machine',3).
+spec_trans(3,'number-->3',3).
+spec_trans(3,zero,0).
+spec_trans(3,inc,4).
+spec_trans(3,dec,2).
+spec_trans(0,'number-->0',0).
+spec_trans(0,zero,0).
+spec_trans(0,inc,1).
+spec_trans(1,'number-->1',1).
+spec_trans(1,zero,0).
+spec_trans(1,inc,2).
+spec_trans(1,dec,0).
+spec_trans(4,'number-->4',4).
+spec_trans(4,zero,0).
+spec_trans(4,inc,5).
+spec_trans(4,dec,3).
+spec_not_all_transitions_added(5).
+spec_not_all_transitions_added(2).
+spec_max_reached_for_node(root).
+spec_completely_explored :-
+        fail.

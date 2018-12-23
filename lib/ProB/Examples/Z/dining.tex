@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\subsection*{Philosophers and Forks}
+
+\begin{zed}
+  Phil ::= p1 | p2 | p3\\
+  Fork ::= f1 | f2 | f3\\
+\end{zed}
+
+\subsection*{Placement of the forks}
+\begin{axdef}
+  left,right : Phil \bij Fork\\
+  \where
+  \forall p:Phil @ left(p) \neq right(p)
+\end{axdef}
+
+\subsection*{State: Which fork is taken by whom}
+\begin{schema}{State}
+  taken : Fork \pfun Phil
+\end{schema}
+
+\subsection*{Taking a fork}
+\begin{schema}{TakeFork}
+  \Delta State\\
+  p?: Phil\\
+  f?: Fork\\
+  \where
+  f?\notin \dom taken\\
+  taken' = taken \oplus \{(f? \mapsto p?)\}\\
+\end{schema}
+
+\begin{zed}
+  TakeLeftFork \defs [~ TakeFork | left(p?) = f?~]\\
+  TakeRightFork \defs [~ TakeFork | right(p?) = f?~]\\
+\end{zed}
+
+\subsection*{Dropping a fork}
+\begin{schema}{DropFork}
+  \Delta State\\
+  p? : Phil\\
+  f? : Fork\\
+  \where
+  (f? \mapsto p?) \in taken\\
+  taken' = \{f?\} \ndres taken
+\end{schema}
+
+\subsection*{Initialisation}
+\begin{zed}
+  Init \defs [~State | taken = \emptyset~]
+\end{zed}
+
+\end{document}

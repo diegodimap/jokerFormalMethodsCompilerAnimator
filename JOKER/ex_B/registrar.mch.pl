@@ -1,0 +1,42 @@
+spec_trans(root,'$initialise_machine',0).
+spec_trans(0,'born(PERSON1,boy)',1).
+spec_trans(0,'born(PERSON1,girl)',2).
+spec_trans(0,'born(PERSON2,boy)',3).
+spec_trans(0,'born(PERSON2,girl)',4).
+spec_trans(1,'dies(PERSON1)',0).
+spec_trans(1,'born(PERSON2,boy)',5).
+spec_trans(1,'born(PERSON2,girl)',6).
+spec_trans(4,'dies(PERSON2)',0).
+spec_trans(4,'born(PERSON1,boy)',6).
+spec_trans(4,'born(PERSON1,girl)',7).
+spec_trans(7,'dies(PERSON1)',4).
+spec_trans(7,'dies(PERSON2)',2).
+spec_trans(2,'dies(PERSON1)',0).
+spec_trans(2,'born(PERSON2,boy)',8).
+spec_trans(2,'born(PERSON2,girl)',7).
+spec_trans(3,'dies(PERSON2)',0).
+spec_trans(3,'born(PERSON1,boy)',5).
+spec_trans(3,'born(PERSON1,girl)',8).
+spec_trans(5,'dies(PERSON1)',3).
+spec_trans(5,'dies(PERSON2)',1).
+spec_trans(6,'dies(PERSON1)',4).
+spec_trans(6,'dies(PERSON2)',1).
+spec_trans(6,'wed(PERSON1,PERSON2)',9).
+spec_trans(8,'dies(PERSON1)',3).
+spec_trans(8,'dies(PERSON2)',2).
+spec_trans(8,'wed(PERSON2,PERSON1)',10).
+spec_trans(9,'dies(PERSON1)',4).
+spec_trans(9,'dies(PERSON2)',1).
+spec_trans(9,'part(PERSON1,PERSON2)',6).
+spec_trans(9,'partner(PERSON1)-->PERSON2',9).
+spec_trans(9,'partner(PERSON2)-->PERSON1',9).
+spec_trans(10,'dies(PERSON1)',3).
+spec_trans(10,'dies(PERSON2)',2).
+spec_trans(10,'part(PERSON2,PERSON1)',8).
+spec_trans(10,'partner(PERSON1)-->PERSON2',10).
+spec_trans(10,'partner(PERSON2)-->PERSON1',10).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

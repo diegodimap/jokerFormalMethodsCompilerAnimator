@@ -1,0 +1,17 @@
+channel in, out, mid:{1..4}
+channel a,b,c,d
+
+
+P = in?x -> mid!x -> P
+Q = mid?y -> out!y -> Q
+
+S = a -> b -> STOP
+T = c -> d -> STOP
+
+--DV = divergences(SISTEMA)
+
+SISTEMA = (P [|{mid}|]Q) \{mid}
+
+SISTEMA2 = (a->S [] c -> T) \{c}
+
+--RENAME = S[a<-b]

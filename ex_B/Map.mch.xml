@@ -1,0 +1,355 @@
+<specification name="Map.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(INDEX1)-->ITEM1"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(INDEX2)-->ITEM2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(INDEX1)-->ITEM2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(INDEX2)-->ITEM2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(INDEX1)-->ITEM2"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(INDEX2)-->ITEM1"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(INDEX1)-->ITEM2"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(INDEX2)-->ITEM1"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(INDEX1)-->ITEM1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(INDEX2)-->ITEM1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(INDEX1,ITEM1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(INDEX1,ITEM2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(INDEX2,ITEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="insert(INDEX2,ITEM2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="remove(INDEX1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="remove(INDEX2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(INDEX1)-->ITEM1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(INDEX2)-->ITEM2"/> 
+            <next value="6"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

@@ -1,0 +1,60 @@
+<specification name="ticketChoice.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_170C95B4554010AD458B2EB39F31F0AD"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_170C95B4554010AD458B2EB39F31F0AD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_170C95B4554010AD458B2EB39F31F0AD"/> 
+            <event value="turnon"/> 
+            <next value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+            <event value="miami"/> 
+            <next value="GP_HashMD5_6E6AD1FDCB2AA130C3132D1FA20D21E8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+            <event value="paris"/> 
+            <next value="GP_HashMD5_E69262804A4F8D003DD795531BD73A49"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+            <event value="turnoff"/> 
+            <next value="GP_HashMD5_170C95B4554010AD458B2EB39F31F0AD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_4027B2A35F2A4D6BCE6E00EFA9148FA1"/> 
+            <event value="ticket"/> 
+            <next value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6E6AD1FDCB2AA130C3132D1FA20D21E8"/> 
+            <event value="dollar1000"/> 
+            <next value="GP_HashMD5_B250D6C3BDC6A627ADC1EF2DC67D0B7F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A756A7821F728CB8B564CB52A1F8625B"/> 
+            <event value="dollar1000"/> 
+            <next value="GP_HashMD5_4027B2A35F2A4D6BCE6E00EFA9148FA1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B250D6C3BDC6A627ADC1EF2DC67D0B7F"/> 
+            <event value="ticket"/> 
+            <next value="GP_HashMD5_3E7AEB8F39498E0946A5AD60D92E9FBF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E69262804A4F8D003DD795531BD73A49"/> 
+            <event value="dollar1000"/> 
+            <next value="GP_HashMD5_A756A7821F728CB8B564CB52A1F8625B"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

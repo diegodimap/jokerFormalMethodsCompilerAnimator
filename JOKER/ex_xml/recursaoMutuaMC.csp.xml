@@ -1,0 +1,25 @@
+<specification name="recursaoMutuaMC.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_77885590D80EEACD3E33CFE18F218AB4"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_77885590D80EEACD3E33CFE18F218AB4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_614BFAE7A53A885FF3D2B7ABE9778FDD"/> 
+            <event value="chocolate"/> 
+            <next value="GP_HashMD5_77885590D80EEACD3E33CFE18F218AB4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_77885590D80EEACD3E33CFE18F218AB4"/> 
+            <event value="coin"/> 
+            <next value="GP_HashMD5_614BFAE7A53A885FF3D2B7ABE9778FDD"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

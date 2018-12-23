@@ -1,0 +1,9 @@
+channel pass, reprove, graduate, start
+channel year:{1..4}
+
+START = start -> YEAR1
+YEAR1 = year.1 -> (pass -> YEAR2 [] reprove -> YEAR1)
+YEAR2 = year.2 -> (pass -> YEAR3 [] reprove -> YEAR2)
+YEAR3 = year.3 -> (pass -> YEAR4 [] reprove -> YEAR3)
+YEAR4 = year.4 -> (pass -> GRADUATE[] reprove -> YEAR4)
+GRADUATE = graduate -> SKIP

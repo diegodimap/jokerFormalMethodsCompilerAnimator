@@ -1,0 +1,12 @@
+channel passar, reprovar, graduar, entrar
+channel ano:{1..4}
+
+START = entrar -> ESTUDANTE(1)
+ESTUDANTE(n) = 
+ano.n -> 
+(
+(passar -> if(n==4) then GRADUAR else ESTUDANTE(n+1))
+[]
+(reprovar -> ESTUDANTE(n))
+)
+GRADUAR = graduar -> SKIP

@@ -1,0 +1,13 @@
+
+datatype BPhils = p1 | p2 | p3
+datatype BForks = f1 | f2 | f3
+
+channel think, eat : BPhils
+channel TakeLeftFork, TakeRightFork, DropFork : BForks.BPhils
+
+
+MAIN = ||| p:BPhils @ PHIL(p)
+
+PHIL(P) = think!P -> TakeLeftFork?fi1!P -> TakeRightFork?fi2!P ->
+          eat!P -> DropFork?fi3!P -> DropFork?fi4!P -> PHIL(P)
+

@@ -1,0 +1,195 @@
+<specification name="Booth.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER1,1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER2,1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER1,2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER2,2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER1,3)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="reserve(CUSTOMER2,3)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER1,1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER2,1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER1,2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER2,2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER1,3)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="reserve(CUSTOMER2,3)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="collect(CUSTOMER1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="collect(CUSTOMER1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER1,1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER2,1)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER1,2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER2,2)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER1,3)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="reserve(CUSTOMER2,3)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER1,1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER2,1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER1,2)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER2,2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER1,3)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="reserve(CUSTOMER2,3)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="collect(CUSTOMER2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="collect(CUSTOMER2)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER1,1)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER2,1)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER1,2)"/> 
+            <next value="28"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER2,2)"/> 
+            <next value="29"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER1,3)"/> 
+            <next value="30"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="reserve(CUSTOMER2,3)"/> 
+            <next value="31"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

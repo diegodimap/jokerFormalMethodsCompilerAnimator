@@ -1,0 +1,414 @@
+<specification name="painting.fdr2">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_01CEE1B60C62B7C8AC71AAB89E6C9F98"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_01CEE1B60C62B7C8AC71AAB89E6C9F98"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_A0438BCCAB4FBE2A21D074D388C108E6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_08A983FE1DEBCAD7F40CC3E49741E6DB"/> 
+            <event value="kate.put.box"/> 
+            <next value="GP_HashMD5_D7687510C0F9767E68D87D4693255678"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0AB1EF10AAEEFA7E54D845C75368821A"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0AB1EF10AAEEFA7E54D845C75368821A"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_AD2519943FA81D93694D369E2448AD2E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_137829AFB2F30F19E6EEB68059AF610B"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_874E429C9F8E8B3581086D6636E5BD6E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_137829AFB2F30F19E6EEB68059AF610B"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_144F8311F2A0C14214BB87C5E3B85FB1"/> 
+            <event value="kate.paint.nadinha"/> 
+            <next value="GP_HashMD5_AB54D6E4B21CC4B8E6BF2A3AF4F8480E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1F219CCC53775D81C6DF2B2347B6171A"/> 
+            <event value="kate.paint.nadinha"/> 
+            <next value="GP_HashMD5_DCA1FECB3094C901AB157E0A2F25FFC6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2250AF1D7A62890C81A6E20DFCE50A80"/> 
+            <event value="kate.put.easel"/> 
+            <next value="GP_HashMD5_01CEE1B60C62B7C8AC71AAB89E6C9F98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_433A23354D587B708E2308D5D210A1B1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_137829AFB2F30F19E6EEB68059AF610B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_0AB1EF10AAEEFA7E54D845C75368821A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_01CEE1B60C62B7C8AC71AAB89E6C9F98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_B757FBED48780A1971C6EC8432A9FC8E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_92EF14D5F9677E35B8D1327CA5EC3A59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_0AB1EF10AAEEFA7E54D845C75368821A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_01CEE1B60C62B7C8AC71AAB89E6C9F98"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_B926AA6E69FC8C159974DED4F1E6B58E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_BDA5A82D91888540F1245A35B29120AA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_CF02EE4A7646C6633CB69DD49626BB97"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_32C9C4D7CFF989CAC173BD45CB5045BD"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_38730B3834535E601BD99CCC6B0F088F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_38730B3834535E601BD99CCC6B0F088F"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_38730B3834535E601BD99CCC6B0F088F"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_E6EDFDE861E0FEEEBB5B3F68973E9074"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3C05336E1E456E11404A43699BC5F175"/> 
+            <event value="jane.put.box"/> 
+            <next value="GP_HashMD5_D51F0D495FD1A788E0FEB8680A4AD675"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3ED91A356CE6F7EADC6EECA69BCF80E1"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3ED91A356CE6F7EADC6EECA69BCF80E1"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_E6EDFDE861E0FEEEBB5B3F68973E9074"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_433A23354D587B708E2308D5D210A1B1"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_1F219CCC53775D81C6DF2B2347B6171A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_433A23354D587B708E2308D5D210A1B1"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_43E221C1FCA9EBF93747B730B6B9D81B"/> 
+            <event value="kate.put.box"/> 
+            <next value="GP_HashMD5_0AB1EF10AAEEFA7E54D845C75368821A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_B757FBED48780A1971C6EC8432A9FC8E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_92EF14D5F9677E35B8D1327CA5EC3A59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_990807B8A5445B9EF5BDE633D59D445D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_3ED91A356CE6F7EADC6EECA69BCF80E1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_68EAED8D1AD172C5AFBA81FB2E876EFD"/> 
+            <event value="kate.put.box"/> 
+            <next value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_68EAED8D1AD172C5AFBA81FB2E876EFD"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_43E221C1FCA9EBF93747B730B6B9D81B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6BF08D3BEE24BDA4046432F6169599E4"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_CB62101A7EAA4087DD94A8791DCCC0E9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6BF08D3BEE24BDA4046432F6169599E4"/> 
+            <event value="jane.put.box"/> 
+            <next value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_710E29820C219B3B03CDE671728A5266"/> 
+            <event value="jane.put.easel"/> 
+            <next value="GP_HashMD5_979BD27EF0E42E8BD77BF4556CDD38A1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_71D35B46927681B9A05D80896A0B79D4"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_C230D3FD09180B77DB5D49E38FCEB077"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_71D35B46927681B9A05D80896A0B79D4"/> 
+            <event value="jane.put.easel"/> 
+            <next value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_86A145ABFF358E9D27EFEFA7D1535B3B"/> 
+            <event value="kate.put.box"/> 
+            <next value="GP_HashMD5_E9DA0857448F226E50B4F409EDD1700D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_874E429C9F8E8B3581086D6636E5BD6E"/> 
+            <event value="kate.paint.nadinha"/> 
+            <next value="GP_HashMD5_08A983FE1DEBCAD7F40CC3E49741E6DB"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_890B9D18F9AD0C4A3EA833DE3C0155F3"/> 
+            <event value="jane.put.easel"/> 
+            <next value="GP_HashMD5_6BF08D3BEE24BDA4046432F6169599E4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_92EF14D5F9677E35B8D1327CA5EC3A59"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_DB02E60A7A35662ECA97B5C21CE8BEE1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_92EF14D5F9677E35B8D1327CA5EC3A59"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_979BD27EF0E42E8BD77BF4556CDD38A1"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_CB62101A7EAA4087DD94A8791DCCC0E9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_979BD27EF0E42E8BD77BF4556CDD38A1"/> 
+            <event value="jane.put.box"/> 
+            <next value="GP_HashMD5_67461E14CD14190C3F24014A1D951619"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_98E29E238CDB65A7C94289E6AE210793"/> 
+            <event value="jane.put.box"/> 
+            <next value="GP_HashMD5_71D35B46927681B9A05D80896A0B79D4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_990807B8A5445B9EF5BDE633D59D445D"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_990807B8A5445B9EF5BDE633D59D445D"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_A7B7B378EEE9CD5A3148E8F5B72769A8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A0438BCCAB4FBE2A21D074D388C108E6"/> 
+            <event value="jane.paint.nadinha"/> 
+            <next value="GP_HashMD5_3C05336E1E456E11404A43699BC5F175"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A7B7B378EEE9CD5A3148E8F5B72769A8"/> 
+            <event value="jane.paint.nadinha"/> 
+            <next value="GP_HashMD5_710E29820C219B3B03CDE671728A5266"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AB54D6E4B21CC4B8E6BF2A3AF4F8480E"/> 
+            <event value="kate.put.easel"/> 
+            <next value="GP_HashMD5_AE500DE037F57ACAAE634B8D61D5B1C6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AD2519943FA81D93694D369E2448AD2E"/> 
+            <event value="jane.paint.nadinha"/> 
+            <next value="GP_HashMD5_890B9D18F9AD0C4A3EA833DE3C0155F3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AE500DE037F57ACAAE634B8D61D5B1C6"/> 
+            <event value="kate.put.box"/> 
+            <next value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AE500DE037F57ACAAE634B8D61D5B1C6"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_43E221C1FCA9EBF93747B730B6B9D81B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B757FBED48780A1971C6EC8432A9FC8E"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_144F8311F2A0C14214BB87C5E3B85FB1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B757FBED48780A1971C6EC8432A9FC8E"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B926AA6E69FC8C159974DED4F1E6B58E"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_1F219CCC53775D81C6DF2B2347B6171A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_B926AA6E69FC8C159974DED4F1E6B58E"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_0D55EC0898B12BE071E2FDB450C98036"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BDA5A82D91888540F1245A35B29120AA"/> 
+            <event value="kate.get.easel"/> 
+            <next value="GP_HashMD5_874E429C9F8E8B3581086D6636E5BD6E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BDA5A82D91888540F1245A35B29120AA"/> 
+            <event value="jane.get.easel"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C230D3FD09180B77DB5D49E38FCEB077"/> 
+            <event value="jane.put.easel"/> 
+            <next value="GP_HashMD5_92EF14D5F9677E35B8D1327CA5EC3A59"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CB62101A7EAA4087DD94A8791DCCC0E9"/> 
+            <event value="jane.put.box"/> 
+            <next value="GP_HashMD5_B757FBED48780A1971C6EC8432A9FC8E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CF02EE4A7646C6633CB69DD49626BB97"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_76E4A249547F2C142559AF9A8BE5709D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CF02EE4A7646C6633CB69DD49626BB97"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_A7B7B378EEE9CD5A3148E8F5B72769A8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D51F0D495FD1A788E0FEB8680A4AD675"/> 
+            <event value="kate.get.box"/> 
+            <next value="GP_HashMD5_C230D3FD09180B77DB5D49E38FCEB077"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D51F0D495FD1A788E0FEB8680A4AD675"/> 
+            <event value="jane.put.easel"/> 
+            <next value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D7687510C0F9767E68D87D4693255678"/> 
+            <event value="kate.put.easel"/> 
+            <next value="GP_HashMD5_27FAE917F457FA27C9D2B2C02513169C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D7687510C0F9767E68D87D4693255678"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_2250AF1D7A62890C81A6E20DFCE50A80"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DB02E60A7A35662ECA97B5C21CE8BEE1"/> 
+            <event value="kate.paint.nadinha"/> 
+            <next value="GP_HashMD5_86A145ABFF358E9D27EFEFA7D1535B3B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DCA1FECB3094C901AB157E0A2F25FFC6"/> 
+            <event value="kate.put.easel"/> 
+            <next value="GP_HashMD5_68EAED8D1AD172C5AFBA81FB2E876EFD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E6EDFDE861E0FEEEBB5B3F68973E9074"/> 
+            <event value="jane.paint.nadinha"/> 
+            <next value="GP_HashMD5_98E29E238CDB65A7C94289E6AE210793"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E9DA0857448F226E50B4F409EDD1700D"/> 
+            <event value="kate.put.easel"/> 
+            <next value="GP_HashMD5_2EBBEBC2F996334B85510ECDD7B68792"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E9DA0857448F226E50B4F409EDD1700D"/> 
+            <event value="jane.get.box"/> 
+            <next value="GP_HashMD5_2250AF1D7A62890C81A6E20DFCE50A80"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

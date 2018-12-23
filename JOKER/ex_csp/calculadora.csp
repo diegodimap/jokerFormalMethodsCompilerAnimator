@@ -1,0 +1,13 @@
+channel ligar, desligar, usar, som, sub, div, mul
+
+MAIN = ligar -> NUMERO1 
+
+NUMERO1 = [] x:{0..100} @ x -> NUMERO2(x)
+NUMERO2(x) = [] y:{0..100} @ y -> CALCULAR(x,y)
+
+CALCULAR(x,y) = som -> SOMA(x,y) [] sub -> SUBTRAIR(x,y) [] div -> DIVIDIR(x,y) [] mul -> MULTIPLICAR(x,y)
+
+SOMA(x,y) =        (x+y) -> (desligar -> START [] usar -> NUMERO1)
+SUBTRAIR(x,y) =    (x-y) -> (desligar -> START [] usar -> NUMERO1)
+DIVIDIR(x,y) =     (x/y) -> (desligar -> START [] usar -> NUMERO1)
+MULTIPLICAR(x,y) = (x*y) -> (desligar -> START [] usar -> NUMERO1)

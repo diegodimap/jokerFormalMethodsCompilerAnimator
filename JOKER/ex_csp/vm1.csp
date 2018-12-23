@@ -1,0 +1,3 @@
+channel coin, choc
+
+VM = coin -> choc -> STOP

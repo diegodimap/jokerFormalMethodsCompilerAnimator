@@ -1,0 +1,54 @@
+spec_trans(root,'$initialise_machine',8).
+spec_trans(root,'$initialise_machine',10).
+spec_trans(root,'$initialise_machine',12).
+spec_trans(root,'$initialise_machine',13).
+spec_trans(root,'$initialise_machine',11).
+spec_trans(root,'$initialise_machine',9).
+spec_trans(root,'$initialise_machine',7).
+spec_trans(6,'$initialise_machine',7).
+spec_trans(0,'$initialise_machine',8).
+spec_trans(7,'GetSol-->[9,0,2,5,3,7,4,6,1,8]',7).
+spec_trans(7,'COPY-->[9,0,2,5]',7).
+spec_trans(7,'PASTE-->[2,3,7,4,6]',7).
+spec_trans(7,'SAVE-->[7,3,1,6]',7).
+spec_trans(7,'TOOLS-->[4,0,0,8,7]',7).
+spec_trans(5,'$initialise_machine',9).
+spec_trans(9,'GetSol-->[8,9,1,5,3,7,2,6,0,4]',9).
+spec_trans(9,'COPY-->[8,9,1,5]',9).
+spec_trans(9,'PASTE-->[1,3,7,2,6]',9).
+spec_trans(9,'SAVE-->[7,3,0,6]',9).
+spec_trans(9,'TOOLS-->[2,9,9,4,7]',9).
+spec_trans(1,'$initialise_machine',10).
+spec_trans(4,'$initialise_machine',11).
+spec_trans(2,'$initialise_machine',12).
+spec_trans(3,'$initialise_machine',13).
+spec_trans(8,'GetSol-->[3,2,5,9,1,7,6,4,8,0]',8).
+spec_trans(8,'COPY-->[3,2,5,9]',8).
+spec_trans(8,'PASTE-->[5,1,7,6,4]',8).
+spec_trans(8,'SAVE-->[7,1,8,4]',8).
+spec_trans(8,'TOOLS-->[6,2,2,0,7]',8).
+spec_trans(11,'GetSol-->[6,5,8,3,7,1,9,4,2,0]',11).
+spec_trans(11,'COPY-->[6,5,8,3]',11).
+spec_trans(11,'PASTE-->[8,7,1,9,4]',11).
+spec_trans(11,'SAVE-->[1,7,2,4]',11).
+spec_trans(11,'TOOLS-->[9,5,5,0,1]',11).
+spec_trans(10,'GetSol-->[3,2,5,4,0,8,6,7,9,1]',10).
+spec_trans(10,'COPY-->[3,2,5,4]',10).
+spec_trans(10,'PASTE-->[5,0,8,6,7]',10).
+spec_trans(10,'SAVE-->[8,0,9,7]',10).
+spec_trans(10,'TOOLS-->[6,2,2,1,8]',10).
+spec_trans(12,'GetSol-->[4,3,8,5,1,7,9,6,2,0]',12).
+spec_trans(12,'COPY-->[4,3,8,5]',12).
+spec_trans(12,'PASTE-->[8,1,7,9,6]',12).
+spec_trans(12,'SAVE-->[7,1,2,6]',12).
+spec_trans(12,'TOOLS-->[9,3,3,0,7]',12).
+spec_trans(13,'GetSol-->[5,6,3,7,9,1,4,2,0,8]',13).
+spec_trans(13,'COPY-->[5,6,3,7]',13).
+spec_trans(13,'PASTE-->[3,9,1,4,2]',13).
+spec_trans(13,'SAVE-->[1,9,0,2]',13).
+spec_trans(13,'TOOLS-->[4,6,6,8,1]',13).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_max_reached_for_node(_) :-
+        fail.
+spec_completely_explored.

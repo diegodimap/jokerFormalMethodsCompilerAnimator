@@ -1,0 +1,58 @@
+<specification name="bilhetesEscolha.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_672C883D19FEC0C4CE4225EAF38971F2"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_672C883D19FEC0C4CE4225EAF38971F2"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_672C883D19FEC0C4CE4225EAF38971F2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_0F13C228865EC63B914A69D01E710D41"/> 
+            <event value="real50"/> 
+            <next value="GP_HashMD5_1E107A894481CE8945DEDE1F1EDCC118"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1E107A894481CE8945DEDE1F1EDCC118"/> 
+            <event value="bilhete"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_672C883D19FEC0C4CE4225EAF38971F2"/> 
+            <event value="recife"/> 
+            <next value="GP_HashMD5_0F13C228865EC63B914A69D01E710D41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_672C883D19FEC0C4CE4225EAF38971F2"/> 
+            <event value="fortaleza"/> 
+            <next value="GP_HashMD5_F90AA1B300FE4700C13F617248F6738B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_73F041408665BD2AED48A6FDFC08847C"/> 
+            <event value="bilhete"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F06B18EBB5F594FA8DEA38D74D907D62"/> 
+            <event value="real50"/> 
+            <next value="GP_HashMD5_73F041408665BD2AED48A6FDFC08847C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F90AA1B300FE4700C13F617248F6738B"/> 
+            <event value="real50"/> 
+            <next value="GP_HashMD5_F06B18EBB5F594FA8DEA38D74D907D62"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

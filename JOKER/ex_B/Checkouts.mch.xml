@@ -1,0 +1,23 @@
+<specification name="Checkouts.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="open(COUNTER1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="open(COUNTER2)"/> 
+            <next value="2"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

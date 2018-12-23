@@ -1,0 +1,8 @@
+channel s2c, s1c, e1r
+Saida = {s2c, s1c}
+
+T1R = e1r -> SAIDA_T(10)
+
+SAIDA(c,n) = if (c==s2c) then SAIDA_T(n-2) else SAIDA_T(n-1)
+
+SAIDA_T(n) = if (n >= 2) then [] c:Saida @ c -> SAIDA(c,n) else if(n >= 1) then s1c -> SAIDA_T(n-1) else STOP

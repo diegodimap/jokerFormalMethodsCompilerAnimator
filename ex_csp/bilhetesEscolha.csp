@@ -1,0 +1,6 @@
+channel real50, bilhete, recife, fortaleza
+
+BILHETE =
+(recife -> real50 -> bilhete -> STOP)
+[]
+(fortaleza -> real50 -> real50 -> bilhete -> STOP)

@@ -1,0 +1,72 @@
+
+start(env(1,[])).
+
+trans(Opcode,env(PC,In),Out ) :-
+    inst(PC,Opcode,A1,A2,A3),
+	NextPC is PC+1,
+	ex_opcode(Opcode,A1,A2,A3,NextPC,In,Out).
+
+
+prop(env(PC,_),'='(pc,PC)).
+prop(env(_,V),'='(Key,Value)) :- member(Key/Value,V).
+prop(P,P).
+
+ inst(1,assign,i,0,_).
+ inst(2,assign,x,2,_).
+ inst(3,if(>),i,1,7).
+ inst(4,assign(*),x,x,x).
+ inst(5,assign(+),i,i,1).
+ inst(6,goto,_,_,3).
+ inst(7,assign,res,x,_).
+ inst(8,halt,_,_,_).
+
+ inst(10,assign,x,1,_).
+ inst(11,assign(+),y,x,1).
+ inst(12,halt,_,_,_).
+
+run(Out) :- tint(1,[],Out).
+
+tint(PC,In,Out) :- print(tint(PC,In)),nl,
+	inst(PC,Opcode,A1,A2,A3),
+	NextPC is PC+1,
+	ex_opcode(Opcode,A1,A2,A3,NextPC,In,Out).
+
+ex_opcode(halt,_,_,_,_,Env,stop).
+ex_opcode(goto,_,_,Label,_,In,env(Label,In)).
+ex_opcode(assign,Var,RHS,_,NextPC,In,env(NextPC,Out)) :-
+    load(RHS,In,RHSVAL),
+    store(In,Var,RHSVAL,Out).
+ex_opcode(if(OP),RHS1,RHS2,Label,PCP1,In,env(NextPC,In)) :-
+    load(RHS1,In,RHSVAL1),
+    load(RHS2,In,RHSVAL2),
+    (test_op(OP,RHSVAL1,RHSVAL2) -> NextPC=Label ; NextPC=PCP1).
+ex_opcode(assign(OP),Var,RHS1,RHS2,NextPC,In,env(NextPC,Out)) :-
+    load(RHS1,In,RHSVAL1),
+    load(RHS2,In,RHSVAL2),
+    ex_op(OP,RHSVAL1,RHSVAL2,Res),
+    store(In,Var,Res,Out).
+
+ex_op(*,A1,A2,R) :- R is A1 * A2.
+ex_op(+,A1,A2,R) :- R is A1 + A2.
+ex_op(-,A1,A2,R) :- R is A1 - A2.
+
+test_op(<,A1,A2) :- A1 < A2.
+test_op(>,A1,A2) :- A1 > A2.
+test_op(<=,A1,A2) :- A1 =< A2.
+test_op(>=,A1,A2) :- A1 >= A2.
+
+	
+
+/* Store(OldEnv, VariableName, NewValue, NewEnv) */
+store([],Key,Value,[Key/Value]) :- \+ number(Key).
+store([Key/_Value2|T],Key,Value,[Key/Value|T]).
+store([Key2/Value2|T],Key,Value,[Key2/Value2|BT]) :-
+   Key \== Key2, store(T,Key,Value,BT).
+
+/* lookup(VariableName, Env, CurrentValue) */
+load(Key,Env,Val) :-
+	(number(Key) -> Val=Key ; lookup(Key,Env,Val)).
+lookup(Key,[],_) :- print('*** could not find variable: ') ,print(Key),nl,fail.
+lookup(Key,[Key/Value|_T],Value).
+lookup(Key,[Key2/_Value2|T],Value) :-
+   Key \== Key2,lookup(Key,T,Value).

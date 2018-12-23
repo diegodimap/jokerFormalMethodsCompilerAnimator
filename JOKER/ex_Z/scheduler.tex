@@ -1,0 +1,106 @@
+\documentclass[a4paper]{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\section*{Scheduler}
+\subsection*{Data types}
+We have a given set $Proc$ of processes, each can be in one of
+the states $idle$, $ready$ or $active$.
+\begin{zed}
+  [Proc]\\
+  State ::= idle | readyd | active\\
+\end{zed}
+
+\subsection*{State}
+The current global state consists of a set of processes and each process
+has a assigned state. This is modelled as a partial function from the
+set of all possible processes to their state. The current processes
+are the domain of the function.
+
+The system starts with no processes.
+\begin{zed}
+  Processes \defs [~proc: Proc \pfun State~]\\
+  Init \defs [~Processes | proc = \emptyset~]\\
+\end{zed}
+
+
+\subsection*{Helper schemas}
+The two following schemas are used by the operations defined
+below. $ProcBase$ is for operations that modify the state and
+have a process as input. $ProcOperation$ has the additional
+constraint that the given process is an existing process in
+the system.
+\begin{zed}
+  ProcBase \defs [~\Delta Processes; p? : Proc~]\\
+  ProcOperation \defs [~ProcBase | p? \in \dom proc~]  
+\end{zed}
+
+
+\subsection*{Process creation and destruction}
+A new process is created.
+\begin{schema}{New}
+  ProcBase\\
+  \where
+  p? \notin \dom proc\\
+  proc' = proc \oplus \{p? \mapsto idle\}
+\end{schema}
+
+An idle process is destroyed.
+\begin{schema}{Del}
+  ProcOperation\\
+  \where
+  proc(p?) = idle\\
+  proc' = \{p?\} \ndres proc
+\end{schema}
+
+
+\subsection*{Changing the state of a process}
+
+An idle process signalises that it's ready to enter the critical section.
+\begin{schema}{Ready}
+  ProcOperation\\
+  \where
+  proc(p?) = idle\\
+  proc' = proc \oplus \{ p? \mapsto ready \}
+\end{schema}
+
+A process that is ready enters the critical section and is then active.
+The process can only become active if no other process is active.
+\begin{schema}{Enter}
+  ProcOperation\\
+  \where
+  proc(p?) = ready\\
+  proc \rres \{ active \} = \emptyset\\
+  proc' = proc \oplus \{ p? \mapsto active\}
+\end{schema}
+
+An active process leaves the critical section.
+\begin{schema}{Leave}
+  ProcOperation\\
+  \where
+  proc(p?) = active\\
+  proc' = proc \oplus \{ p? \mapsto idle \}
+\end{schema}
+
+\end{document}
+start_logging(1302529375491,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').
+version(1302529375491,1,3,2,beta10,'$Rev: 5042 $','$LastChangedDate: 2010-03-30 17:57:13 +0200 (Tue, 30 Mar 2010) $').
+options(1302529375491,[set_pref('D:/FORMAIS/ProB_Win/ProB_Win/lib',uzzlib),log('D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex')],['D:/FORMAIS/ProB_Win/ProB_Win/lib',uzz,>>,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.fuzz']).
+date(1302529375491,datime(2011,4,11,10,42,55)).
+prob_halted_prematurely(1302529375491).
+start_logging(1302529376479,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').
+version(1302529376479,1,3,2,beta10,'$Rev: 5042 $','$LastChangedDate: 2010-03-30 17:57:13 +0200 (Tue, 30 Mar 2010) $').
+options(1302529376479,[set_pref('D:/FORMAIS/ProB_Win/ProB_Win/lib',uzzlib),log('D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex')],['D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex','D:/FORMAIS/ProB_Win/ProB_Win/probcli.exe','D:/FORMAIS/ProB_Win/ProB_Win/lib',uzz,>>,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.fuzz','D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.pl']).
+date(1302529376479,datime(2011,4,11,10,42,56)).
+loading(1302529376479,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').
+start_logging(1302529577009,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').
+version(1302529577009,1,3,2,beta10,'$Rev: 5042 $','$LastChangedDate: 2010-03-30 17:57:13 +0200 (Tue, 30 Mar 2010) $').
+options(1302529577009,[set_pref('D:/FORMAIS/ProB_Win/ProB_Winlib',uzzlib),log('D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex')],['D:/FORMAIS/ProB_Win/ProB_Winlib',uzz,>>,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.fuzz']).
+date(1302529577009,datime(2011,4,11,10,46,17)).
+prob_halted_prematurely(1302529577009).
+start_logging(1302529578040,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').
+version(1302529578040,1,3,2,beta10,'$Rev: 5042 $','$LastChangedDate: 2010-03-30 17:57:13 +0200 (Tue, 30 Mar 2010) $').
+options(1302529578040,[set_pref('D:/FORMAIS/ProB_Win/ProB_Winlib',uzzlib),log('D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex')],['D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex','D:/FORMAIS/ProB_Win/ProB_Win/probcli.exe','D:/FORMAIS/ProB_Win/ProB_Winlib',uzz,>>,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.fuzz','D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex.pl']).
+date(1302529578040,datime(2011,4,11,10,46,18)).
+loading(1302529578040,'D:\\09-PROJETOS_NETBEANS\\JOKER\\ex_Z\\scheduler.tex').

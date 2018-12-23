@@ -1,0 +1,73 @@
+channel jump : NUM.NUM.NUM
+
+channel move : NUM.NUM
+
+channel done
+
+n = 8
+m = 4
+
+NUM = {0..n}
+
+--- white counters move from right to left, black ones from left to right
+---
+---  initially:  * * * * - o o o o
+
+EMPTY(i) = (if (i>0) then (move.(i-1).i -> BLACK(i)) else STOP)
+           []
+           (if (i < n) then (move.(i+1).i -> WHITE(i)) else STOP)
+           []
+           (if (i > 1) then (jump.(i-2).(i-1).i -> BLACK(i)) else STOP)
+           []
+           (if (i < (n-1)) then (jump.(i+2).(i+1).i -> WHITE(i)) else STOP)
+           []
+           (if (i == (n-m)) then (done -> STOP) else STOP)
+
+
+BLACK(i) = (if ((i < n) and (i > 0)) then (jump.(i+1).i.(i-1) -> BLACK(i)) else STOP)
+           []
+           (if (i < (n-1)) then (jump.i.(i+1).(i+2) -> EMPTY(i)) else STOP)
+           []
+           (if (i < n) then (move.i.(i+1) -> EMPTY(i)) else STOP)
+           []
+           (if (i > (n-m)) then (done -> STOP) else STOP)
+
+WHITE(i) = (if ((i < n) and (i > 0)) then (jump.(i-1).i.(i+1) -> WHITE(i)) else STOP)
+           []
+           (if (i > 1) then (jump.i.(i-1).(i-2) -> EMPTY(i)) else STOP)
+           []
+           (if (i > 0) then (move.i.(i-1) -> EMPTY(i)) else STOP)
+           []
+           (if (i < (n-m)) then (done -> STOP) else STOP)
+
+START(i) = if (i == m) 
+           then EMPTY(i)
+           else if (i > m)
+                then WHITE(i)
+                else BLACK(i)
+
+
+A(i) = if (i == n) 
+       then {jump.(n-2).(n-1).n, jump.n.(n-1).(n-2), 
+             move.(n-1).n, move.n.(n-1), done} 
+       else 
+       if (i == n-1) 
+       then {jump.(n-2).(n-1).n, jump.n.(n-1).(n-2), jump.(n-3).(n-2).(n-1), jump.(n-1).(n-2).(n-3), move.(n-2).(n-1), move.(n-1).(n-2), move.(n-1).n, move.n.(n-1), done}
+            else if (i == 0) then {jump.0.1.2, jump.2.1.0, move.0.1, move.1.0, done}
+                 else if (i == 1) then {jump.0.1.2, jump.2.1.0, jump.1.2.3, jump.3.2.1, move.1.2, move.2.1, move.0.1, move.1.0, done}
+                      else
+{jump.i-2.i-1.i, jump.i.i-1.i-2, jump.i-1.i.i+1, jump.i+1.i.i-1, jump.i.i+1.i+2, jump.i+2.i+1.i, move.i-1.i, move.i.i-1, move.i.i+1, move.i+1.i, done}
+
+-- earlier definitions are taken first
+
+
+
+GAME = || i : NUM @ [A(i)] START(i)
+
+assert STOP [T= GAME \ {|jump, move|} 
+
+-- This assertion states that the event `done' should not happen.  Thus
+-- FDR will search for a treace in which it does happen, and if it
+-- finds one then it will display it as a trace for which the
+-- specification fails.
+

@@ -1,0 +1,10 @@
+machine('TrainTorchPuzzle').
+setup_constants(avl_set(node((fd(2,'Persons'),int(2)),true,1,node((fd(1,'Persons'),int(1)),true,0,empty,empty),node((fd(3,'Persons'),int(5)),true,1,empty,node((fd(4,'Persons'),int(8)),true,0,empty,empty)))),int(16)).
+initialise_machine(bool_true,global_set('Persons'),int(0)).
+'Go_Right_Over_Bridge'(avl_set(node(fd(1,'Persons'),true,1,empty,node(fd(2,'Persons'),true,0,empty,empty)))).
+'Go_Left_Over_Bridge'(avl_set(node(fd(1,'Persons'),true,0,empty,empty))).
+'Go_Right_Over_Bridge'(avl_set(node(fd(3,'Persons'),true,1,empty,node(fd(4,'Persons'),true,0,empty,empty)))).
+'Go_Left_Over_Bridge'(avl_set(node(fd(2,'Persons'),true,0,empty,empty))).
+'Go_Right_Over_Bridge'(avl_set(node(fd(1,'Persons'),true,1,empty,node(fd(2,'Persons'),true,0,empty,empty)))).
+'Success'.
+

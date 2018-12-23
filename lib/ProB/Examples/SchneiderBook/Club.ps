@@ -1,0 +1,1386 @@
+%!PS-Adobe-2.0
+%%Creator: dot version 1.9 (Thu Nov  6 15:50:33 GMT 2003)
+%%For: (mal) Michael Leuschel
+%%Title: visited_states
+%%Pages: (atend)
+%%BoundingBox: 35 35 577 736
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+
+EncodingVector
+  dup 306 /AE
+  dup 301 /Aacute
+  dup 302 /Acircumflex
+  dup 304 /Adieresis
+  dup 300 /Agrave
+  dup 305 /Aring
+  dup 303 /Atilde
+  dup 307 /Ccedilla
+  dup 311 /Eacute
+  dup 312 /Ecircumflex
+  dup 313 /Edieresis
+  dup 310 /Egrave
+  dup 315 /Iacute
+  dup 316 /Icircumflex
+  dup 317 /Idieresis
+  dup 314 /Igrave
+  dup 334 /Udieresis
+  dup 335 /Yacute
+  dup 376 /thorn
+  dup 337 /germandbls
+  dup 341 /aacute
+  dup 342 /acircumflex
+  dup 344 /adieresis
+  dup 346 /ae
+  dup 340 /agrave
+  dup 345 /aring
+  dup 347 /ccedilla
+  dup 351 /eacute
+  dup 352 /ecircumflex
+  dup 353 /edieresis
+  dup 350 /egrave
+  dup 355 /iacute
+  dup 356 /icircumflex
+  dup 357 /idieresis
+  dup 354 /igrave
+  dup 360 /dcroat
+  dup 361 /ntilde
+  dup 363 /oacute
+  dup 364 /ocircumflex
+  dup 366 /odieresis
+  dup 362 /ograve
+  dup 365 /otilde
+  dup 370 /oslash
+  dup 372 /uacute
+  dup 373 /ucircumflex
+  dup 374 /udieresis
+  dup 371 /ugrave
+  dup 375 /yacute
+  dup 377 /ydieresis  
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+%%Page: 1 1
+%%PageBoundingBox: 36 36 577 736
+%%PageOrientation: Portrait
+gsave
+35 35 542 701 boxprim clip newpath
+36 36 translate
+0 0 1 beginpage
+0.2719 set_scale
+0 0 translate 0 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+
+%	root
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+newpath 1185 2563 moveto
+1158 2536 lineto
+1212 2536 lineto
+closepath
+stroke
+end grestore
+
+%	1060
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1094 2316 71 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1094 2311 moveto 121 -0.5 (capacity=1,total=3) alignedtext
+end grestore
+end grestore
+
+%	root -> 1060
+gsave 10 dict begin
+dotted
+newpath 1176 2536 moveto
+1159 2519 1124 2480 1108 2440 curveto
+1095 2408 1093 2368 1093 2342 curveto
+stroke
+gsave 10 dict begin
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1096 2344 moveto
+1093 2334 lineto
+1091 2344 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+end grestore
+gsave 10 dict begin
+1182 2425 moveto 133 -0.5 (setup_constants\(1,3\)) alignedtext
+end grestore
+end grestore
+
+%	1066
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+1277 2316 73 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1277 2311 moveto 124 -0.5 (capacity=2,total=3) alignedtext
+end grestore
+end grestore
+
+%	root -> 1066
+gsave 10 dict begin
+dotted
+newpath 1194 2536 moveto
+1209 2519 1243 2480 1259 2440 curveto
+1272 2408 1275 2368 1277 2342 curveto
+stroke
+gsave 10 dict begin
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1280 2344 moveto
+1277 2334 lineto
+1275 2344 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+end grestore
+gsave 10 dict begin
+1339 2425 moveto 137 -0.5 (setup_constants\(2,3\)) alignedtext
+end grestore
+end grestore
+
+%	1087
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+1277 2087 87 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1277 2082 moveto 152 -0.5 (member={},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1066 -> 1087
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1277 2298 moveto
+1277 2257 1277 2163 1277 2115 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1280 2115 moveto
+1277 2105 lineto
+1275 2115 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1363 2196 moveto 157 -0.5 (initialise_machine\({},{}\)) alignedtext
+end grestore
+end grestore
+
+%	1087 -> 1087
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1336 2074 moveto
+1361 2073 1382 2077 1382 2087 curveto
+1382 2096 1367 2100 1346 2100 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1346 2098 moveto
+1336 2100 lineto
+1346 2103 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1425 2082 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1137
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+1024 1858 116 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1024 1853 moveto 211 -0.5 (member={},waiting={NAME1}) alignedtext
+end grestore
+end grestore
+
+%	1087 -> 1137
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1208 2076 moveto
+1153 2063 1078 2036 1038 1982 curveto
+1017 1954 1017 1912 1020 1884 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1022 1886 moveto
+1021 1876 lineto
+1017 1886 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1118 1967 moveto 146 -0.5 (join_queue\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1142
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1687 484 118 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1687 479 moveto 214 -0.5 (member={},waiting={NAME2}) alignedtext
+end grestore
+end grestore
+
+%	1087 -> 1142
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1358 2080 moveto
+1483 2065 1709 2015 1709 1858 curveto
+1709 1858 1709 1858 1709 713 curveto
+1709 640 1698 554 1691 511 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1694 512 moveto
+1690 502 lineto
+1689 512 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1791 1281 moveto 149 -0.5 (join_queue\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1147
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1379 1171 117 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1379 1166 moveto 213 -0.5 (member={},waiting={NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1087 -> 1147
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1284 2069 moveto
+1291 2048 1303 2013 1310 1982 curveto
+1369 1679 1378 1302 1379 1198 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1382 1199 moveto
+1379 1189 lineto
+1377 1199 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1439 1624 moveto 148 -0.5 (join_queue\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1137 -> 1087
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1266 2061 moveto
+1253 2033 1231 1991 1202 1962 curveto
+1162 1922 1104 1892 1065 1875 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1263 2061 moveto
+1270 2069 lineto
+1268 2059 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1263 1967 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1247
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+383 255 116 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+383 250 moveto 211 -0.5 (member={NAME1},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1137 -> 1247
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 938 1846 moveto
+744 1804 56 1652 56 1629 curveto
+56 1629 56 1629 56 484 curveto
+56 362 210 299 307 272 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 307 275 moveto
+316 270 lineto
+306 270 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+110 1052 moveto 94 -0.5 (join\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1280
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+1310 255 148 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1310 250 moveto 275 -0.5 (member={},waiting={NAME1,NAME2}) alignedtext
+end grestore
+end grestore
+
+%	1137 -> 1280
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1085 1843 moveto
+1272 1792 1355 1790 1514 1647 curveto
+1520 1640 1524 1638 1524 1629 curveto
+1524 1629 1524 1629 1524 1286 curveto
+1524 1133 1518 1094 1518 942 curveto
+1518 942 1518 942 1518 484 curveto
+1518 387 1415 312 1354 278 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1355 276 moveto
+1345 273 lineto
+1353 280 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1601 1052 moveto 149 -0.5 (join_queue\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1285
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+548 1629 148 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+548 1624 moveto 274 -0.5 (member={},waiting={NAME1,NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1137 -> 1285
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 988 1841 moveto
+945 1820 871 1784 807 1754 curveto
+731 1717 644 1676 592 1651 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 594 1649 moveto
+584 1647 lineto
+592 1654 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+891 1739 moveto 148 -0.5 (join_queue\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1280 -> 1087
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1373 2083 moveto
+1411 2080 1427 2077 1472 2069 curveto
+1680 2029 1900 2070 1900 1858 curveto
+1900 1858 1900 1858 1900 484 curveto
+1900 241 1653 302 1414 268 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1373 2081 moveto
+1363 2084 lineto
+1373 2085 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1943 1166 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1387
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+1194 713 147 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1194 708 moveto 272 -0.5 (member={NAME1},waiting={NAME2}) alignedtext
+end grestore
+end grestore
+
+%	1280 -> 1387
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1229 689 moveto
+1254 671 1285 642 1300 609 curveto
+1351 490 1325 327 1314 273 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1228 687 moveto
+1221 695 lineto
+1231 691 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1382 479 moveto 94 -0.5 (join\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1407
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1310 26 147 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1310 21 moveto 272 -0.5 (member={NAME2},waiting={NAME1}) alignedtext
+end grestore
+end grestore
+
+%	1280 -> 1407
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1310 237 moveto
+1310 196 1310 102 1310 54 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1313 54 moveto
+1310 44 lineto
+1308 54 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1366 136 moveto 98 -0.5 (join\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1440
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+579 26 180 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+579 21 moveto 338 -0.5 (member={},waiting={NAME1,NAME2,NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1280 -> 1440
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1256 238 moveto
+1124 197 786 91 644 46 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 644 43 moveto
+634 43 lineto
+643 48 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1061 136 moveto 148 -0.5 (join_queue\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1285 -> 1087
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1185 2080 moveto
+1151 2071 1137 2060 1100 2040 curveto
+972 1967 931 1963 813 1876 curveto
+710 1800 604 1690 564 1647 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1183 2082 moveto
+1193 2082 lineto
+1184 2077 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+859 1853 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1285 -> 1440
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 478 1613 moveto
+327 1568 192 1562 192 1400 curveto
+192 1400 192 1400 192 255 curveto
+192 126 354 67 469 43 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 470 45 moveto
+479 41 lineto
+469 41 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+274 823 moveto 149 -0.5 (join_queue\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1700
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+366 1400 146 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+366 1395 moveto 271 -0.5 (member={NAME1},waiting={NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1285 -> 1700
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 521 1611 moveto
+495 1592 454 1560 426 1525 curveto
+403 1494 385 1453 375 1426 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 378 1426 moveto
+372 1418 lineto
+373 1428 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+480 1510 moveto 94 -0.5 (join\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1720
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+928 1400 146 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+928 1395 moveto 271 -0.5 (member={NAME3},waiting={NAME1}) alignedtext
+end grestore
+end grestore
+
+%	1285 -> 1720
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 578 1611 moveto
+647 1569 816 1467 891 1423 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 892 1425 moveto
+899 1418 lineto
+889 1421 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+807 1510 moveto 97 -0.5 (join\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1387 -> 1137
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1037 1831 moveto
+1057 1792 1093 1715 1119 1647 curveto
+1177 1494 1205 1457 1231 1296 curveto
+1265 1075 1213 803 1198 731 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1035 1830 moveto
+1033 1840 lineto
+1039 1832 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1274 1281 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1387 -> 1142
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1232 695 moveto
+1321 654 1544 551 1641 505 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1642 507 moveto
+1650 501 lineto
+1640 503 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1524 594 moveto 120 -0.5 (remove\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1540
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+newpath 900 502 moveto
+612 502 lineto
+612 466 lineto
+900 466 lineto
+closepath
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+756 479 moveto 275 -0.5 (member={NAME1,NAME2},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1387 -> 1540
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1141 696 moveto
+998 640 855 550 791 507 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 793 505 moveto
+783 502 lineto
+790 509 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1014 594 moveto 98 -0.5 (join\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1573
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1096 484 178 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1096 479 moveto 335 -0.5 (member={NAME1},waiting={NAME2,NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1387 -> 1573
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1182 695 moveto
+1169 675 1148 640 1134 609 curveto
+1120 576 1108 536 1102 510 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1105 511 moveto
+1100 502 lineto
+1100 512 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1215 594 moveto 148 -0.5 (join_queue\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1720 -> 1137
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1018 1832 moveto
+1000 1748 946 1489 932 1418 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1015 1831 moveto
+1020 1840 lineto
+1020 1830 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1047 1624 moveto 122 -0.5 (remove\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1720 -> 1147
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 956 1382 moveto
+996 1357 1073 1310 1141 1276 curveto
+1204 1244 1279 1211 1328 1192 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1329 1194 moveto
+1337 1188 lineto
+1327 1190 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1184 1281 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	1852
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+546 1171 148 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+546 1166 moveto 274 -0.5 (member={NAME1,NAME3},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1720 -> 1852
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 905 1382 moveto
+872 1357 808 1310 752 1276 curveto
+699 1243 635 1212 593 1193 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 595 1191 moveto
+585 1189 lineto
+593 1196 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+839 1281 moveto 94 -0.5 (join\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1885
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+928 1171 178 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+928 1166 moveto 335 -0.5 (member={NAME3},waiting={NAME1,NAME2}) alignedtext
+end grestore
+end grestore
+
+%	1720 -> 1885
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 928 1382 moveto
+928 1341 928 1247 928 1199 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 931 1199 moveto
+928 1189 lineto
+926 1199 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1010 1281 moveto 149 -0.5 (join_queue\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1540 -> 1247
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 724 466 moveto
+605 399 478 316 418 278 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 420 276 moveto
+410 273 lineto
+417 280 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+652 365 moveto 123 -0.5 (remove\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	1540 -> 1280
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 846 466 moveto
+1020 415 1196 321 1271 278 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1272 280 moveto
+1280 273 lineto
+1270 276 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1152 365 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	2308
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+706 255 178 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+706 250 moveto 335 -0.5 (member={NAME1,NAME2},waiting={NAME3}) alignedtext
+end grestore
+end grestore
+
+%	1540 -> 2308
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 752 466 moveto
+744 425 722 330 712 282 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 715 282 moveto
+710 273 lineto
+710 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+813 365 moveto 148 -0.5 (join_queue\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	2333
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+1020 255 118 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+1020 250 moveto 214 -0.5 (member={NAME2},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1540 -> 2333
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 783 466 moveto
+812 446 860 413 898 380 curveto
+934 348 974 306 998 280 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 999 282 moveto
+1004 273 lineto
+996 279 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+983 365 moveto 120 -0.5 (remove\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	1852 -> 1247
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 510 1153 moveto
+500 1140 499 1126 485 1106 curveto
+439 1033 383 1027 383 942 curveto
+383 942 383 942 383 484 curveto
+383 411 383 327 383 284 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 386 283 moveto
+383 273 lineto
+381 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+451 708 moveto 122 -0.5 (remove\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	1852 -> 1285
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 548 1602 moveto
+548 1517 547 1260 546 1189 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 546 1601 moveto
+548 1611 lineto
+551 1601 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+591 1395 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	2013
+gsave 10 dict begin
+0.333 1.000 1.000 nodecolor
+841 942 178 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+841 937 moveto 335 -0.5 (member={NAME1,NAME3},waiting={NAME2}) alignedtext
+end grestore
+end grestore
+
+%	1852 -> 2013
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 556 1153 moveto
+571 1127 601 1078 638 1047 curveto
+682 1010 741 981 784 963 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 785 965 moveto
+793 959 lineto
+783 961 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+720 1052 moveto 149 -0.5 (join_queue\(NAME2\)) alignedtext
+end grestore
+end grestore
+
+%	2038
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+528 942 117 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+528 937 moveto 213 -0.5 (member={NAME3},waiting={}) alignedtext
+end grestore
+end grestore
+
+%	1852 -> 2038
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 527 1153 moveto
+508 1134 480 1101 468 1067 curveto
+456 1031 481 993 503 968 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 505 969 moveto
+510 960 lineto
+502 966 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+535 1052 moveto 120 -0.5 (remove\(NAME1\)) alignedtext
+end grestore
+end grestore
+
+%	2013 -> 1285
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 562 1603 moveto
+581 1564 618 1487 638 1418 curveto
+656 1356 639 1335 662 1276 curveto
+685 1215 704 1206 741 1153 curveto
+768 1113 783 1109 805 1067 curveto
+822 1031 833 985 838 960 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 560 1601 moveto
+558 1611 lineto
+565 1603 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+705 1281 moveto 72 -0.5 (semi_reset) alignedtext
+end grestore
+end grestore
+
+%	2013 -> 1387
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 869 924 moveto
+932 883 1088 782 1158 736 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1159 738 moveto
+1166 731 lineto
+1156 734 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+1097 823 moveto 122 -0.5 (remove\(NAME3\)) alignedtext
+end grestore
+end grestore
+
+%	2175
+gsave 10 dict begin
+0.000 1.000 1.000 nodecolor
+841 713 148 18 ellipse_path
+stroke
+gsave 10 dict begin
+0.000 0.000 0.000 nodecolor
+841 708 moveto 274 -0.5 (member={NAME3},waiting={NAME2}) alignedtext
+end grestore
+end grestore
+
+%	2013 -> 2175
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 841 924 moveto
+841 883 841 789 841 741 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 844 741 moveto
+841 731 lineto
+839 741 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+gsave 10 dict begin
+0.000 0.000 0.000 edgecolor
+908 823 moveto 120 -0.5 (remove\(NAME1\)) alignedtext
+end grestore
+end grestore
+endpage
+grestore
+%%PageTrailer
+%%EndPage: 1

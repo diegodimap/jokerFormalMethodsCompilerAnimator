@@ -1,0 +1,195 @@
+(DATA 9
+  (NAME "Phil" "")
+  (LIST
+    (ARM 9
+      (NAME "p1" "")
+      (NOTHING 9))
+    (ARM 9
+      (NAME "p2" "")
+      (NOTHING 9))
+    (ARM 9
+      (NAME "p3" "")
+      (NOTHING 9))))
+
+(DATA 10
+  (NAME "Fork" "")
+  (LIST
+    (ARM 10
+      (NAME "f1" "")
+      (NOTHING 10))
+    (ARM 10
+      (NAME "f2" "")
+      (NOTHING 10))
+    (ARM 10
+      (NAME "f3" "")
+      (NOTHING 10))))
+
+(AXDEF 14
+  (BODY 15
+    (LIST
+      (DECL 15
+        (LIST
+          (NAME "left" "")
+          (NAME "right" ""))
+        (INGEN 15
+          (NAME "\bij" "")
+          (REF 15 (NAME "Phil" "") ())
+          (REF 15 (NAME "Fork" "") ()))))
+    (LIST
+      (FORALL 17
+        (BODY 17
+          (LIST
+            (DECL 17
+              (LIST
+                (NAME "p" ""))
+              (REF 17 (NAME "Phil" "") ())))
+          ())
+        (INREL 17
+          (NAME "\neq" "")
+          (APPLY 17
+            (REF 17 (NAME "left" "") ())
+            (REF 17 (NAME "p" "") ()))
+          (APPLY 17
+            (REF 17 (NAME "right" "") ())
+            (REF 17 (NAME "p" "") ())))))))
+
+(SDEF 21
+  (SHEAD 21
+    "State"
+    ())
+  (BODY 22
+    (LIST
+      (DECL 22
+        (LIST
+          (NAME "taken" ""))
+        (INGEN 22
+          (NAME "\pfun" "")
+          (REF 22 (NAME "Fork" "") ())
+          (REF 22 (NAME "Phil" "") ()))))
+    ()))
+
+(SDEF 0
+  (SHEAD 0
+    "\Delta State"
+    ())
+  (BODY 0
+    (LIST
+      (SDECL 0
+        (SREF 0 "State" "" () ()))
+      (SDECL 0
+        (SREF 0 "State" "'" () ())))
+    ()))
+
+(SDEF 26
+  (SHEAD 26
+    "TakeFork"
+    ())
+  (BODY 27
+    (LIST
+      (SDECL 27
+        (SREF 27 "\Delta State" "" () ()))
+      (DECL 28
+        (LIST
+          (NAME "p" "?"))
+        (REF 28 (NAME "Phil" "") ()))
+      (DECL 29
+        (LIST
+          (NAME "f" "?"))
+        (REF 29 (NAME "Fork" "") ())))
+    (LIST
+      (INREL 31
+        (NAME "\notin" "")
+        (REF 31 (NAME "f" "?") ())
+        (APPLY 31
+          (REF 31 (NAME "\dom" "") ())
+          (REF 31 (NAME "taken" "") ())))
+      (EQUAL 32
+        (REF 32 (NAME "taken" "'") ())
+        (INOP 32
+          (NAME "\oplus" "")
+          (REF 32 (NAME "taken" "") ())
+          (EXT 32
+            (LIST
+              (INOP 32
+                (NAME "\mapsto" "")
+                (REF 32 (NAME "f" "?") ())
+                (REF 32 (NAME "p" "?") ())))))))))
+
+(DEFEQ 36
+  (SHEAD 36
+    "TakeLeftFork"
+    ())
+  (TEXT 36
+    (BODY 36
+      (LIST
+        (SDECL 36
+          (SREF 36 "TakeFork" "" () ())))
+      (LIST
+        (EQUAL 36
+          (APPLY 36
+            (REF 36 (NAME "left" "") ())
+            (REF 36 (NAME "p" "?") ()))
+          (REF 36 (NAME "f" "?") ()))))))
+
+(DEFEQ 37
+  (SHEAD 37
+    "TakeRightFork"
+    ())
+  (TEXT 37
+    (BODY 37
+      (LIST
+        (SDECL 37
+          (SREF 37 "TakeFork" "" () ())))
+      (LIST
+        (EQUAL 37
+          (APPLY 37
+            (REF 37 (NAME "right" "") ())
+            (REF 37 (NAME "p" "?") ()))
+          (REF 37 (NAME "f" "?") ()))))))
+
+(SDEF 41
+  (SHEAD 41
+    "DropFork"
+    ())
+  (BODY 42
+    (LIST
+      (SDECL 42
+        (SREF 42 "\Delta State" "" () ()))
+      (DECL 43
+        (LIST
+          (NAME "p" "?"))
+        (REF 43 (NAME "Phil" "") ()))
+      (DECL 44
+        (LIST
+          (NAME "f" "?"))
+        (REF 44 (NAME "Fork" "") ())))
+    (LIST
+      (MEMBER 46
+        (INOP 46
+          (NAME "\mapsto" "")
+          (REF 46 (NAME "f" "?") ())
+          (REF 46 (NAME "p" "?") ()))
+        (REF 46 (NAME "taken" "") ()))
+      (EQUAL 47
+        (REF 47 (NAME "taken" "'") ())
+        (INOP 47
+          (NAME "\ndres" "")
+          (EXT 47
+            (LIST
+              (REF 47 (NAME "f" "?") ())))
+          (REF 47 (NAME "taken" "") ()))))))
+
+(DEFEQ 52
+  (SHEAD 52
+    "Init"
+    ())
+  (TEXT 52
+    (BODY 52
+      (LIST
+        (SDECL 52
+          (SREF 52 "State" "" () ())))
+      (LIST
+        (EQUAL 52
+          (REF 52 (NAME "taken" "") ())
+          (REF 52 (NAME "\emptyset" "") ()))))))
+

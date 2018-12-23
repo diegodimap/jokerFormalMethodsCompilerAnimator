@@ -1,0 +1,5 @@
+MACHINE   GOODS_ctx
+
+SETS    GOODS
+
+END

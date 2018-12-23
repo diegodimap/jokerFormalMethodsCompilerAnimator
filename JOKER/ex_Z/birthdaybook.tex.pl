@@ -1,0 +1,41 @@
+spec_trans(root,'$initialise_machine',5).
+spec_trans(root,'$initialise_machine',12).
+spec_trans(root,'$initialise_machine',13).
+spec_trans(root,'$initialise_machine',4).
+spec_trans(3,'$initialise_machine',4).
+spec_trans(0,'$initialise_machine',5).
+spec_trans(4,'AddBirthday(DATE1,NAME1)',6).
+spec_trans(4,'AddBirthday(DATE2,NAME1)',7).
+spec_trans(4,'AddBirthday(DATE1,NAME2)',8).
+spec_trans(4,'AddBirthday(DATE2,NAME2)',9).
+spec_trans(9,'AddBirthday(DATE1,NAME1)',10).
+spec_trans(9,'AddBirthday(DATE2,NAME1)',11).
+spec_trans(1,'$initialise_machine',12).
+spec_trans(2,'$initialise_machine',13).
+spec_trans(8,'AddBirthday(DATE1,NAME1)',14).
+spec_trans(8,'AddBirthday(DATE2,NAME1)',15).
+spec_trans(6,'AddBirthday(DATE1,NAME2)',14).
+spec_trans(6,'AddBirthday(DATE2,NAME2)',10).
+spec_trans(7,'AddBirthday(DATE1,NAME2)',15).
+spec_trans(7,'AddBirthday(DATE2,NAME2)',11).
+spec_trans(12,'AddBirthday(DATE1,NAME1)',16).
+spec_trans(12,'AddBirthday(DATE2,NAME1)',17).
+spec_trans(12,'AddBirthday(DATE1,NAME2)',18).
+spec_trans(12,'AddBirthday(DATE2,NAME2)',19).
+spec_trans(13,'AddBirthday(DATE1,NAME1)',20).
+spec_trans(13,'AddBirthday(DATE2,NAME1)',21).
+spec_trans(13,'AddBirthday(DATE1,NAME2)',22).
+spec_trans(13,'AddBirthday(DATE2,NAME2)',23).
+spec_trans(20,'AddBirthday(DATE1,NAME2)',24).
+spec_trans(20,'AddBirthday(DATE2,NAME2)',25).
+spec_trans(21,'AddBirthday(DATE1,NAME2)',26).
+spec_trans(21,'AddBirthday(DATE2,NAME2)',27).
+spec_trans(22,'AddBirthday(DATE1,NAME1)',24).
+spec_trans(22,'AddBirthday(DATE2,NAME1)',26).
+spec_trans(23,'AddBirthday(DATE1,NAME1)',25).
+spec_trans(23,'AddBirthday(DATE2,NAME1)',27).
+spec_max_reached_for_node(root).
+spec_not_all_transitions_added(_) :-
+        fail.
+spec_completely_explored :-
+        fail.

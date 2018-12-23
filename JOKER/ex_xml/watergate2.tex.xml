@@ -1,0 +1,325 @@
+<specification name="watergate2.tex">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Open(gate1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Open(gate3)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Raise(pool2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Close(gate1)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Open(gate3)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Close(gate3)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Open(gate1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="Raise(pool2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Open(gate2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Open(gate3)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="Lower(pool2)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Open(gate1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Raise(pool2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Open(gate1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Open(gate4)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Raise(pool2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="Close(gate1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="Close(gate3)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="Open(gate2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="Open(gate4)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="Lower(pool2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="Close(gate4)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="Open(gate2)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="Lower(pool2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Close(gate1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="Close(gate2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="Close(gate4)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="Close(gate2)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="Open(gate4)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="Close(gate2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Close(gate3)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Open(gate2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="Lower(pool2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Close(gate2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Open(gate3)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Open(gate2)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Raise(pool4)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Lower(pool2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="Close(gate4)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="Open(gate1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="Raise(pool2)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="Close(gate1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="Open(gate4)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="Lower(pool4)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="Close(gate1)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="Close(gate4)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="Close(gate2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="Close(gate3)"/> 
+            <next value="9"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

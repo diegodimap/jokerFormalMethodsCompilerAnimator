@@ -1,0 +1,17 @@
+machine('Priorityqueue').
+initialise_machine([]).
+insert(int(1)).
+extract-->[int(1)].
+insert(int(2)).
+extract-->[int(2)].
+insert(int(3)).
+insert(int(2)).
+extract-->[int(2)].
+extract-->[int(3)].
+insert(int(4)).
+insert(int(1)).
+insert(int(2)).
+extract-->[int(1)].
+extract-->[int(2)].
+extract-->[int(4)].
+

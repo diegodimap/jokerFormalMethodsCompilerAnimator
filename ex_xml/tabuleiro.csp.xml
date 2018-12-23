@@ -1,0 +1,171 @@
+<specification name="tabuleiro.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+            <event value="baixo"/> 
+            <next value="GP_HashMD5_5656E9932895C11C6C2AFC2BB81C82E2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_D91F096E2BCE4BB5FF6DBF75B94049AC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_9618A9D3268B91FABA7F6F6B75B0A04D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3926638C048025659B14244946B405DD"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_6FDFA5C69F96E767CF37C5F60DDD438B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5656E9932895C11C6C2AFC2BB81C82E2"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5656E9932895C11C6C2AFC2BB81C82E2"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+            <event value="baixo"/> 
+            <next value="GP_HashMD5_980D69E4056C09D948087E0C70689657"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6FDFA5C69F96E767CF37C5F60DDD438B"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6FDFA5C69F96E767CF37C5F60DDD438B"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6FDFA5C69F96E767CF37C5F60DDD438B"/> 
+            <event value="baixo"/> 
+            <next value="GP_HashMD5_F8D2AB5432A80A42608515CFB8FCDA6C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+            <event value="baixo"/> 
+            <next value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_5656E9932895C11C6C2AFC2BB81C82E2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_980D69E4056C09D948087E0C70689657"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9618A9D3268B91FABA7F6F6B75B0A04D"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_F0A44FA8D02EC9BF6AAF70BCC187AF07"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_9618A9D3268B91FABA7F6F6B75B0A04D"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_980D69E4056C09D948087E0C70689657"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_7C183D6A595BF2E61D6DCC53F0B3AE9B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_980D69E4056C09D948087E0C70689657"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_5D011EEDBB0B176E27AD40328112F19C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D91F096E2BCE4BB5FF6DBF75B94049AC"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_F0A44FA8D02EC9BF6AAF70BCC187AF07"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D91F096E2BCE4BB5FF6DBF75B94049AC"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_30A697A7B05DC45991FF9DDCEAEA0954"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F0A44FA8D02EC9BF6AAF70BCC187AF07"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_D91F096E2BCE4BB5FF6DBF75B94049AC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F0A44FA8D02EC9BF6AAF70BCC187AF07"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_9618A9D3268B91FABA7F6F6B75B0A04D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F0A44FA8D02EC9BF6AAF70BCC187AF07"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_7365618D1CB2B3F5DB50D64BD30DF00C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F8D2AB5432A80A42608515CFB8FCDA6C"/> 
+            <event value="direita"/> 
+            <next value="GP_HashMD5_5656E9932895C11C6C2AFC2BB81C82E2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F8D2AB5432A80A42608515CFB8FCDA6C"/> 
+            <event value="esquerda"/> 
+            <next value="GP_HashMD5_980D69E4056C09D948087E0C70689657"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F8D2AB5432A80A42608515CFB8FCDA6C"/> 
+            <event value="cima"/> 
+            <next value="GP_HashMD5_6FDFA5C69F96E767CF37C5F60DDD438B"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

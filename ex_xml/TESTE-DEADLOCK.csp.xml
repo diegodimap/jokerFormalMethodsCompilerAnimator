@@ -1,0 +1,25 @@
+<specification name="TESTE-DEADLOCK.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_D88E5AB83CDF9C7C2EE36CEFDC9411FC"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_D88E5AB83CDF9C7C2EE36CEFDC9411FC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D88E5AB83CDF9C7C2EE36CEFDC9411FC"/> 
+            <event value="moeda"/> 
+            <next value="GP_HashMD5_DA973438CF0D4A9766E5485477F6360A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DA973438CF0D4A9766E5485477F6360A"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_DA973438CF0D4A9766E5485477F6360A"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

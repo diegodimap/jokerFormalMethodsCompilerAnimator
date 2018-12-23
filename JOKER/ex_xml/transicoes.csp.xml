@@ -1,0 +1,55 @@
+<specification name="transicoes.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_767314FA66E05CE7E4926A432434EA9F"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_767314FA66E05CE7E4926A432434EA9F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_101368A7378257723AC55CA2EB1BA9E9"/> 
+            <event value="choc"/> 
+            <next value="GP_HashMD5_917FEB61497A3EE3B8CB5B86B3E96853"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2028F8556CE421ED5D04767D228FE5F3"/> 
+            <event value="beep"/> 
+            <next value="GP_HashMD5_43C867AF809588470F1BA82332D902B5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_2028F8556CE421ED5D04767D228FE5F3"/> 
+            <event value="gritar"/> 
+            <next value="GP_HashMD5_41D8A18D39ECC3AED7E58CEB9356F002"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_41D8A18D39ECC3AED7E58CEB9356F002"/> 
+            <event value="beep"/> 
+            <next value="GP_HashMD5_101368A7378257723AC55CA2EB1BA9E9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_43C867AF809588470F1BA82332D902B5"/> 
+            <event value="gritar"/> 
+            <next value="GP_HashMD5_101368A7378257723AC55CA2EB1BA9E9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_767314FA66E05CE7E4926A432434EA9F"/> 
+            <event value="moeda"/> 
+            <next value="GP_HashMD5_2028F8556CE421ED5D04767D228FE5F3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_917FEB61497A3EE3B8CB5B86B3E96853"/> 
+            <event value="comer"/> 
+            <next value="GP_HashMD5_BC5ABD182F0E1C5852A66EFE382530BF"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BC5ABD182F0E1C5852A66EFE382530BF"/> 
+            <event value="moeda"/> 
+            <next value="GP_HashMD5_2028F8556CE421ED5D04767D228FE5F3"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

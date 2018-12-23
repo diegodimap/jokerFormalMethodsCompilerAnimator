@@ -1,0 +1,261 @@
+<specification name="Fifo.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="$initialise_machine"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="$initialise_machine"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="13"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="16"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="17"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="20"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="21"/> 
+        </xnode> 
+        <xnode> 
+            <key value="14"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="13"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="15"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="16"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="21"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="20"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="14"/> 
+        </xnode> 
+        <xnode> 
+            <key value="17"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="15"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="24"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="25"/> 
+        </xnode> 
+        <xnode> 
+            <key value="18"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="25"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="19"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="input(ELEM1)"/> 
+            <next value="26"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="input(ELEM2)"/> 
+            <next value="27"/> 
+        </xnode> 
+        <xnode> 
+            <key value="19"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="22"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="26"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="23"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="24"/> 
+            <event value="output-->ELEM1"/> 
+            <next value="18"/> 
+        </xnode> 
+        <xnode> 
+            <key value="27"/> 
+            <event value="output-->ELEM2"/> 
+            <next value="19"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

@@ -1,0 +1,75 @@
+<specification name="aula.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="1"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Producer"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="Consumer"/> 
+            <next value="5"/> 
+        </xnode> 
+		<xnode> 
+            <key value="2"/> 
+            <event value="pc1"/> 
+            <next value="3"/> 
+        </xnode> 
+		<xnode> 
+            <key value="2"/> 
+            <event value="pc2"/> 
+            <next value="4"/> 
+        </xnode> 
+		<xnode> 
+            <key value="3"/> 
+            <event value="pc2"/> 
+            <next value="99"/> 
+        </xnode> 
+		<xnode> 
+            <key value="4"/> 
+            <event value="pc1"/> 
+            <next value="99"/> 
+        </xnode> 
+		<xnode> 
+            <key value="99"/> 
+            <event value="exit"/> 
+            <next value="100"/> 
+        </xnode> 
+		<xnode> 
+            <key value="100"/> 
+            <event value="SKIP"/> 
+            <next value="100"/> 
+        </xnode> 
+		<xnode> 
+            <key value="5"/> 
+            <event value="cc1"/> 
+            <next value="6"/> 
+        </xnode> 
+		<xnode> 
+            <key value="5"/> 
+            <event value="cc2"/> 
+            <next value="7"/> 
+        </xnode> 
+		<xnode> 
+            <key value="6"/> 
+            <event value="cc2"/> 
+            <next value="99"/> 
+        </xnode> 
+		<xnode> 
+            <key value="7"/> 
+            <event value="cc1"/> 
+            <next value="99"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

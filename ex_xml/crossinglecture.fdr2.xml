@@ -1,0 +1,363 @@
+<specification name="crossinglecture.fdr2">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_C4F8A2C85F977BBE423F548591C5758E"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_C4F8A2C85F977BBE423F548591C5758E"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_C4F8A2C85F977BBE423F548591C5758E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_025B9823F7C9E53591F73EF6A61AF4A2"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_F5E8E749BF0AE2907A2BF72681566B3E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_025B9823F7C9E53591F73EF6A61AF4A2"/> 
+            <event value="gate.raise"/> 
+            <next value="GP_HashMD5_396ABDDB382CC00428081DB16AB0B9D6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_03EABCAC241609C1C8FBCA8CC82AC853"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_8386AC5F56D8007C21BD57F088A17671"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_03EABCAC241609C1C8FBCA8CC82AC853"/> 
+            <event value="train.leave"/> 
+            <next value="GP_HashMD5_11ED5DD14D4D68A75A3BC25E77212D85"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_05A2081133D3967241EF384C47770988"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_6134324FC7CA929BD6EDBB0F7228703D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_05A2081133D3967241EF384C47770988"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_E6AB4F1443F02B12AD1A77470A18FDF0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_096F5F15B11444E5AD116CE473EDCECA"/> 
+            <event value="train.enter"/> 
+            <next value="GP_HashMD5_8386AC5F56D8007C21BD57F088A17671"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_11ED5DD14D4D68A75A3BC25E77212D85"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_F5E8E749BF0AE2907A2BF72681566B3E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_11ED5DD14D4D68A75A3BC25E77212D85"/> 
+            <event value="gate.raise"/> 
+            <next value="GP_HashMD5_24D7617BD2B048A0809F35772EEC1773"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1221B9406E43686A83D55B8E355E600C"/> 
+            <event value="gate.down"/> 
+            <next value="GP_HashMD5_7004E62F978EEF21D40A158E7A5C16D2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1604E575BC522B055F7DA5DFF46497FC"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_6C2AF18A364ED91823E43C31AFD7463E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1604E575BC522B055F7DA5DFF46497FC"/> 
+            <event value="gate.raise"/> 
+            <next value="GP_HashMD5_24D7617BD2B048A0809F35772EEC1773"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1838BEF812EB2B28C0E2B9BC0FDF1F56"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_D933040196795BC25C6FE62D435BE09B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_1838BEF812EB2B28C0E2B9BC0FDF1F56"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_CBB68266752DA1B407A175481DD1943F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_24D7617BD2B048A0809F35772EEC1773"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_24D7617BD2B048A0809F35772EEC1773"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_46457187F7B832DA94055C9876035D76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_35C065F1416B8BAC95EC6C9090873032"/> 
+            <event value="car.leave"/> 
+            <next value="GP_HashMD5_24D7617BD2B048A0809F35772EEC1773"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_35C065F1416B8BAC95EC6C9090873032"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_D0DCFC2E207CA2D3C3881D2E3FB8BEED"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_396ABDDB382CC00428081DB16AB0B9D6"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_396ABDDB382CC00428081DB16AB0B9D6"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_7A786F60B57B2B5934A98D55DDF12238"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3C1E81469DF73E1EA57375411AEE50BC"/> 
+            <event value="car.leave"/> 
+            <next value="GP_HashMD5_05A2081133D3967241EF384C47770988"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_3C1E81469DF73E1EA57375411AEE50BC"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_C731ED97D32953BF8F9BEE44D94A98F2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_43E8055C018F19F849C1A65ECD36319A"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_1221B9406E43686A83D55B8E355E600C"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_43E8055C018F19F849C1A65ECD36319A"/> 
+            <event value="gate.down"/> 
+            <next value="GP_HashMD5_C39A89EEDDFFDDB17FF40EA796B0F0F7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_46457187F7B832DA94055C9876035D76"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_F5897F7F25BDF638EB2782EC051E450E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_46457187F7B832DA94055C9876035D76"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_E6AB4F1443F02B12AD1A77470A18FDF0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6134324FC7CA929BD6EDBB0F7228703D"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_3C1E81469DF73E1EA57375411AEE50BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6134324FC7CA929BD6EDBB0F7228703D"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_685C13E13D1BE786FA32BAF92558FC41"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_8386AC5F56D8007C21BD57F088A17671"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_685C13E13D1BE786FA32BAF92558FC41"/> 
+            <event value="train.leave"/> 
+            <next value="GP_HashMD5_025B9823F7C9E53591F73EF6A61AF4A2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_6C2AF18A364ED91823E43C31AFD7463E"/> 
+            <event value="gate.raise"/> 
+            <next value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7004E62F978EEF21D40A158E7A5C16D2"/> 
+            <event value="train.enter"/> 
+            <next value="GP_HashMD5_D6F34103D0B9B1270719FD87415BDB41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7A786F60B57B2B5934A98D55DDF12238"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_F5897F7F25BDF638EB2782EC051E450E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7A786F60B57B2B5934A98D55DDF12238"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_8A17467116F6112E6CBE24BE161B5346"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8386AC5F56D8007C21BD57F088A17671"/> 
+            <event value="train.leave"/> 
+            <next value="GP_HashMD5_F5E8E749BF0AE2907A2BF72681566B3E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8A17467116F6112E6CBE24BE161B5346"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_8A17467116F6112E6CBE24BE161B5346"/> 
+            <event value="gate.down"/> 
+            <next value="GP_HashMD5_A40E37DF0215B78CD396CD358F5C10C6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A40E37DF0215B78CD396CD358F5C10C6"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_096F5F15B11444E5AD116CE473EDCECA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A40E37DF0215B78CD396CD358F5C10C6"/> 
+            <event value="train.enter"/> 
+            <next value="GP_HashMD5_685C13E13D1BE786FA32BAF92558FC41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_35C065F1416B8BAC95EC6C9090873032"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_F5897F7F25BDF638EB2782EC051E450E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AB58AABDE4A48DBB23C14E94EE441A58"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_D6F34103D0B9B1270719FD87415BDB41"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_AB58AABDE4A48DBB23C14E94EE441A58"/> 
+            <event value="train.leave"/> 
+            <next value="GP_HashMD5_1604E575BC522B055F7DA5DFF46497FC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BBD58DD01AC405F12F0D284F66C3A787"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_D933040196795BC25C6FE62D435BE09B"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BBD58DD01AC405F12F0D284F66C3A787"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_6134324FC7CA929BD6EDBB0F7228703D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BE36862884F2616A53CFB133424BE898"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_096F5F15B11444E5AD116CE473EDCECA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_BE36862884F2616A53CFB133424BE898"/> 
+            <event value="train.enter"/> 
+            <next value="GP_HashMD5_03EABCAC241609C1C8FBCA8CC82AC853"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C39A89EEDDFFDDB17FF40EA796B0F0F7"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_7004E62F978EEF21D40A158E7A5C16D2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C39A89EEDDFFDDB17FF40EA796B0F0F7"/> 
+            <event value="train.enter"/> 
+            <next value="GP_HashMD5_AB58AABDE4A48DBB23C14E94EE441A58"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C4F8A2C85F977BBE423F548591C5758E"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_1838BEF812EB2B28C0E2B9BC0FDF1F56"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C4F8A2C85F977BBE423F548591C5758E"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_FB627BAC669BBF6D68C05984D75F6E0F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_C731ED97D32953BF8F9BEE44D94A98F2"/> 
+            <event value="car.leave"/> 
+            <next value="GP_HashMD5_43E8055C018F19F849C1A65ECD36319A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CBB68266752DA1B407A175481DD1943F"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_3C1E81469DF73E1EA57375411AEE50BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_CBB68266752DA1B407A175481DD1943F"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D0DCFC2E207CA2D3C3881D2E3FB8BEED"/> 
+            <event value="car.leave"/> 
+            <next value="GP_HashMD5_46457187F7B832DA94055C9876035D76"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D0DCFC2E207CA2D3C3881D2E3FB8BEED"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_C731ED97D32953BF8F9BEE44D94A98F2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D6F34103D0B9B1270719FD87415BDB41"/> 
+            <event value="train.leave"/> 
+            <next value="GP_HashMD5_6C2AF18A364ED91823E43C31AFD7463E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D933040196795BC25C6FE62D435BE09B"/> 
+            <event value="car.leave"/> 
+            <next value="GP_HashMD5_FCA3770BD3F555D8CBD6B834E80120B0"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_D933040196795BC25C6FE62D435BE09B"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_3C1E81469DF73E1EA57375411AEE50BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+            <event value="gate.down"/> 
+            <next value="GP_HashMD5_096F5F15B11444E5AD116CE473EDCECA"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E6AB4F1443F02B12AD1A77470A18FDF0"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_E6AB4F1443F02B12AD1A77470A18FDF0"/> 
+            <event value="gate.down"/> 
+            <next value="GP_HashMD5_BE36862884F2616A53CFB133424BE898"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F5897F7F25BDF638EB2782EC051E450E"/> 
+            <event value="car.enter"/> 
+            <next value="GP_HashMD5_D0DCFC2E207CA2D3C3881D2E3FB8BEED"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F5897F7F25BDF638EB2782EC051E450E"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_E39A3E07B8100B27A87AED82DBC95E22"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_F5E8E749BF0AE2907A2BF72681566B3E"/> 
+            <event value="gate.raise"/> 
+            <next value="GP_HashMD5_A8CBC683138525B535CEA7CCA08388BC"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FB627BAC669BBF6D68C05984D75F6E0F"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_CBB68266752DA1B407A175481DD1943F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FB627BAC669BBF6D68C05984D75F6E0F"/> 
+            <event value="gate.lower"/> 
+            <next value="GP_HashMD5_8A17467116F6112E6CBE24BE161B5346"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FCA3770BD3F555D8CBD6B834E80120B0"/> 
+            <event value="car.approach"/> 
+            <next value="GP_HashMD5_BBD58DD01AC405F12F0D284F66C3A787"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FCA3770BD3F555D8CBD6B834E80120B0"/> 
+            <event value="train.approach"/> 
+            <next value="GP_HashMD5_05A2081133D3967241EF384C47770988"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

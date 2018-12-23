@@ -1,0 +1,1263 @@
+<specification name="Player.mch">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+        <initialXNode> 
+            <ikey value="0"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="0"/> 
+            <event value="$initialise_machine"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER1,PLAYER12)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER2,PLAYER12)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER3,PLAYER12)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER4,PLAYER12)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER5,PLAYER12)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER6,PLAYER12)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER7,PLAYER12)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER8,PLAYER12)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER9,PLAYER12)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="substitute(PLAYER10,PLAYER12)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="1"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="1"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER1,PLAYER9)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER2,PLAYER9)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER3,PLAYER9)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER4,PLAYER9)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER5,PLAYER9)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER6,PLAYER9)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER7,PLAYER9)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER8,PLAYER9)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER10,PLAYER9)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="substitute(PLAYER11,PLAYER9)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER9)-->out"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="4"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER1,PLAYER11)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER2,PLAYER11)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER3,PLAYER11)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER4,PLAYER11)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER5,PLAYER11)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER6,PLAYER11)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER7,PLAYER11)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER8,PLAYER11)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER9,PLAYER11)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="substitute(PLAYER10,PLAYER11)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="2"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER1,PLAYER10)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER2,PLAYER10)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER3,PLAYER10)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER4,PLAYER10)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER5,PLAYER10)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER6,PLAYER10)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER7,PLAYER10)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER8,PLAYER10)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER9,PLAYER10)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="substitute(PLAYER11,PLAYER10)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="3"/> 
+            <event value="query(PLAYER10)-->out"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER2,PLAYER1)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER3,PLAYER1)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER4,PLAYER1)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER5,PLAYER1)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER6,PLAYER1)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER7,PLAYER1)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER8,PLAYER1)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER9,PLAYER1)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER10,PLAYER1)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="substitute(PLAYER11,PLAYER1)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER1)-->out"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="5"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER1,PLAYER2)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER3,PLAYER2)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER4,PLAYER2)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER5,PLAYER2)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER6,PLAYER2)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER7,PLAYER2)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER8,PLAYER2)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER9,PLAYER2)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER10,PLAYER2)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="substitute(PLAYER11,PLAYER2)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER2)-->out"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="6"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER1,PLAYER3)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER2,PLAYER3)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER4,PLAYER3)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER5,PLAYER3)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER6,PLAYER3)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER7,PLAYER3)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER8,PLAYER3)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER9,PLAYER3)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER10,PLAYER3)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="substitute(PLAYER11,PLAYER3)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER3)-->out"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="7"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER1,PLAYER4)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER2,PLAYER4)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER3,PLAYER4)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER5,PLAYER4)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER6,PLAYER4)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER7,PLAYER4)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER8,PLAYER4)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER9,PLAYER4)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER10,PLAYER4)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="substitute(PLAYER11,PLAYER4)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER4)-->out"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="8"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER1,PLAYER5)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER2,PLAYER5)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER3,PLAYER5)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER4,PLAYER5)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER6,PLAYER5)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER7,PLAYER5)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER8,PLAYER5)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER9,PLAYER5)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER10,PLAYER5)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="substitute(PLAYER11,PLAYER5)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER5)-->out"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="9"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER1,PLAYER6)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER2,PLAYER6)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER3,PLAYER6)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER4,PLAYER6)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER5,PLAYER6)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER7,PLAYER6)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER8,PLAYER6)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER9,PLAYER6)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER10,PLAYER6)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="substitute(PLAYER11,PLAYER6)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER6)-->out"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="10"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER1,PLAYER7)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER2,PLAYER7)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER3,PLAYER7)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER4,PLAYER7)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER5,PLAYER7)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER6,PLAYER7)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER8,PLAYER7)"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER9,PLAYER7)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER10,PLAYER7)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="substitute(PLAYER11,PLAYER7)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER7)-->out"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER8)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="11"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER1,PLAYER8)"/> 
+            <next value="5"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER2,PLAYER8)"/> 
+            <next value="6"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER3,PLAYER8)"/> 
+            <next value="7"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER4,PLAYER8)"/> 
+            <next value="8"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER5,PLAYER8)"/> 
+            <next value="9"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER6,PLAYER8)"/> 
+            <next value="10"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER7,PLAYER8)"/> 
+            <next value="11"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER9,PLAYER8)"/> 
+            <next value="4"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER10,PLAYER8)"/> 
+            <next value="3"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="substitute(PLAYER11,PLAYER8)"/> 
+            <next value="2"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER1)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER2)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER3)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER4)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER5)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER6)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER7)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER8)-->out"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER9)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+        <xnode> 
+            <key value="12"/> 
+            <event value="query(PLAYER10)-->in"/> 
+            <next value="12"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

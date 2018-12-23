@@ -1,0 +1,9 @@
+channel cima, baixo, direita, esquerda
+
+ED = esquerda -> direita -> ED [] direita -> esquerda -> ED
+A_ED = {esquerda, direita}
+
+CB = cima -> baixo -> CB
+A_CB = {cima, baixo}
+
+SISTEMA = ED[A_ED||A_CB]CB

@@ -1,0 +1,3 @@
+http://www.stups.uni-duesseldorf.de/~jenkins/tcl/
+
+http://www.stups.uni-duesseldorf.de/~fontaine/csp/download/cli/0.5.2.0/

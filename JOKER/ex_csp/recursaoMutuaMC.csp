@@ -1,0 +1,4 @@
+channel coin, chocolate
+
+START = coin -> PAID
+PAID = chocolate -> START

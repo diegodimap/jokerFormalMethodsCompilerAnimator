@@ -1,0 +1,4 @@
+channel begin, end
+
+RUNNER = begin -> end -> SKIP
+START = [| {|begin|} |] n:{1..4} @ RUNNER

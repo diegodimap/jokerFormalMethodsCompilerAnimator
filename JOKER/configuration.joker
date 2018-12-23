@@ -1,0 +1,6 @@
+cspm=D:\09-PROJETOS_NETBEANS\JOKER\lib\cspm-0.5.2.0.exe;
+probcli=D:\09-PROJETOS_NETBEANS\JOKER\lib\ProB\probcli.exe;
+graphType=Ballons;
+graphImg=bug;
+graphWidth=800;
+graphHeight=800

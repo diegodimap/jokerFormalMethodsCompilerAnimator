@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\section{Definition of a graph}
+
+\begin{zed}
+  [NODE]
+\end{zed}
+
+\begin{schema}{Graph}
+  edges : NODE \rel NODE
+\end{schema}
+
+\section{Theorem}
+% \begin{axdef}
+%   degree : ((NODE \rel NODE) \cross NODE) \rel \num
+%   \where
+%   degree = (\lambda edges: NODE\rel NODE; x:NODE @ \#(edges\limg \{x\} \rimg))
+% \end{axdef}
+
+There are two nodes in a graph with the same number of adjacent edges.
+
+\begin{schema}{Invariant}
+  Graph
+  \where
+%  \exists x,y:NODE | x\neq y @ degree(edges,x) = degree(edges,y)
+  \exists x,y:NODE | x\neq y @ \#(edges\limg \{x\} \rimg) = \#(edges\limg \{y\} \rimg)
+\end{schema}
+
+\section{Initialisation: An empty graph}
+
+\begin{schema}{Init}
+  Graph
+  \where
+  edges = \emptyset
+\end{schema}
+
+\section{Adding edges}
+\begin{schema}{AddEdge}
+  \Delta Graph\\
+  x?,y? : NODE\\
+  \where
+  (x? \mapsto y?) \notin edges\\
+  edges' = edges \cup \{(x? \mapsto y?), (y? \mapsto x?)\}
+\end{schema}
+
+\end{document}

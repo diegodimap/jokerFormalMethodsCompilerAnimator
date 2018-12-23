@@ -1,0 +1,9 @@
+channel choc, moeda
+
+SPEC(n) = 
+if (n==0) then moeda -> SPEC(1)
+else ( choc -> SPEC(n-1) [] moeda -> SPEC(n+1) )
+
+SPECT_F = SPEC(0)
+
+TR = Traces(SPEC_F)

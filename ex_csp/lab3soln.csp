@@ -1,0 +1,74 @@
+-- CS388 lab3 sample solution
+--
+-- Steve Schneider September 2005
+
+channel level1, level2, level3, pass, fail, graduate, present
+
+D = {| level1, level2, level3, pass, fail, graduate |}
+
+P = {| pass, present |}
+
+DEGREE = level1 -> (pass -> LEVEL2 [] fail -> DEGREE)
+
+LEVEL2 = level2 -> (pass -> LEVEL3 [] fail -> LEVEL2)
+
+LEVEL3 = level3 -> (pass -> graduate -> STOP [] fail -> LEVEL3)
+
+PARENT = pass -> present -> PARENT
+
+SYSTEM = DEGREE [ D || P ] PARENT
+
+SPEC_GRAD = pass -> pass -> pass -> graduate -> STOP
+
+E = {|level1, level2, level3, fail|}
+
+EXTRA = [] x:E @ x -> EXTRA
+
+SPEC_GRAD_FULL = SPEC_GRAD [{|pass,graduate|}||E] EXTRA
+
+assert SPEC_GRAD [T= DEGREE
+
+assert SPEC_GRAD_FULL [T= DEGREE
+
+assert SPEC_GRAD_FULL [T= SYSTEM
+
+-- when considering SYSTEM, the event `present' comes in, so must also be in
+-- the specification
+
+-- We can define a process RUN(A) which behaves like EXTRA, with alphabet A
+
+RUN(A) = [] x:A @ x -> RUN(A)
+
+E1 = {|level1, level2, level3, fail, present|}
+
+SPEC_GRAD_FULL1 = SPEC_GRAD [{|pass,graduate|}||E1] RUN(E1)
+
+assert SPEC_GRAD_FULL1 [T= SYSTEM
+
+---------- part 6
+
+SPEC_LEVELS = level1 -> SPEC_LEVELS []
+              level2 -> SPEC_LEVELS2
+
+SPEC_LEVELS2 = level2 -> SPEC_LEVELS2
+
+assert SPEC_LEVELS [T= DEGREE
+
+E2 = {|level3, pass, fail, graduate|}
+
+SPEC_LEVELS_FULL = SPEC_LEVELS [{level1,level2}||E2] RUN(E2)
+
+assert SPEC_LEVELS_FULL [T= DEGREE
+
+------------- part 7
+
+SPEC_PRESENTS = level1 -> SPEC_PRESENTS []
+                present -> SPEC_PRESENTS2
+
+SPEC_PRESENTS2 = present -> SPEC_PRESENTS2
+
+SPEC_PRESENTS_FULL = SPEC_PRESENTS [{|level1,present|}||E3] RUN(E3)
+
+E3 = {|level2, level3, pass, fail, graduate|}
+
+assert SPEC_PRESENTS_FULL [T= SYSTEM

@@ -1,0 +1,55 @@
+<specification name="chaining.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_56C1D6B95C9274C76AAD8E1DB18EDD3D"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_56C1D6B95C9274C76AAD8E1DB18EDD3D"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_54941F12A1EF2AD8F9D0C08438EF0847"/> 
+            <event value="b"/> 
+            <next value="GP_HashMD5_84B240136FE87647948CBA482760892E"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_56C1D6B95C9274C76AAD8E1DB18EDD3D"/> 
+            <event value="a"/> 
+            <next value="GP_HashMD5_54941F12A1EF2AD8F9D0C08438EF0847"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_71244EC066AC6B277458EC97082C9963"/> 
+            <event value="f"/> 
+            <next value="GP_HashMD5_EFCB666E152ED39CA3F39DB9CEA27E0F"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_84B240136FE87647948CBA482760892E"/> 
+            <event value="c"/> 
+            <next value="GP_HashMD5_FEBEC2D252DAABF07E2A67950C3F8E35"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_DE45B15ED4B0D67852CEC8C67002E0AB"/> 
+            <event value="e"/> 
+            <next value="GP_HashMD5_71244EC066AC6B277458EC97082C9963"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_EFCB666E152ED39CA3F39DB9CEA27E0F"/> 
+            <event value="out"/> 
+            <next value="GP_HashMD5_7C853B0B98833C1ACD98513C68C1DE23"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_FEBEC2D252DAABF07E2A67950C3F8E35"/> 
+            <event value="d"/> 
+            <next value="GP_HashMD5_DE45B15ED4B0D67852CEC8C67002E0AB"/> 
+        </xnode> 
+    </xnodes> 
+</specification>

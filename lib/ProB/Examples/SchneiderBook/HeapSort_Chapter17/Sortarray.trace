@@ -1,0 +1,17 @@
+machine('Sortarray').
+setup_constants(int(3)).
+initialise_machine([(int(1),int(0)),(int(2),int(2)),(int(3),int(0))]).
+set(int(2),int(0)).
+set(int(2),int(2)).
+get(int(1))-->[int(0)].
+get(int(2))-->[int(2)].
+get(int(3))-->[int(0)].
+set(int(1),int(3)).
+get(int(1))-->[int(3)].
+get(int(2))-->[int(2)].
+get(int(3))-->[int(0)].
+sort.
+get(int(1))-->[int(0)].
+get(int(2))-->[int(2)].
+get(int(3))-->[int(3)].
+

@@ -1,0 +1,462 @@
+\documentclass{article}
+\usepackage{fuzz}
+
+\begin{document}
+
+\section*{\huge Basic test cases}
+In this document, we define test cases for the ProZ animator.
+For each operator listed in the Z reference card, there should be
+at least one test case, with two exceptions:
+\begin{itemize}
+\item Schema operators are not tested here
+\item The reflexive-transitive closure ($\star$) is not supported.
+\end{itemize}
+The intention of these test cases are not exhaustive checks but
+to avoid crude errors by superficial tests.
+
+Each test case is a $skip$ operation (by extending the schema $Check$)
+whose guard uses the construct that should be checked.
+Several test cases are grouped together by schema conjunction,
+the test is run by using ProB's trace check functionallity.
+E.g., there is a trace file that enumerates all the operations
+$ArithOp$, $ArithComp$, \ldots.
+
+\section{Preliminary Definitions}
+
+We define two basic sets that we'll use in several test cases.
+\begin{syntax}
+  SetA & ::= & a | b | c\\
+  SetK & ::= & k | m | n\\
+\end{syntax}
+A schema serves as a record data type:
+\begin{schema}{Record}
+  x,y : \nat
+\end{schema}
+The state consists of a number of variables for the test cases. Using these
+variables instead of fixed values should avoid that an optimisation in the
+translation process removes operators.
+\begin{schema}{State}
+  x,y,zero : \num \\
+  A,B : \power SetA \\
+  K,M : \power SetK \\
+  R   : SetA \rel SetK \\
+  S   : SetA \rel SetA \\
+  f   : SetA \pfun SetK \\
+  r   : Record\\
+  l   : \seq SetA\\
+  bg  : \bag SetA\\
+\end{schema}
+We initialise the state as follows. The initialisation is also used to test
+$\IF/\THEN/\ELSE \ldots$, $\lambda$ and $\mu$.
+\begin{schema}{Init}
+  State
+  \where
+  x = 2 \land y = 5 \land zero = 0\\
+  A = \{a,b\} \land B = \{b,c\}\\
+  K = \{k,m\} \land M = \{n\} \\
+  R = \{a\mapsto k,b\mapsto m,b\mapsto n\}\\
+  S = \{a\mapsto b,b\mapsto c\}\\
+  f = (\lambda x:SetA | x\in A @ \IF x=a \THEN k \ELSE m)\\
+  r = (\mu Record | x=3 \land y=6)\\
+  l = \langle a,b,c \rangle\\
+  bg = \lbag a,b,a \rbag\\
+\end{schema}
+A $Check$ is an operation that leaves the state unchanged. Each test case is just such a check,
+the state should never change. We check later the tests by using a trace file to see if all
+operations are enabled.
+\begin{zed}
+  Check \defs \Xi State\\
+\end{zed}
+
+\section{Arithmetic}
+
+\subsection{Arithmetic Operators}
+\begin{zed}
+  Addition \defs [~Check | x + y = 7 ~]\\
+  Multiplication \defs [~Check | x * y = 10 ~]\\
+  Subtraction \defs [~Check | x - y = -3 ~]\\
+  Division \defs [~Check | y \div x = 2 ~]\\
+  Modulo \defs [~Check | 13 \mod y = 3 ~]\\
+  UnaryMinus \defs [~Check | -x = -2~] \\
+  Succ \defs [~Check | succ~x = 3~]\\
+\end{zed}
+We summarise all arithmetic tests in $ArithOp$:
+\begin{zed}
+  ArithOp \defs Addition \land Multiplication \land Subtraction \land Division \land Modulo \land {} \\
+  \t3 UnaryMinus \land Succ
+\end{zed}
+
+\subsection{Arithmetic Comparision}
+\begin{zed}
+  Equal \defs [~Check | x = x ~]\\
+  NotEqual \defs [~Check | x \neq y ~]\\  
+  \also
+  Lesser1 \defs [~Check | x < y ~]\\
+  Lesser2 \defs [~Check | \lnot( x < x )~]\\
+  Lesser3 \defs [~Check | \lnot( y < x )~]\\
+  Lesser \defs Lesser1 \land Lesser2 \land Lesser3\\
+  \also
+  LesserEqual1 \defs [~Check | x \leq y ~]\\
+  LesserEqual2 \defs [~Check | x \leq x ~]\\
+  LesserEqual3 \defs [~Check | \lnot( y \leq x )~]\\
+  LesserEqual \defs LesserEqual1 \land LesserEqual2 \land LesserEqual3\\    
+  \also
+  Greater1 \defs [~Check | y > x ~]\\
+  Greater2 \defs [~Check | \lnot( x > x )~]\\
+  Greater3 \defs [~Check | \lnot( x > y )~]\\
+  Greater \defs Greater1 \land Greater2 \land Greater3\\
+  \also
+  GreaterEqual1 \defs [~Check | y \geq x ~]\\
+  GreaterEqual2 \defs [~Check | x \geq x ~]\\
+  GreaterEqual3 \defs [~Check | \lnot( x \geq y )~]\\
+  GreaterEqual \defs GreaterEqual1 \land GreaterEqual2 \land GreaterEqual3\\
+\end{zed}
+We summarise all arithmetic comparisions in $ArithComp$:
+\begin{zed}
+  ArithComp \defs Equal \land NotEqual \land Lesser \land LesserEqual \land Greater \land GreaterEqual\\
+\end{zed}
+
+\subsection{Numbers}
+\begin{zed}
+  Int1 \defs [~Check | zero\in\num ~]\\
+  Int2 \defs [~Check | x\in\num ~]\\
+  Int3 \defs [~Check | -x\in\num ~]\\
+  Integers \defs Int1 \land Int2 \land Int3 \\
+  \also
+  Nat1 \defs [~Check | zero\in\nat ~]\\
+  Nat2 \defs [~Check | x\in\nat ~]\\
+  Nat3 \defs [~Check | -x\notin\nat ~]\\
+  Naturals \defs Nat1 \land Nat2 \land Nat3 \\
+  \also
+  Nat11 \defs [~Check | zero\notin\nat_1 ~]\\
+  Nat12 \defs [~Check | x\in\nat_1 ~]\\
+  Nat13 \defs [~Check | -x\notin\nat_1 ~]\\
+  Naturals1 \defs Nat11 \land Nat12 \land Nat13 \\
+  \also  
+  Upto \defs [~Check | x\upto y = \{2,3,4,5\}~]\\
+  Min \defs [~Check | min~\{x,y\} = x~]\\
+  Max \defs [~Check | max~\{x,y\} = y~]\\
+  Card \defs [~Check | \# \{x,y,-x,-y\} = 4~]\\
+  \also
+  NumberSets \defs Integers \land Naturals \land Naturals1 \land {} \\
+  \t3 Upto \land Min \land Max \land Card\\
+\end{zed}
+
+\section{Sets}
+
+\subsection{Set Predicates}
+
+\begin{zed}
+  Member1 \defs [~Check | a \in A ~]\\
+  Member2 \defs [~Check | \lnot( a \in B) ~]\\
+  NotMember1 \defs [~Check | a \notin B ~]\\
+  NotMember2 \defs [~Check | \lnot( a \notin A) ~]\\
+  Member \defs Member1 \land Member2 \land NotMember1 \land NotMember2\\
+  \also
+  SubsetStrict1 \defs [~Check | \{a\} \subset A ~]\\
+  SubsetStrict2 \defs [~Check | \lnot( A \subset A )~]\\
+  SubsetEqual1 \defs [~Check | \{a\} \subseteq A ~]\\
+  SubsetEqual2 \defs [~Check | A \subseteq A ~]\\  
+  Subset \defs SubsetStrict1 \land SubsetStrict2 \land SubsetEqual1 \land SubsetEqual2
+  \also
+  SetPreds \defs Member \land Subset
+\end{zed}
+
+\subsection{Set Operations}
+
+\begin{zed}    
+  Union \defs [~Check | A \cup B = \{a,b,c\} ~]\\
+  Intersection \defs [~Check | A \cap B = \{b\}~]\\
+  SetMinus \defs [~Check | A \setminus B = \{a\}~]\\
+  GeneralizedUnion \defs [~Check | \bigcup \{A,B\} = SetA~]\\
+  GeneralizedIntersection \defs [~Check | \bigcap \{A,B\} = \{b\}~]\\
+\end{zed}
+
+\begin{zed}
+  SetOps \defs Union \land Intersection \land SetMinus \land \\
+  \t3 GeneralizedUnion \land GeneralizedIntersection
+\end{zed}
+
+\subsection{Set Definitions}
+\begin{zed}
+  PowSet \defs [~Check | \power A = \{ \emptyset, \{a\}, \{b\}, \{a,b\}\}~]\\
+  Pow1Set \defs [~Check | \power_1 A = \{ \{a\}, \{b\}, \{a,b\}\}~]\\
+  FinSet \defs [~Check | \finset A = \{ \emptyset, \{a\}, \{b\}, \{a,b\}\}~]\\
+  Fin1Set \defs [~Check | \finset_1 A = \{ \{a\}, \{b\}, \{a,b\}\}~]\\
+  CompSet1 \defs [~Check | \{~x:A | x\neq b~\} = \{a\}~]\\
+  CompSet2 \defs [~Check | \{~x:\num | x=2 \lor x=3 @ x*x~\} = \{4,9\}~]\\
+  CompSet3 \defs [~Check | \{~y,x:A | x\neq y\} = \{a\mapsto b,b\mapsto a\}~]\\
+  \also
+  SetDefs \defs PowSet \land Pow1Set \land FinSet \land Fin1Set \land \\
+  \t3 CompSet1 \land CompSet2 \land CompSet3
+\end{zed}
+
+
+\section{Relations}
+
+\subsection{Function definitions}
+\begin{zed}
+  PartFun1 \defs [~Check | \{ a\mapsto k \} \in SetA \pfun SetK~]\\
+  PartFun2 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in SetA \pfun SetK~]\\
+  PartFun3 \defs [~Check | \{ a\mapsto k,b\mapsto m,b\mapsto n \} \notin SetA \pfun SetK~]\\
+  PartialFunction \defs PartFun1 \land PartFun2 \land PartFun3
+  \also
+  TotalFun1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in A \fun SetK~]\\
+  TotalFun2 \defs [~Check | \{ a\mapsto k  \} \notin A \fun SetK~]\\
+  TotalFunction \defs TotalFun1 \land TotalFun2
+  \also
+  PartInj1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in SetA \pinj SetK~]\\
+  PartInj2 \defs [~Check | \{ a\mapsto k,b\mapsto k \} \notin SetA \pinj SetK~]\\
+  PartialInjection \defs PartInj1 \land PartInj2
+  \also
+  TotalInj1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in A \inj SetK~]\\
+  TotalInj2 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \notin SetA \inj SetK ~]\\
+  TotalInj3 \defs [~Check | \{ a\mapsto k,b\mapsto k \} \notin A \inj SetK ~]\\
+  TotalInjection \defs TotalInj1 \land TotalInj2 \land TotalInj3
+  \also
+  PartSurj1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in SetA \psurj K~]\\
+  PartSurj2 \defs [~Check | \{ a\mapsto k,b\mapsto m,c\mapsto k \} \in SetA \psurj K~]\\
+  PartSurj3 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \notin SetA \psurj SetK~]\\
+  PartialSurjection \defs PartSurj1 \land PartSurj2 \land PartSurj3
+  \also
+  TotalSurj1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in A \surj K~]\\
+  TotalSurj2 \defs [~Check | \{ a\mapsto k,b\mapsto m,c\mapsto k\} \in SetA \surj K~]\\
+  TotalSurj3 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \notin SetA \surj K~]\\
+  TotalSurj4 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \notin A \surj SetK~]\\
+  TotalSurjection \defs TotalSurj1 \land TotalSurj2 \land TotalSurj3 \land TotalSurj4
+  \also
+  Bij1 \defs [~Check | \{ a\mapsto k,b\mapsto m,c\mapsto n\} \in SetA \bij SetK~]\\
+  Bij2 \defs [~Check | \{ a\mapsto k,b\mapsto m\} \in A \bij K~]\\
+  Bij3 \defs [~Check | \{ a\mapsto k,b\mapsto m,c\mapsto k\} \notin SetA \bij K~]\\
+  Bij4 \defs [~Check | \{ a\mapsto k,b\mapsto m\} \notin A \bij SetK~]\\
+  Bijection \defs Bij1 \land Bij2 \land Bij3 \land Bij4
+\end{zed}
+For checking finite partial functions ($\ffun$) resp. injections ($\finj$), we just
+copy the checks for partial functions resp. partial injections, because
+they are treated the same by ProB.
+\begin{zed}
+  FinPartFun1 \defs [~Check | \{ a\mapsto k \} \in SetA \ffun SetK~]\\
+  FinPartFun2 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in SetA \ffun SetK~]\\
+  FinPartFun3 \defs [~Check | \{ a\mapsto k,b\mapsto m,b\mapsto n \} \notin SetA \ffun SetK~]\\
+  FinitePartialFunction \defs FinPartFun1 \land FinPartFun2 \land FinPartFun3
+  \also
+  FinPartInj1 \defs [~Check | \{ a\mapsto k,b\mapsto m \} \in SetA \finj SetK~]\\
+  FinPartInj2 \defs [~Check | \{ a\mapsto k,b\mapsto k \} \notin SetA \finj SetK~]\\
+  FinitePartialInjection \defs FinPartInj1 \land FinPartInj2    
+\end{zed}
+We summarize all checks of function definitions in the schema Functions:
+\begin{zed}
+  Functions \defs PartialFunction \land TotalFunction \land PartialInjection \land TotalInjection \land {} \\
+  \t3 PartialSurjection \land TotalSurjection \land Bijection \land {} \\
+  \t3 FinitePartialFunction \land FinitePartialInjection\\
+\end{zed}
+
+\subsection{Function application and lambda definition}
+The function $f$ is defined by a $\lambda$-expression in the initialisation.
+\begin{zed}
+  FunApplication1 \defs [~Check | f(a) = k~]\\
+  FunApplication2 \defs [~Check | f(b) = m~]\\
+  FunApplication \defs FunApplication1 \land FunApplication2
+\end{zed}
+
+\subsection{Operations on relations}
+The relfexive-transitive closure is not yet implemented.
+\begin{zed}
+  Domain \defs [~Check | \dom~R = A~]\\
+  Range \defs [~Check | \ran~R = SetK~]\\
+  Id \defs [~Check | \id~A = \{a\mapsto a,b\mapsto b\}~]\\
+  ForwardComp \defs [~Check | R\comp\{k\mapsto b,m\mapsto a,n\mapsto c\} = 
+    \{a\mapsto b,b\mapsto a,b\mapsto c\}~]\\
+  BackwardComp \defs [~Check | \{k\mapsto b,m\mapsto a,n\mapsto c\}\circ R = 
+    \{a\mapsto b,b\mapsto a,b\mapsto c\}~]\\
+  Inversion \defs [~Check | R \inv = \{k\mapsto a,m\mapsto b,n\mapsto b\}~]\\
+  RelImage \defs [~Check | R \limg B \rimg = \{m,n\}~]\\
+  Overriding \defs [~Check | R\oplus \{b\mapsto k\} = \{a\mapsto k,b\mapsto k\}~]\\
+  Iteration1 \defs [~Check | S^{1} = S~]\\
+  Iteration2 \defs [~Check | S^{x} = \{a\mapsto c\}~]\\
+  Iteration3 \defs [~Check | iter~2~S = \{a\mapsto c\}~]\\
+  Iteration4 \defs [~Check | S^{-1} = S \inv~]\\
+  TransClosure \defs [~Check | S \plus = \{a\mapsto b,a\mapsto c,b\mapsto c\}~]\\
+  \also 
+  RelationOperators1 \defs Domain \land Range \land Id \land ForwardComp \land BackwardComp \land \\
+  \t3 Inversion \land RelImage \land Overriding \land \\
+  \t3 Iteration1 \land Iteration2 \land Iteration3 \land Iteration4 \land TransClosure\\
+  \also
+  DomainRestriction \defs [~Check | B\dres R = \{b\mapsto m,b\mapsto n\}~]\\
+  RangeRestriction \defs [~Check | R\rres M = \{b\mapsto n\}~]\\
+  DomainAntiRestriction \defs [~Check | B\ndres R = \{a\mapsto k\}~]\\
+  RangeAntiRestriction \defs [~Check | R\nrres M = \{a\mapsto k,b\mapsto m\}~]\\
+  Restrictions \defs DomainRestriction \land RangeRestriction \land \\
+  \t3 DomainAntiRestriction \land RangeAntiRestriction\\
+  \also
+  RelationOperators \defs RelationOperators1 \land Restrictions
+\end{zed}
+
+\section{Logic}
+
+\subsection{Connectives}
+We use $x=0, y=0$ for $false$ and $x=2, y=5$ for $true$, just to avoid optimisations.
+\begin{zed}
+  LAnd1 \defs [~Check | x=2 \land y=5~]\\
+  LAnd2 \defs [~Check | \lnot (x=2 \land y=0)~]\\
+  LAnd3 \defs [~Check | \lnot (x=0 \land y=5)~]\\
+  LAnd4 \defs [~Check | \lnot (x=0 \land y=0)~]\\
+  LAnd \defs LAnd1 \land LAnd2 \land LAnd3 \land LAnd4\\
+  \also
+  LOr1 \defs [~Check | x=2 \lor y=5~]\\
+  LOr2 \defs [~Check | x=2 \lor y=0~]\\
+  LOr3 \defs [~Check | x=0 \lor y=5~]\\
+  LOr4 \defs [~Check | \lnot (x=0 \lor y=0)~]\\
+  LOr \defs LOr1 \land LOr2 \land LOr3 \land LOr4\\
+  \also
+  LImp1 \defs [~Check | x=2 \implies y=5~]\\
+  LImp2 \defs [~Check | \lnot (x=2 \implies y=0)~]\\
+  LImp3 \defs [~Check | x=0 \implies y=5~]\\
+  LImp4 \defs [~Check | x=0 \implies y=0~]\\
+  LImp \defs LImp1 \land LImp2 \land LImp3 \land LImp4\\
+  \also
+  LIff1 \defs [~Check | x=2 \iff y=5~]\\
+  LIff2 \defs [~Check | \lnot (x=2 \iff y=0)~]\\
+  LIff3 \defs [~Check | \lnot (x=0 \iff y=5)~]\\
+  LIff4 \defs [~Check | x=0 \iff y=0~]\\
+  LIff \defs LIff1 \land LIff2 \land LIff3 \land LIff4\\
+  \also
+  LogicalConnectives \defs LAnd \land LOr \land LImp \land LIff\\
+\end{zed}
+
+\subsection{Quantifiers}
+We use the following test cases to test the $first$ and $second$ functions, too.
+\begin{zed}
+  ForAll1 \defs [~Check | \forall e:S @ first~e=b \lor second~e=b ~]\\
+  ForAll2 \defs [~Check | \forall e:R | first~e=a @ second~e=k ~]\\
+  ForAll3 \defs [~Check | \lnot (\forall e:R @ first~e=b) ~]\\
+  \also
+  Exists1 \defs [~Check | \exists e:R @ first~e=b ~]\\
+  Exists2 \defs [~Check | \lnot (\exists e:S @ first~e=c)~]\\
+  \also
+  EExists1 \defs [~Check | \exists_1 e:R @ first~e=a ~]\\
+  EExists2 \defs [~Check | \lnot (\exists_1 e:R @ first~e=b) ~]\\
+  \also
+  Quantifiers \defs ForAll1 \land ForAll2 \land ForAll3 \land \\
+  \t3 Exists1 \land Exists2 \land EExists1 \land EExists2\\
+\end{zed}
+
+\section{Miscellaneous Constructs}
+
+\subsection{Tuples}
+B knows only pairs, whereas Z can have arbitrarily long tuples.
+\begin{zed}
+  Tuples \defs [~Check | (a,n,b) \in A \cross M \cross B ~]\\
+\end{zed}
+
+\subsection{Records}
+Some test cases to check the usage of schemas as record types. The $\theta$ operator instantiates
+a record whose values are taken from the current scope. With schema renaming, other variables
+(here e.g. $e_1$ instead of $x$) can be used.
+$Theta1$ introduces two new variables, we hide them in $Theta$ with $\hide$ to prevent
+them from showing up as parameters of the operation.
+\begin{zed}
+  Selection \defs [~Check | r.x = x+1~]\\
+  Theta1 \defs [~Check;e_1,e_2 : \num | e_1=x+1 \land e_2=y+1 \land \theta Record[e_1/x,e_2/y] = r~]\\
+  Theta \defs Theta1 \hide (e_1,e_2)\\
+  \also
+  Records \defs Selection \land Theta
+\end{zed}
+
+\subsection{Lets}
+$\LET$ can be used both as an expression and as a predicate. We test both cases and
+for predicates we test $\LET$ in a positive and negative context.
+\begin{zed}
+  LetExpr \defs [~Check | (\LET e_1==x+1;e_2==y+1 @ e_1*e_2) = 18~]\\
+  LetPred1 \defs [~Check | (\LET e_1==x+1;e_2==y+1 @ e_1*e_2 = 18)~]\\
+  LetPred2 \defs [~Check | \lnot (\LET e_1==x+1;e_2==y+1 @ e_1*e_2 = 19)~]\\
+  \also
+  Lets \defs LetExpr \land LetPred1 \land LetPred2\\
+\end{zed}
+
+\section{Sequences}
+\subsection{Sequence Sets}
+\begin{zed}
+  SeqDef1 \defs [~Check | \{x-1 \mapsto a,x \mapsto b\} \in \seq SetA~]\\
+  SeqDef2 \defs [~Check | \{x\mapsto a,x \mapsto b\} \notin \seq SetA~]\\
+  SeqDef3 \defs [~Check | \langle \rangle \in \seq SetA~]\\
+  Seq1Def1 \defs [~Check | \{x-1 \mapsto a,x \mapsto b\} \in \seq_1 SetA~]\\
+  Seq1Def2 \defs [~Check | \{x\mapsto a,x \mapsto b\} \notin \seq_1 SetA~]\\
+  Seq1Def3 \defs [~Check | \langle \rangle \notin \seq_1 SetA~]\\
+  ISeqDef1 \defs [~Check | \{x-1 \mapsto a,x \mapsto b\} \in \iseq SetA~]\\
+  ISeqDef2 \defs [~Check | \{x-1 \mapsto a,x \mapsto a\} \notin \iseq SetA~]\\
+  ISeqDef3 \defs [~Check | \langle \rangle \in \seq SetA~]\\
+  \also
+  SeqDefs \defs SeqDef1 \land SeqDef2 \land SeqDef3 \land\\
+  \t3 Seq1Def1 \land Seq1Def2 \land Seq1Def3 \land\\
+  \t3 ISeqDef1 \land ISeqDef2 \land ISeqDef3
+\end{zed}
+
+\subsection{Operations on Sequences}
+\begin{zed}
+  Concat \defs [~Check | l \cat \langle b,a \rangle = \langle a,b,c,b,a \rangle~]\\
+  SeqRev \defs [~Check | rev~l = \langle c,b,a \rangle~]\\
+  Head \defs [~Check | head~l = a~]\\
+  Last \defs [~Check | last~l = c~]\\
+  Tail \defs [~Check | tail~l = \langle b,c \rangle~]\\
+  Front \defs [~Check | front~l = \langle a,b \rangle~]\\
+  Extract \defs [~Check | \{1,3\} \extract l = \langle a,c \rangle~]\\
+  Filter \defs [~Check | l \filter A = \langle a,b \rangle~]\\
+  Squash \defs [~Check | squash~\{x\mapsto a, y\mapsto b\} = \langle a,b \rangle~]\\
+  \also
+  SeqOps \defs Concat \land SeqRev \land Head \land Last \land Tail \land Front \land Extract \land Filter \land Squash\\
+\end{zed}
+
+\subsection{Sequence predicates}
+\begin{zed}
+  Prefix1 \defs [~Check | \langle a,b \rangle \prefix l ~]\\
+  Prefix2 \defs [~Check | \lnot \langle b,c \rangle \prefix l ~]\\
+  Suffix1 \defs [~Check | \langle b,c \rangle \suffix l ~]\\
+  Suffix2 \defs [~Check | \lnot \langle a,b \rangle \suffix l ~]\\
+  SeqIn1 \defs [~Check | \langle c,b \rangle \inseq (l\cat \langle b,c \rangle) ~]\\
+  SeqIn2 \defs [~Check | \lnot \langle b,b \rangle \inseq (l\cat \langle b,c \rangle) ~]\\
+  DistributedConcat \defs [~Check | \dcat \langle l,l \rangle = \langle a,b,c,a,b,c \rangle~]\\
+  Disjoint1 \defs [~Check | \disjoint \langle \{1,3,5\}, \{2,4\}, \emptyset \rangle~]\\
+  Disjoint2 \defs [~Check | \lnot \disjoint \langle \{1,3,4\}, \{2,4\}, \emptyset \rangle~]\\
+  Partition1 \defs [~Check | \langle \{1,3,5\}, \{2,4\}, \emptyset \rangle \partition 1\upto 5~]\\
+  Partition2 \defs [~Check | \lnot \langle \{1,3,4\}, \{2,4\}, \emptyset \rangle \partition 1\upto 4~]\\
+  Partition3 \defs [~Check | \lnot \langle \{1,3,5\}, \{2\}, \emptyset \rangle \partition 1\upto 5~]\\
+  \also
+  SeqPreds \defs Prefix1 \land Prefix2 \land Suffix1 \land Suffix2 \land SeqIn1 \land SeqIn2 \land \\
+  \t3 DistributedConcat \land Disjoint1 \land Disjoint2 \land \\
+  \t3 Partition1 \land Partition2 \land Partition3 \\
+\end{zed}
+
+\section{Bags}
+
+\subsection{Operations on Bags}
+\begin{zed}
+  BagItems \defs [~Check | items~l = (A\cross \{1\}) \cup \{c\mapsto 1\}~]\\
+  BagCount1 \defs [~Check | count~bg~a = 2~]\\
+  BagCount2 \defs [~Check | count~bg~c = 0~]\\
+  BagICount1 \defs [~Check | bg \bcount a = 2~]\\
+  BagICount2 \defs [~Check | bg \bcount c = 0~]\\
+  BagScale \defs [~Check | 2 \otimes bg = \{a\mapsto 4,b\mapsto x\}~]\\
+  BagUnion \defs [~Check | bg \uplus \{b\mapsto x,c\mapsto y\} = \{a\mapsto x,b\mapsto 3,c\mapsto y\}~]\\
+  BagDifference1 \defs [~Check | bg \uminus \{a\mapsto 1,c\mapsto y\} = \{a\mapsto 1,b\mapsto 1\}~]\\
+  BagDifference2 \defs [~Check | bg \uminus \{a\mapsto y\} = \{b\mapsto 1\}~]\\
+  \also
+  BagOps \defs BagItems \land BagCount1 \land BagCount2 \land BagICount1 \land BagICount2 \land \\
+  \t3 BagScale \land BagUnion \land BagDifference1 \land BagDifference2 \\
+\end{zed}
+
+\subsection{Predicates on Bags}
+\begin{zed}
+  InBag1 \defs [~Check | a \inbag bg~]\\
+  InBag2 \defs [~Check | \lnot c \inbag bg~]\\
+  SubBag1 \defs [~Check | \lbag a,b \rbag \subbageq bg~]\\
+  SubBag2 \defs [~Check | \lbag a,a \rbag \subbageq bg~]\\
+  SubBag3 \defs [~Check | \lnot \lbag b,a,b \rbag \subbageq bg~]\\
+  SubBag4 \defs [~Check | \lnot \lbag a,c \rbag \subbageq bg~]\\
+  \also
+  BagPreds \defs InBag1 \land InBag2 \land \\
+  \t3 SubBag1 \land SubBag2 \land SubBag3 \land SubBag4\\
+\end{zed}
+
+
+\end{document}

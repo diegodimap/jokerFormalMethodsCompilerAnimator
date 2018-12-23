@@ -1,0 +1,20 @@
+<specification name="contagemEscolhaMenu.csp">
+    <initialXNodes> 
+        <initialXNode> 
+            <ikey value="GP_HashMD5_133AC696B6FC895D6DD57F67E9A8988A"/> 
+        </initialNNode> 
+    </initialXnodes> 
+
+    <xnodes> 
+        <xnode> 
+            <key value="root"/> 
+            <event value="root"/> 
+            <next value="GP_HashMD5_133AC696B6FC895D6DD57F67E9A8988A"/> 
+        </xnode> 
+        <xnode> 
+            <key value="GP_HashMD5_133AC696B6FC895D6DD57F67E9A8988A"/> 
+            <event value="STOP"/> 
+            <next value="GP_HashMD5_133AC696B6FC895D6DD57F67E9A8988A"/> 
+        </xnode> 
+    </xnodes> 
+</specification>
